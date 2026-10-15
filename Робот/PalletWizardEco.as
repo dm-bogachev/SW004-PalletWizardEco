@@ -42,6 +42,7 @@ N_INT5    "di.ifp.page[5]"
 N_INT6    "di.ifp.page[6]"
 N_INT7    "di.ifp.page[7]"
 N_INT8    "di.ifp.page[8]"
+N_INT9    "di.reset.main"
 N_INT10    "do.home"
 N_INT11    "s.apply.product[1]"
 N_INT12    "s.apply.product[2]"
@@ -100,16 +101,27 @@ N_INT304    "x.pallet.full[1]"
 N_INT305    "x.pallet.full[2]"
 N_INT306    "x.stop[1]"
 N_INT307    "x.stop[2]"
+N_INT308    "x.defect.put[1]"
+N_INT309    "x.defect.put[2]"
+N_INT310    "x.move.to.home"
+N_INT311    "x.pallet.free[1]"
+N_INT312    "x.pallet.free[2]"
 .END
 .INTER_PANEL_D
 0,2,"","  SELECT","  PRODUCT","",10,4,3,2003,0
 1,9,7,5,8
 6,10,""," RESET","AUTOSTART","",10,4,6,1,"PCEXECUTE autostart.pc",0
-13,2,""," PRIME"," MAIN","",10,4,6,2014,0
-20,2,""," PRIME"," HOME","",10,4,11,2015,0
+7,2,"","  LINE 1","  RESET","",10,2,13,2105,0
+8,1,"PAL 1 FREE","","","",10,15,4,10,2311,0
+11,2,""," PRIME"," MAIN","",10,4,6,2014,0
+12,2,""," RESET"," MAIN","",9,4,1,2009,-1
+13,2,""," PRIME"," HOME","",10,4,11,2015,0
+14,2,"","  LINE 2","  RESET","",10,2,13,2106,0
+15,1,"PAL 2 FREE","","","",10,15,4,10,2312,0
 21,9,8,3,15
-24,2,"","  CONTROL","","",10,4,3,2002,0
-25,2,"","  LOG","","",10,4,3,2004,0
+25,2,"","  CONTROL","","",10,4,3,2002,0
+26,2,"","  LOG","","",10,4,3,2004,0
+27,2,""," DEBUG","","",10,4,3,2005,0
 28,1," BAG 1 RDY","","","",10,15,4,10,2201,0
 29,1," BAG 2 RDY","","","",10,15,4,10,2202,0
 30,4,2,"FINGERS","CLOSE","OPEN","",10,4,4,34,33,0
@@ -117,8 +129,8 @@ N_INT307    "x.stop[2]"
 32,1," FIN R OP","","","",10,15,4,10,2234,0
 33,1," FIN L CL","","","",10,15,4,10,2235,0
 34,1," FIN R CL","","","",10,15,4,10,2236,0
-35,1,"LINE 1 RDY","","","",10,15,4,10,2203,0
-36,1,"LINE 2 RDY","","","",10,15,4,10,2204,0
+35,1,"LINE 1 SAF","","","",10,15,4,10,2203,0
+36,1,"LINE 2 SAF","","","",10,15,4,10,2204,0
 37,4,2,"PLATE","CLOSE","OPEN","",10,4,4,36,35,0
 38,1,"PLATE L OP","","","",10,15,4,10,2237,0
 39,1,"PLATE R OP","","","",10,15,4,10,2238,0
@@ -152,6 +164,26 @@ N_INT307    "x.stop[2]"
 91,9,2,7,15
 98,9,3,7,15
 105,2,"","   MAIN","<---------","",10,4,11,2001,0
+112,4,2,"BAG 1 RDY","","FORCE","",10,4,4,0,2101,0
+113,4,2,"BAG 2 RDY","","FORCE","",10,4,4,0,2102,0
+115,4,2,"FIN L OP","","FORCE","",10,4,4,0,2133,0
+116,4,2,"FIN R OP","","FORCE","",10,4,4,0,2134,0
+117,4,2,"FIN L CL","","FORCE","",10,4,4,0,2135,0
+118,4,2,"FIN R CL","","FORCE","",10,4,4,0,2136,0
+119,4,2,"LINE 1 SAF","","FORCE","",10,4,4,0,2103,0
+120,4,2,"LINE 2 SAF","","FORCE","",10,4,4,0,2104,0
+122,4,2,"PLATE L OP","","FORCE","",10,4,4,0,2137,0
+123,4,2,"PLATE R OP","","FORCE","",10,4,4,0,2138,0
+124,4,2,"PLATE L CL","","FORCE","",10,4,4,0,2139,0
+125,4,2,"PLATE R CL","","FORCE","",10,4,4,0,2140,0
+126,4,2,"BAG 1 DEF","","FORCE","",10,4,4,0,2111,0
+127,4,2,"BAG 2 DEF","","FORCE","",10,4,4,0,2112,0
+129,4,2,"CLAMP UP","","FORCE","",10,4,4,0,2141,0
+130,4,2,"CLAMP DOWN","","FORCE","",10,4,4,0,2142,0
+132,4,2,"AIR ON","","FORCE","",10,4,4,0,2143,0
+133,2,"","   MAIN","<---------","",10,4,11,2001,0
+138,2,""," PRIME"," TEACH","",10,4,11,2016,0
+139,2,""," PRIME"," SERVICE","",10,4,11,2017,0
 .END
 .INTER_PANEL_TITLE
 "",0
@@ -185,35 +217,74 @@ N_INT307    "x.stop[2]"
 .END
 .PROGRAM a.main()@26/10/13 16:54 #0
   ;
-  CALL log("Main program executed")
+  CALL log ("Main program executed")
   ;
   ; Set robot basic parameters
   WEIGHT 120, 0, 0, 350, 0.1, 0.1, 0.1
   TOOL tool.gripper
   CALL safe.home
-  CALL pallet.reset(1)
-  CALL pallet.reset(2)
+  ;
+  SIGNAL -x.defect.put[1], -x.defect.put[2]
   ;
   WHILE TRUE DO
-    IF cur.layer[1] <= w.max.layers[1] THEN
-      CALL pick (1)
-      IF NOT SIG (2111) THEN
-        CALL put.pallet (1)
-      ELSE
-        CALL put.defect (1)
-        SIGNAL -2111
+    FOR .i = 1 TO 2
+      IF SIG (x.pick.ready[.i]) THEN
+        CALL pick (.i)
+        IF NOT SIG (x.defect.put[.i]) THEN
+          CALL put.pallet (.i)
+        ELSE
+          SIGNAL -x.defect.put[.i]
+          CALL put.defect (.i)
+        END
       END
     END
-    IF cur.layer[2] <= w.max.layers[2] THEN
-      CALL pick (2)
-      IF NOT SIG (2112) THEN
-        CALL put.pallet (2)
-      ELSE
-        CALL put.defect (2)
-        SIGNAL -2112
-      END
+    IF SIG(x.move.to.home) THEN
+      BREAK
+      CALL safe.home
     END
   END
+.END
+.PROGRAM a.service ()
+  ;
+  SPEED 20 ALWAYS
+  ACCURACY 1 ALWAYS
+  ;
+  POINT .service = #put[.line.no]
+  POINT .service.appro = SHIFT(.service BY 0, 0, 400)
+  ;
+  JMOVE .service.appro
+  ;
+.END
+.PROGRAM a.teach ()
+  ;
+  ; CALL STEP 9 TO LINE 1 STEP 17 TO LINE 2
+  ; CALL STEP 26 TO DEFECT
+  ;
+  SPEED 20 ALWAYS
+  ACCURACY 1 ALWAYS
+  ;
+  HOME
+  ;
+  LAPPRO #pick[1], 400
+  LMOVE #pick[1] ; *** TEACH POINT ***
+  LAPPRO #pick[1], 400
+  ;
+  LAPPRO #put[1], 800
+  LMOVE #put[1] ; *** TEACH POINT ***
+  LAPPRO #put[1], 800
+  ;
+  LAPPRO #pick[2], 400
+  LMOVE #pick[2] ; *** TEACH POINT ***
+  LAPPRO #pick[2], 400
+  ;
+  LAPPRO #put[2], 800
+  LMOVE #put[2] ; *** TEACH POINT ***
+  LAPPRO #put[2], 800
+  ;
+  LAPPRO #put.defect, 800
+  LMOVE #put.defect ; *** TEACH POINT ***
+  LAPPRO #put.defect, 800
+  ;
 .END
 .PROGRAM a.transport()@26/10/13 16:54 #0
 ;
@@ -361,6 +432,27 @@ N_INT307    "x.stop[2]"
       CALL disp.list
     END
     ;
+    ; Prime buttons
+    IF SIG (s.prime.main) AND NOT SWITCH (CS) AND WHICHTASK("a.main") <> 1 THEN
+      CALL log.pc1("a.main program was set to execute")
+      MC PRIME a.main
+    END
+    ;
+    IF SIG (s.prime.home) AND NOT SWITCH (CS) AND WHICHTASK("safe.home") <> 1 THEN
+      CALL log.pc1("safe.home program was set to execute")
+      MC PRIME safe.home
+    END
+    ;
+    IF SIG (s.prime.teach) AND NOT SWITCH (REPEAT) AND WHICHTASK("a.teach") <> 1 THEN
+      CALL log.pc1("a.teach program was set to execute")
+      MC PRIME a.teach
+    END
+    ;
+    IF SIG (s.prime.service) AND NOT SWITCH (REPEAT) AND WHICHTASK("a.service") <> 1 THEN
+      CALL log.pc1("a.service program was set to execute")
+      MC PRIME a.service
+    END
+    ;
   END
 .END
 .PROGRAM initialize.pc()@26/10/13 17:03 #1
@@ -503,8 +595,13 @@ N_INT307    "x.stop[2]"
 .END
 .PROGRAM numpg ()
   ;
+  ; Green lamp flicker
   SFLK z.line.blink[1] = 2
   SFLK z.line.blink[2] = 2
+  ;
+  ; Reset timers
+  STIM z.reset.tmr[1] = x.btn.stop[1], 5
+  STIM z.reset.tmr[2] = x.btn.stop[2], 5
   ;
   ; Input from ifp and physical
   SOUT x.bag.ready[1] = s.bag.ready[1] OR i.bag.ready[1]
@@ -537,12 +634,29 @@ N_INT307    "x.stop[2]"
   ;
   SOUT x.air.on = s.air.on OR i.air.on
   ;
-  ; Check if pallet is full
-  .sign = 1 - 2 * ((cur.layer[1] > w.max.layers[1]) + 1)
-  SIGNAL .sign*x.pallet.full[1] 
-  .sign = 1 - 2 * ((cur.layer[2] > w.max.layers[2]) + 1)
-  SIGNAL .sign*x.pallet.full[2]
+  ; Lamp if pallet is free
+  IF cur.layer[1] == 1 AND cur.bag[1] == 1 THEN
+    SIGNAL x.pallet.free[1]
+  ELSE
+    SIGNAL -x.pallet.free[1]
+  END
+  IF cur.layer[2] == 1 AND cur.bag[2] == 1 THEN
+    SIGNAL x.pallet.free[2]
+  ELSE
+    SIGNAL -x.pallet.free[2]
+  END
   ;
+  ; Check if pallet is full
+  IF cur.layer[1] > w.max.layers[1] THEN
+    SIGNAL x.pallet.full[1]
+  ELSE
+    SIGNAL -x.pallet.full[1]
+  END
+  IF cur.layer[2] > w.max.layers[2] THEN
+    SIGNAL x.pallet.full[2]
+  ELSE
+    SIGNAL -x.pallet.full[2]
+  END
   ; Line ready blink
   SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.line.safe[1] AND z.line.blink[1] OR x.line.ready[1])
   SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.line.safe[2] AND z.line.blink[2] OR x.line.ready[2])
@@ -552,12 +666,29 @@ N_INT307    "x.stop[2]"
   SOUT x.stop[2] = x.btn.stop[2] OR x.pallet.full[2]
   ;
   ; Line start/stop
-  SOUT x.line.ready[1] = x.line.safe[1] AND x.btn.start[1] OR x.line.ready[1] AND NOT x.stop[1]
-  SOUT x.line.ready[2] = x.line.safe[2] AND x.btn.start[2] OR x.line.ready[2] AND NOT x.stop[2]
+  SOUT x.line.ready[1] = x.line.safe[1] AND x.btn.start[1] OR x.line.ready[1] AND NOT x.stop[1] AND x.line.safe[1]
+  SOUT x.line.ready[2] = x.line.safe[2] AND x.btn.start[2] OR x.line.ready[2] AND NOT x.stop[2]  AND x.line.safe[2]
   ;
   ; Bag pick ready
-  SOUT x.pick.ready[1] = x.line.ready[1] AND x.bag.ready[1] AND NOT x.pallet.full[1] 
-  SOUT x.pick.ready[2] = x.line.ready[2] AND x.bag.ready[2] AND NOT x.pallet.full[2] 
+  SOUT x.pick.ready[1] = x.air.on AND x.line.ready[1] AND x.bag.ready[1] AND NOT x.pallet.full[1]
+  SOUT x.pick.ready[2] = x.air.on AND x.line.ready[2] AND x.bag.ready[2] AND NOT x.pallet.full[2]
+  ;
+  ; Check if bag is defect
+  SOUT x.defect.put[1] = i.bag.defect[1] OR s.bag.defect[1] OR x.defect.put[1]
+  SOUT x.defect.put[2] = i.bag.defect[2] OR s.bag.defect[2] OR x.defect.put[2]
+  ;
+  ; Reset pallet
+  IF SIG (z.reset.tmr[1]) AND NOT SIG(x.line.ready[1]) THEN
+    cur.layer[1] = 1
+    cur.bag[1] = 1
+  END
+  IF SIG (z.reset.tmr[2]) AND NOT SIG(x.line.ready[2]) THEN
+    cur.layer[2] = 1
+    cur.bag[2] = 1
+  END
+  ;
+  ; Move to home
+  SOUT x.move.to.home = NOT x.line.ready[1] AND NOT x.line.ready[2] AND NOT do.home
   ;
 .END
 .PROGRAM pallet.reset (.line.no)
@@ -1829,6 +1960,7 @@ N_INT307    "x.stop[2]"
   HOME
   CALL log("Perform safe motion to home position: move to home")
   CALL grip.release
+  TWAIT 2
   RETURN
 ;
 .END
@@ -1959,6 +2091,7 @@ N_INT307    "x.stop[2]"
   di.ifp.page[6] = 2006
   di.ifp.page[7] = 2007
   di.ifp.page[8] = 2008
+  di.reset.main = 2009
   ;
   do.home = 2010
   ;
@@ -1984,8 +2117,19 @@ N_INT307    "x.stop[2]"
   x.stop[1] = 2306
   x.stop[2] = 2307
   ;
+  x.defect.put[1] = 2308
+  x.defect.put[2] = 2309
+  ;
+  x.move.to.home = 2310
+  ;
+  x.pallet.free[1] = 2311
+  x.pallet.free[2] = 2312
+  ;
   z.line.blink[1] = 3065
   z.line.blink[2] = 3066
+  ;
+  z.reset.tmr[1] = 3001
+  z.reset.tmr[2] = 3002
   ;
 .END
 .PROGRAM set.product(.line.no)@26/10/13 17:16 #3
@@ -2062,6 +2206,28 @@ N_INT307    "x.stop[2]"
   ;
   ifp.list.page = 1
   ifp.last.page = 1
+  ;
+  ; Last selected elements for correction tool
+  ifp.last.prod[1] = -1
+  ifp.last.prod[2] = -1
+  ifp.last.layer[1] = -1
+  ifp.last.layer[2] = -1
+  ifp.last.bag[1] = -1
+  ifp.last.bag[2] = -1
+  ;
+  ;
+  ; Corrections on interface panel
+  ifp.pal.x.shift[1] = 0
+  ifp.pal.y.shift[1] = 0
+  ifp.pal.z.shift[1] = 0
+  ifp.pal.a.shift[1] = 0
+  ;
+  ifp.pal.x.shift[2] = 0
+  ifp.pal.y.shift[2] = 0
+  ifp.pal.z.shift[2] = 0
+  ifp.pal.a.shift[2] = 0
+  ;
+  ;
 .END
 .PROGRAM t.pick (.line.no)
   ;
@@ -2209,15 +2375,13 @@ N_INT307    "x.stop[2]"
 	; PalletWizardEco
 	; @@@ HISTORY @@@
 	; @@@ INSPECTION @@@
-	; x.line.safe[1]
-	; s.line.safe[1]
-	; x.line.ready[1]
-	; x.stop[1]
-	; cur.layer[1]
-	; w.max.layers[1]
-	; x.pick.ready[1]
+	; z.reset.tmr[1]
 	; x.pallet.full[1]
-	; x.btn.stop[1]
+	; x.move.to.home
+	; x.line.ready[1]
+	; x.line.ready[2]
+	; do.home
+	; x.pallet.full[2]
 	; @@@ CONNECTION @@@
 	; KROSET R01
 	; 127.0.0.1
@@ -2360,6 +2524,10 @@ N_INT307    "x.stop[2]"
 	;       .layer 
 	;       .bag 
 	;       .t.shift 
+	;       .$no 
+	;       .$l 
+	;       .$b 
+	;       .$temp 
 	;       .pick 
 	;       .put.base 
 	;       .put 
@@ -2390,6 +2558,8 @@ N_INT307    "x.stop[2]"
 	;       .default 
 	;     5:pallet.reset:F
 	;       .line.no 
+	;     5:a.teach:F
+	;     5:a.service:F
 	;   Group:Log:6
 	;     6:log:F
 	;       .$msg 
@@ -2462,6 +2632,7 @@ N_INT307    "x.stop[2]"
 	;     9:set.vars.pc:B
 	;   0:autostart.pc:B
 	;   0:numpg:N
+	;     .sign 
 	; @@@ TRANS @@@
 	; bp[] 
 	; pb[] 
@@ -2591,6 +2762,11 @@ N_INT307    "x.stop[2]"
 	; x.pallet.full[] 
 	; x.pick.ready[] 
 	; x.stop[] 
+	; x.defect.put[] 
+	; z.reset.tmr[] 
+	; x.move.to.home 
+	; x.pallet.free[] 
+	; di.reset.main 
 	; @@@ TOOLS @@@
 	; @@@ BASE @@@
 	; @@@ FRAME @@@
@@ -2991,4 +3167,12 @@ x.pick.ready[2] = 2303
 x.pick.ready[1] = 2302
 x.stop[1] = 2306
 x.stop[2] = 2307
+x.defect.put[1] = 2308
+x.defect.put[2] = 2309
+z.reset.tmr[1] = 3001
+z.reset.tmr[2] = 3002
+x.move.to.home = 2310
+x.pallet.free[1] = 2311
+x.pallet.free[2] = 2312
+di.reset.main = 2009
 .END

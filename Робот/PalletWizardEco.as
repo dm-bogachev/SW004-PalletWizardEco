@@ -12,8 +12,8 @@ N_OX36    "o.plate.close"
 N_OX37    "o.clamp.down"
 N_WX1    "i.bag.ready[1]"
 N_WX2    "i.bag.ready[2]"
-N_WX3    "i.line.ready[1]"
-N_WX4    "i.line.ready[2]"
+N_WX3    "i.line.safe[1]"
+N_WX4    "i.line.safe[2]"
 N_WX5    "i.btn.stop[1]"
 N_WX6    "i.btn.stop[2]"
 N_WX7    "i.btn.start[1]"
@@ -46,39 +46,112 @@ N_INT10    "do.home"
 N_INT11    "s.apply.product[1]"
 N_INT12    "s.apply.product[2]"
 N_INT13    "s.upd.prod.list"
+N_INT14    "s.prime.main"
+N_INT15    "s.prime.home"
+N_INT16    "s.prime.teach"
+N_INT17    "s.prime.service"
+N_INT101    "s.bag.ready[1]"
+N_INT102    "s.bag.ready[2]"
+N_INT103    "s.line.safe[1]"
+N_INT104    "s.line.safe[2]"
+N_INT105    "s.btn.stop[1]"
+N_INT106    "s.btn.stop[2]"
+N_INT107    "s.btn.start[1]"
+N_INT108    "s.btn.start[2]"
+N_INT111    "s.bag.defect[1]"
+N_INT112    "s.bag.defect[2]"
+N_INT133    "s.fin.l.opened"
+N_INT134    "s.fin.r.opened"
+N_INT135    "s.fin.l.closed"
+N_INT136    "s.fin.r.closed"
+N_INT137    "s.plt.l.opened"
+N_INT138    "s.plt.r.opened"
+N_INT139    "s.plt.l.closed"
+N_INT140    "s.plt.r.closed"
+N_INT141    "s.clamp.up"
+N_INT142    "s.clamp.down"
+N_INT143    "s.air.on"
+N_INT201    "x.bag.ready[1]"
+N_INT202    "x.bag.ready[2]"
+N_INT203    "x.line.safe[1]"
+N_INT204    "x.line.safe[2]"
+N_INT205    "x.btn.stop[1]"
+N_INT206    "x.btn.stop[2]"
+N_INT207    "x.btn.start[1]"
+N_INT208    "x.btn.start[2]"
+N_INT211    "x.bag.defect[1]"
+N_INT212    "x.bag.defect[2]"
+N_INT233    "x.fin.l.opened"
+N_INT234    "x.fin.r.opened"
+N_INT235    "x.fin.l.closed"
+N_INT236    "x.fin.r.closed"
+N_INT237    "x.plt.l.opened"
+N_INT238    "x.plt.r.opened"
+N_INT239    "x.plt.l.closed"
+N_INT240    "x.plt.r.closed"
+N_INT241    "x.clamp.up"
+N_INT242    "x.clamp.down"
+N_INT243    "x.air.on"
+N_INT300    "x.line.ready[1]"
+N_INT301    "x.line.ready[2]"
+N_INT302    "x.pick.ready[1]"
+N_INT303    "x.pick.ready[2]"
+N_INT304    "x.pallet.full[1]"
+N_INT305    "x.pallet.full[2]"
+N_INT306    "x.stop[1]"
+N_INT307    "x.stop[2]"
 .END
 .INTER_PANEL_D
-0,9,7,4,8
-6,2,"","  CONTROL","","",10,4,3,2003,0
-13,2,"","  SELECT","  PRODUCT","",10,4,3,2003,0
-14,10,"","PCEXECUTE ","AUTOSTART","",10,4,6,1,"PCEXECUTE autostart.pc",0
-21,9,8,6,15
-27,2,"","  TEACH","","",10,4,11,2003,0
-28,1," BAG 1 RDY","","","",10,15,4,10,1001,0
-29,1,"BAG 1 DEF","","","",10,15,4,10,1011,0
-30,1,"LINE 1 RDY","","","",10,15,4,10,1003,0
-35,1," BAG 2 RDY","","","",10,15,4,10,1002,0
-36,1,"BAG 2 DEF","","","",10,15,4,10,1012,0
-37,1,"LINE 2 RDY","","","",10,15,4,10,1004,0
-42,1," BAG 2 RDY","","","",10,15,4,10,33,0
-43,1," BAG 2 RDY","","","",10,15,4,10,34,0
+0,2,"","  SELECT","  PRODUCT","",10,4,3,2003,0
+1,9,7,5,8
+6,10,""," RESET","AUTOSTART","",10,4,6,1,"PCEXECUTE autostart.pc",0
+13,2,""," PRIME"," MAIN","",10,4,6,2014,0
+20,2,""," PRIME"," HOME","",10,4,11,2015,0
+21,9,8,3,15
+24,2,"","  CONTROL","","",10,4,3,2002,0
+25,2,"","  LOG","","",10,4,3,2004,0
+28,1," BAG 1 RDY","","","",10,15,4,10,2201,0
+29,1," BAG 2 RDY","","","",10,15,4,10,2202,0
+30,4,2,"FINGERS","CLOSE","OPEN","",10,4,4,34,33,0
+31,1," FIN L OP","","","",10,15,4,10,2233,0
+32,1," FIN R OP","","","",10,15,4,10,2234,0
+33,1," FIN L CL","","","",10,15,4,10,2235,0
+34,1," FIN R CL","","","",10,15,4,10,2236,0
+35,1,"LINE 1 RDY","","","",10,15,4,10,2203,0
+36,1,"LINE 2 RDY","","","",10,15,4,10,2204,0
+37,4,2,"PLATE","CLOSE","OPEN","",10,4,4,36,35,0
+38,1,"PLATE L OP","","","",10,15,4,10,2237,0
+39,1,"PLATE R OP","","","",10,15,4,10,2238,0
+40,1,"PLATE L CL","","","",10,15,4,10,2239,0
+41,1,"PLATE R CL","","","",10,15,4,10,2240,0
+42,1,"BAG 1 DEF","","","",10,15,4,10,2211,0
+43,1,"BAG 2 DEF","","","",10,15,4,10,2212,0
+44,4,2,"CLAMP","UP","DOWN","",10,4,4,0,37,0
+45,1," CLAMP UP","","","",10,15,4,10,2241,0
+46,1,"CLAMP DOWN","","","",10,15,4,10,2242,0
+47,3,"","  LINE 1","  START ","",10,4,14,0,0,2107,2,-1
+48,3,"","  LINE 2","  START ","",10,4,14,0,0,2108,3,-1
+49,2,"","   MAIN","<---------","",10,4,11,2001,0
+53,1,"  AIR ON","","","",10,15,4,10,2243,-1
+54,2,"","  LINE 1","   STOP","",10,10,0,2105,-1
+55,2,"","  LINE 2","   STOP","",10,10,0,2106,-1
 56,8,"ifp.prod.no[1]"," LINE 1","PRODUCT NO",10,4,3,1,0
 57,2," LINE 1 "," APPLY"," PRODUCT","",10,6,11,2011,-1
 58,9,4,4,9
-62,10,"","   PREV","   PAGE","",10,4,8,3,"ifp.list.page = ifp.list.page - 1",0
+62,10,"","   PREV","   PAGE","",10,4,9,3,"ifp.list.page = ifp.list.page - 1",0
 63,8,"ifp.prod.no[2]"," LINE 2","PRODUCT NO",10,4,3,1,0
 64,2," LINE 2"," APPLY"," PRODUCT","",10,6,11,2012,-1
 65,9,5,4,9
 69,8,"ifp.list.page","","   PAGE",10,15,2,1,0
 72,9,6,4,9
-76,10,"","   NEXT","   PAGE","",10,4,8,2,"ifp.list.page = ifp.list.page + 1",0
+76,10,"","   NEXT","   PAGE","",10,4,9,2,"ifp.list.page = ifp.list.page + 1",0
 77,2,"","   MAIN","<---------","",10,4,11,2001,0
-79,2,"  UPDATE","  PRODUCT","   LIST","",10,4,3,2013,-1
-80,9,7,4,8
-142,2,"","   IO","","",10,4,11,2002,0
-168,9,1,6,9
-169,9,2,6,9
-170,9,3,6,15
+78,2,"  UPDATE","  PRODUCT","   LIST","",10,4,3,2013,-1
+79,9,7,5,8
+84,9,1,7,15
+91,9,2,7,15
+98,9,3,7,15
+105,2,"","   MAIN","<---------","",10,4,11,2001,0
 .END
 .INTER_PANEL_TITLE
 "",0
@@ -112,27 +185,17 @@ N_INT13    "s.upd.prod.list"
 .END
 .PROGRAM a.main()@26/10/13 16:54 #0
   ;
-  SPEED 100 ALWAYS
-  ACCURACY 500 ALWAYS
+  CALL log("Main program executed")
   ;
+  ; Set robot basic parameters
   WEIGHT 120, 0, 0, 350, 0.1, 0.1, 0.1
-  ;
-  HOME
-  ;
   TOOL tool.gripper
+  CALL safe.home
+  CALL pallet.reset(1)
+  CALL pallet.reset(2)
   ;
-  SIGNAL -34
-  ;
-  cur.layer[1] = 1
-  cur.bag[1] = 1
-  ;
-  cur.layer[2] = 1
-  cur.bag[2] = 1
-  ;
-  TIMER 2 = 0
   WHILE TRUE DO
-    TIMER 1 = 0
-    IF cur.layer[1] > w.max.layers[1] THEN
+    IF cur.layer[1] <= w.max.layers[1] THEN
       CALL pick (1)
       IF NOT SIG (2111) THEN
         CALL put.pallet (1)
@@ -141,7 +204,7 @@ N_INT13    "s.upd.prod.list"
         SIGNAL -2111
       END
     END
-    IF cur.layer[2] > w.max.layers[2] THEN
+    IF cur.layer[2] <= w.max.layers[2] THEN
       CALL pick (2)
       IF NOT SIG (2112) THEN
         CALL put.pallet (2)
@@ -150,16 +213,7 @@ N_INT13    "s.upd.prod.list"
         SIGNAL -2112
       END
     END
-    PRINT "1", TIMER (1)
   END
-  PRINT "2:", TIMER (2)
-  ;IF cur.layer[2] <= w.max.layers[2]
-  ;  CALL pick (2)
-  ;  CALL put (2)
-  ;END
-  ;
-  ;END
-  ;
 .END
 .PROGRAM a.transport()@26/10/13 16:54 #0
 ;
@@ -245,42 +299,46 @@ N_INT13    "s.upd.prod.list"
 ;
 .END
 .PROGRAM disp.product()@26/10/13 17:16 #4
-;
+  ;
   .product.window = 7
   .row = 1
   .col = 1
-;
+  ;
   FOR .i = 1 TO 2
-    .$i = $ENCODE(/L,.i)
-;
-    IF line.product.no[.i]<=0 THEN
-      IF line.product.no[.i]==0 THEN
-        .$line[.i] = "Line "+.$i+" product: Not selected"
+    .$i = $ENCODE (/L, .i)
+    ;
+    IF line.product.no[.i] <= 0 THEN
+      IF line.product.no[.i] == 0 THEN
+        .$line[.i] = "Line " + .$i + " product: Not selected"
       ELSE
-        .$line[.i] = "Line "+.$i+" product: Wrong program"
+        .$line[.i] = "Line " + .$i + " product: Wrong program"
       END
     ELSE
-      .$line[.i] = "Line "+.$i+" product: "+$product.names[line.product.no[.i]]
+      .$line[.i] = "Line " + .$i + " product: " + $product.names[line.product.no[.i]]
     END
-;
+    ;
   END
-  IFPWOVERWRITE .product.window,.row,.col,color.yellow,color.black=.$line[1]," ",.$line[2]," "
-;
+  ;
+  IFPWPRINT .product.window, .row, .col, color.pink, color.black = .$line[1], " ", .$line[2]
+  ;
 .END
 .PROGRAM grip.check.open ()
   ;
-  ; Check if gripper is opened
+  CALL log ("Check if gripper is opened")
+  ; 
   SWAIT i.fin.l.opened, i.fin.r.opened
   SWAIT i.plt.l.opened, i.plt.r.opened
   SWAIT i.clamp.up
   ;
 .END
 .PROGRAM grip.release ()
-;
+  ;
+  CALL log ("Open gripper")
+  ;
   SIGNAL -o.clamp.down
-  SIGNAL o.plate.open,-o.plate.close
-  SIGNAL o.fingers.open,-o.fingers.close
-;
+  SIGNAL o.plate.open, -o.plate.close
+  SIGNAL o.fingers.open, -o.fingers.close
+  ;
 .END
 .PROGRAM ifp.pc()@26/10/13 16:58 #1749111
   ;
@@ -443,6 +501,72 @@ N_INT13    "s.upd.prod.list"
   IFPWPRINT 3,1,1,9,10=.$tmp[8],.$tmp[9],.$tmp[10],.$tmp[11]
 ;
 .END
+.PROGRAM numpg ()
+  ;
+  SFLK z.line.blink[1] = 2
+  SFLK z.line.blink[2] = 2
+  ;
+  ; Input from ifp and physical
+  SOUT x.bag.ready[1] = s.bag.ready[1] OR i.bag.ready[1]
+  SOUT x.bag.ready[2] = s.bag.ready[2] OR i.bag.ready[2]
+  ;
+  SOUT x.line.safe[1] = s.line.safe[1] OR i.line.safe[1]
+  SOUT x.line.safe[2] = s.line.safe[2] OR i.line.safe[2]
+  ;
+  SOUT x.btn.stop[1] = s.btn.stop[1] OR i.btn.stop[1]
+  SOUT x.btn.stop[2] = s.btn.stop[2] OR i.btn.stop[2]
+  ;
+  SOUT x.btn.start[1] = s.btn.start[1] OR i.btn.start[1]
+  SOUT x.btn.start[2] = s.btn.start[2] OR i.btn.start[2]
+  ;
+  SOUT x.bag.defect[1] = s.bag.defect[1] OR i.bag.defect[1]
+  SOUT x.bag.defect[2] = s.bag.defect[2] OR i.bag.defect[2]
+  ;
+  SOUT x.fin.l.opened = s.fin.l.opened OR i.fin.l.opened
+  SOUT x.fin.r.opened = s.fin.r.opened OR i.fin.r.opened
+  SOUT x.fin.l.closed = s.fin.l.closed OR i.fin.l.closed
+  SOUT x.fin.r.closed = s.fin.r.closed OR i.fin.r.closed
+  ;
+  SOUT x.plt.l.opened = s.plt.l.opened OR i.plt.l.opened
+  SOUT x.plt.r.opened = s.plt.r.opened OR i.plt.r.opened
+  SOUT x.plt.l.closed = s.plt.l.closed OR i.plt.l.closed
+  SOUT x.plt.r.closed = s.plt.r.closed OR i.plt.r.closed
+  ;
+  SOUT x.clamp.up = s.clamp.up OR i.clamp.up
+  SOUT x.clamp.down = s.clamp.down OR i.clamp.down
+  ;
+  SOUT x.air.on = s.air.on OR i.air.on
+  ;
+  ; Check if pallet is full
+  .sign = 1 - 2 * ((cur.layer[1] > w.max.layers[1]) + 1)
+  SIGNAL .sign*x.pallet.full[1] 
+  .sign = 1 - 2 * ((cur.layer[2] > w.max.layers[2]) + 1)
+  SIGNAL .sign*x.pallet.full[2]
+  ;
+  ; Line ready blink
+  SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.line.safe[1] AND z.line.blink[1] OR x.line.ready[1])
+  SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.line.safe[2] AND z.line.blink[2] OR x.line.ready[2])
+  ;
+  ; Stop conditions
+  SOUT x.stop[1] = x.btn.stop[1] OR x.pallet.full[1]
+  SOUT x.stop[2] = x.btn.stop[2] OR x.pallet.full[2]
+  ;
+  ; Line start/stop
+  SOUT x.line.ready[1] = x.line.safe[1] AND x.btn.start[1] OR x.line.ready[1] AND NOT x.stop[1]
+  SOUT x.line.ready[2] = x.line.safe[2] AND x.btn.start[2] OR x.line.ready[2] AND NOT x.stop[2]
+  ;
+  ; Bag pick ready
+  SOUT x.pick.ready[1] = x.line.ready[1] AND x.bag.ready[1] AND NOT x.pallet.full[1] 
+  SOUT x.pick.ready[2] = x.line.ready[2] AND x.bag.ready[2] AND NOT x.pallet.full[2] 
+  ;
+.END
+.PROGRAM pallet.reset (.line.no)
+  ;
+  CALL log("Pallet" + $ENCODE(.line.no) + " reset")
+  cur.layer[.line.no] = 1
+  cur.bag[.line.no] = 1
+  ;
+.END
 .PROGRAM pg0()@26/10/13 16:54 #0
 ;
   CALL a.main
@@ -450,10 +574,11 @@ N_INT13    "s.upd.prod.list"
 .END
 .PROGRAM pick (.line.no)
   ;
-  ; Points calculation
-  ;
   .layer = cur.layer[.line.no]
   .bag = cur.bag[.line.no]
+  CALL log("Pick bag from line:" + $ENCODE(.line.no) + "")
+  ;
+  ; Points calculation
   ;
   POINT .pick = #pick[.line.no]
   POINT .put.base = #put[.line.no]
@@ -462,6 +587,8 @@ N_INT13    "s.upd.prod.list"
   .pick.z = DZ (.pick) + pick.appro[.line.no]
   .put.z = DZ (.put) + put.appro[.line.no]
   .z.appro = MAXVAL (.put.z, .pick.z)
+  ;
+  CALL log("Calculated z.appro for pick:" + $ENCODE(.z.appro))
   ;
   POINT .pick.appro = .pick
   POINT/Z .pick.appro = TRANS (0, 0, .z.appro)
@@ -1590,6 +1717,8 @@ N_INT13    "s.upd.prod.list"
 .END
 .PROGRAM put.defect (.line.no)
   ;
+  CALL log ("Put bag from line:" + $ENCODE (.line.no) + " to defect")
+  ;
   ; Points calculation
   ;
   POINT .pick = #pick[.line.no]
@@ -1611,7 +1740,7 @@ N_INT13    "s.upd.prod.list"
   ACCURACY 1
   LMOVE .put
   BREAK
-  ; Open gripper 
+  ; Open gripper
   SIGNAL -o.clamp.down
   SIGNAL o.fingers.open, -o.fingers.close
   SIGNAL o.plate.open, -o.plate.close
@@ -1623,11 +1752,17 @@ N_INT13    "s.upd.prod.list"
 .END
 .PROGRAM put.pallet (.line.no)
   ;
-  ; Points calculation
-  ;
   .layer = cur.layer[.line.no]
   .bag = cur.bag[.line.no]
   .t.shift = pick.shift[.line.no] - w.bag.length[.line.no] / 2
+  ;
+  .$no = $ENCODE (/L, .line.no)
+  .$l = $ENCODE(/L, .layer)
+  .$b = $ENCODE(/L, .bag)
+  .$temp = "Put bag from line: " + .$no + " to layer: " + .$l + " bag: " + .$b
+  CALL log (.$temp)
+  ;
+  ; Points calculation
   ;
   POINT .pick = #pick[.line.no]
   POINT .put.base = #put[.line.no]
@@ -1637,6 +1772,8 @@ N_INT13    "s.upd.prod.list"
   .pick.z = DZ (.pick) + pick.appro[.line.no]
   .put.z = DZ (.put) + put.appro[.line.no]
   .z.appro = MAXVAL (.put.z, .pick.z)
+  ;
+  CALL log ("Calculated z.appro for put:" + $ENCODE (.z.appro))
   ;
   POINT .put.appro = .put
   POINT .pick.appro = .pick
@@ -1654,7 +1791,7 @@ N_INT13    "s.upd.prod.list"
   ACCURACY 1
   LMOVE .put
   BREAK
-  ; Open gripper 
+  ; Open gripper
   SIGNAL -o.clamp.down
   SIGNAL o.fingers.open, -o.fingers.close
   SIGNAL o.plate.open, -o.plate.close
@@ -1695,71 +1832,125 @@ N_INT13    "s.upd.prod.list"
   RETURN
 ;
 .END
-.PROGRAM set.io.pc()@26/10/13 17:03 #1
-;
-; Robot internal I/O
-;
-; Outputs
-;
+.PROGRAM set.io.pc()@26/10/15 18:46 #7
+  ;
+  ; Robot internal I/O
+  ;
+  ; Outputs
+  ;
   do.teach = 1
   o.lamp.green[1] = 2
   o.lamp.green[2] = 3
-;
+  ;
   do.error = 30
   do.cs = 31
   do.motor = 32
-;
-; Inputs
-;
+  ;
+  ; Inputs
+  ;
   i.bag.ready[1] = 1001
+  s.bag.ready[1] = 2101
+  x.bag.ready[1] = 2201
+  ;
   i.bag.ready[2] = 1002
-;
-  i.line.ready[1] = 1003
-  i.line.ready[2] = 1004
-;
+  s.bag.ready[2] = 2102
+  x.bag.ready[2] = 2202
+  ;
+  i.line.safe[1] = 1003
+  s.line.safe[1] = 2103
+  x.line.safe[1] = 2203
+  ;
+  i.line.safe[2] = 1004
+  s.line.safe[2] = 2104
+  x.line.safe[2] = 2204
+  ;
   i.btn.stop[1] = 1005
+  s.btn.stop[1] = 2105
+  x.btn.stop[1] = 2205
+  ;
   i.btn.stop[2] = 1006
-;
+  s.btn.stop[2] = 2106
+  x.btn.stop[2] = 2206
+  ;
   i.btn.start[1] = 1007
+  s.btn.start[1] = 2107
+  x.btn.start[1] = 2207
+  ;
   i.btn.start[2] = 1008
-;
+  s.btn.start[2] = 2108
+  x.btn.start[2] = 2208
+  ;
   i.bag.defect[1] = 1011
+  s.bag.defect[1] = 2111
+  x.bag.defect[1] = 2211
+  ;
   i.bag.defect[2] = 1012
-;
+  s.bag.defect[2] = 2112
+  x.bag.defect[2] = 2212
+  ;
   di.error = 1030
   di.cs = 1031
   di.motor = 1032
-;
-;
-; Gripper IO
-;
-; Gripper outputs
-;
+  ;
+  ;
+  ; Gripper IO
+  ;
+  ; Gripper outputs
+  ;
   o.fingers.open = 33
   o.fingers.close = 34
   o.plate.open = 35
   o.plate.close = 36
   o.clamp.down = 37
-;
-; Gripper input
-;
+  ;
+  ; Gripper input
+  ;
   i.fin.l.opened = 1033
+  s.fin.l.opened = 2133
+  x.fin.l.opened = 2233
+  ;
   i.fin.r.opened = 1034
+  s.fin.r.opened = 2134
+  x.fin.r.opened = 2234
+  ;
   i.fin.l.closed = 1035
+  s.fin.l.closed = 2135
+  x.fin.l.closed = 2235
+  ;
   i.fin.r.closed = 1036
-;
+  s.fin.r.closed = 2136
+  x.fin.r.closed = 2236
+  ;
   i.plt.l.opened = 1037
+  s.plt.l.opened = 2137
+  x.plt.l.opened = 2237
+  ;
   i.plt.r.opened = 1038
+  s.plt.r.opened = 2138
+  x.plt.r.opened = 2238
+  ;
   i.plt.l.closed = 1039
+  s.plt.l.closed = 2139
+  x.plt.l.closed = 2239
+  ;
   i.plt.r.closed = 1040
-;
+  s.plt.r.closed = 2140
+  x.plt.r.closed = 2240
+  ;
   i.clamp.up = 1041
+  s.clamp.up = 2141
+  x.clamp.up = 2241
+  ;
   i.clamp.down = 1042
-;
+  s.clamp.down = 2142
+  x.clamp.down = 2242
+  ;
   i.air.on = 1043
-;
-; Internal signals
-; IFP page change 2001-2008
+  s.air.on = 2143
+  x.air.on = 2243
+  ;
+  ; Internal signals
+  ; IFP page change 2001-2008
   di.ifp.page[1] = 2001
   di.ifp.page[2] = 2002
   di.ifp.page[3] = 2003
@@ -1768,17 +1959,34 @@ N_INT13    "s.upd.prod.list"
   di.ifp.page[6] = 2006
   di.ifp.page[7] = 2007
   di.ifp.page[8] = 2008
-;
+  ;
   do.home = 2010
-;
+  ;
   s.apply.product[1] = 2011
   s.apply.product[2] = 2012
   ;
   s.upd.prod.list = 2013
   ;
-  s.line.permit[1] = 2014
-  s.line.permit[2] = 2015
-;
+  s.prime.main = 2014
+  s.prime.home = 2015
+  s.prime.teach = 2016
+  s.prime.service = 2017
+  ;
+  x.line.ready[1] = 2300
+  x.line.ready[2] = 2301
+  ;
+  x.pick.ready[1] = 2302
+  x.pick.ready[2] = 2303
+  ;
+  x.pallet.full[1] = 2304
+  x.pallet.full[2] = 2305
+  ;
+  x.stop[1] = 2306
+  x.stop[2] = 2307
+  ;
+  z.line.blink[1] = 3065
+  z.line.blink[2] = 3066
+  ;
 .END
 .PROGRAM set.product(.line.no)@26/10/13 17:16 #3
 ;
@@ -1854,11 +2062,6 @@ N_INT13    "s.upd.prod.list"
   ;
   ifp.list.page = 1
   ifp.last.page = 1
-.END
-.PROGRAM signals.pc ()
-  ;
-  SOUT s.line.permit[1] = 1
-  ;
 .END
 .PROGRAM t.pick (.line.no)
   ;
@@ -2006,10 +2209,15 @@ N_INT13    "s.upd.prod.list"
 	; PalletWizardEco
 	; @@@ HISTORY @@@
 	; @@@ INSPECTION @@@
-	; pick.shift[1]
-	; w.bag.width[1]
-	; put.appro[1]
-	; put.base[1,1,1]
+	; x.line.safe[1]
+	; s.line.safe[1]
+	; x.line.ready[1]
+	; x.stop[1]
+	; cur.layer[1]
+	; w.max.layers[1]
+	; x.pick.ready[1]
+	; x.pallet.full[1]
+	; x.btn.stop[1]
 	; @@@ CONNECTION @@@
 	; KROSET R01
 	; 127.0.0.1
@@ -2180,6 +2388,8 @@ N_INT13    "s.upd.prod.list"
 	;       .$var.name 
 	;       .var 
 	;       .default 
+	;     5:pallet.reset:F
+	;       .line.no 
 	;   Group:Log:6
 	;     6:log:F
 	;       .$msg 
@@ -2196,7 +2406,6 @@ N_INT13    "s.upd.prod.list"
 	;     6:log.clear:F
 	;       .i 
 	;   0:a.main:F
-	;     .i 
 	;   0:pg0:F
 	;   Group:Product:7
 	;     7:load.products:B
@@ -2239,7 +2448,6 @@ N_INT13    "s.upd.prod.list"
 	;     8:ifp.pc:B
 	;       .i 
 	;     8:limits.pc:B
-	;     8:signals.pc:B
 	;   Group:Initialization:9
 	;     9:initialize.pc:B
 	;     9:set.io.pc:B
@@ -2253,6 +2461,7 @@ N_INT13    "s.upd.prod.list"
 	;       .$cont.str 
 	;     9:set.vars.pc:B
 	;   0:autostart.pc:B
+	;   0:numpg:N
 	; @@@ TRANS @@@
 	; bp[] 
 	; pb[] 
@@ -2300,6 +2509,11 @@ N_INT13    "s.upd.prod.list"
 	; w.pallet.width[] 
 	; pallet.x.shift 
 	; pallet.y.shift 
+	; clamp.appro[] 
+	; drop.appro[] 
+	; drop.appro.def 
+	; w.pallet.x.shif[] 
+	; w.pallet.y.shif[] 
 	; @@@ STRINGS @@@
 	; @@@ INTEGER @@@
 	; @@@ SIGNALS @@@
@@ -2323,7 +2537,7 @@ N_INT13    "s.upd.prod.list"
 	; i.fin.l.opened 
 	; i.fin.r.closed 
 	; i.fin.r.opened 
-	; i.line.ready[] 
+	; i.line.safe[] 
 	; i.plt.l.closed 
 	; i.plt.l.opened 
 	; i.plt.r.closed 
@@ -2336,6 +2550,47 @@ N_INT13    "s.upd.prod.list"
 	; o.fingers.close 
 	; s.apply.product[] 
 	; s.upd.prod.list 
+	; s.clamp.down 
+	; s.btn.stop[] 
+	; s.btn.start[] 
+	; s.air.on 
+	; s.bag.defect[] 
+	; s.bag.ready[] 
+	; s.fin.l.closed 
+	; s.clamp.up 
+	; s.fin.r.closed 
+	; s.fin.l.opened 
+	; s.plt.l.closed 
+	; s.line.safe[] 
+	; s.plt.r.closed 
+	; s.plt.l.opened 
+	; s.prime.service 
+	; s.prime.main 
+	; s.prime.home 
+	; s.plt.r.opened 
+	; s.fin.r.opened 
+	; x.line.ready[] 
+	; z.line.blink[] 
+	; s.prime.teach 
+	; x.air.on 
+	; x.bag.defect[] 
+	; x.bag.ready[] 
+	; x.btn.start[] 
+	; x.btn.stop[] 
+	; x.clamp.down 
+	; x.clamp.up 
+	; x.fin.l.closed 
+	; x.fin.l.opened 
+	; x.fin.r.closed 
+	; x.fin.r.opened 
+	; x.line.safe[] 
+	; x.plt.l.closed 
+	; x.plt.l.opened 
+	; x.plt.r.closed 
+	; x.plt.r.opened 
+	; x.pallet.full[] 
+	; x.pick.ready[] 
+	; x.stop[] 
 	; @@@ TOOLS @@@
 	; @@@ BASE @@@
 	; @@@ FRAME @@@
@@ -2570,8 +2825,8 @@ i.fin.l.closed = 1035
 i.fin.l.opened = 1033
 i.fin.r.closed = 1036
 i.fin.r.opened = 1034
-i.line.ready[1] = 1003
-i.line.ready[2] = 1004
+i.line.safe[1] = 1003
+i.line.safe[2] = 1004
 i.plt.l.closed = 1039
 i.plt.l.opened = 1037
 i.plt.r.closed = 1040
@@ -2596,12 +2851,12 @@ put.appro[1] = 400
 put.appro[2] = 400
 s.apply.product[1] = 2011
 s.apply.product[2] = 2012
-bag.height = 110
+bag.height = 120
 bag.length = 580
-bag.weight = 30
-bag.width = 495
+bag.weight = 25
+bag.width = 380
 cur.bag[1] = 1
-cur.layer[1] = 3
+cur.layer[1] = 1
 ifp.last.page = 1
 ifp.list.page = 1
 layer.bags[1] = 5
@@ -2613,12 +2868,12 @@ layer.bags[6] = 5
 layer.bags[7] = 5
 layer.bags[8] = 5
 layer.bags[9] = 5
-line.product.no[1] = 1
+line.product.no[1] = -1
 max.layers = 9
 pallet.height = 150
 pallet.length = 1200
 pallet.width = 1000
-line.product.no[2] = 1
+line.product.no[2] = -1
 s.upd.prod.list = 2013
 color.pink = 8
 color.yellow = 6
@@ -2628,32 +2883,32 @@ pick.shift[1] = 342
 pick.shift[2] = 342
 w.bag.height[1] = 120
 w.bag.height[2] = 120
-w.bag.length[1] = 445
-w.bag.length[2] = 445
+w.bag.length[1] = 500
+w.bag.length[2] = 500
 w.bag.weight[1] = 25
 w.bag.weight[2] = 25
-w.bag.width[1] = 305
-w.bag.width[2] = 305
-w.layer.bags[1,1] = 5
-w.layer.bags[1,2] = 5
-w.layer.bags[1,3] = 5
-w.layer.bags[1,4] = 5
-w.layer.bags[1,5] = 5
-w.layer.bags[1,6] = 5
-w.layer.bags[1,7] = 5
+w.bag.width[1] = 330
+w.bag.width[2] = 330
+w.layer.bags[1,1] = 8
+w.layer.bags[1,2] = 8
+w.layer.bags[1,3] = 8
+w.layer.bags[1,4] = 8
+w.layer.bags[1,5] = 8
+w.layer.bags[1,6] = 8
+w.layer.bags[1,7] = 8
 w.layer.bags[1,8] = 5
 w.layer.bags[1,9] = 5
-w.layer.bags[2,1] = 5
-w.layer.bags[2,2] = 5
-w.layer.bags[2,3] = 5
-w.layer.bags[2,4] = 5
-w.layer.bags[2,5] = 5
-w.layer.bags[2,6] = 5
-w.layer.bags[2,7] = 5
+w.layer.bags[2,1] = 8
+w.layer.bags[2,2] = 8
+w.layer.bags[2,3] = 8
+w.layer.bags[2,4] = 8
+w.layer.bags[2,5] = 8
+w.layer.bags[2,6] = 8
+w.layer.bags[2,7] = 8
 w.layer.bags[2,8] = 5
 w.layer.bags[2,9] = 5
-w.max.layers[1] = 9
-w.max.layers[2] = 9
+w.max.layers[1] = 7
+w.max.layers[2] = 7
 w.pallet.height[1] = 150
 w.pallet.height[2] = 150
 w.pallet.length[1] = 1200
@@ -2662,4 +2917,78 @@ w.pallet.width[1] = 1000
 w.pallet.width[2] = 1000
 pallet.x.shift = 10
 pallet.y.shift = 10
+s.clamp.down = 2142
+s.btn.stop[2] = 2106
+s.btn.stop[1] = 2105
+s.btn.start[2] = 2108
+s.air.on = 2143
+s.bag.defect[1] = 2111
+s.bag.defect[2] = 2112
+s.bag.ready[1] = 2101
+s.fin.l.closed = 2135
+s.clamp.up = 2141
+s.btn.start[1] = 2107
+s.bag.ready[2] = 2102
+s.fin.r.closed = 2136
+s.fin.l.opened = 2133
+s.plt.l.closed = 2139
+s.line.safe[2] = 2104
+s.plt.r.closed = 2140
+s.plt.l.opened = 2137
+s.prime.service = 2017
+s.prime.main = 2014
+s.prime.home = 2015
+s.plt.r.opened = 2138
+s.line.safe[1] = 2103
+s.fin.r.opened = 2134
+clamp.appro[1] = 100
+clamp.appro[2] = 100
+drop.appro[1] = 100
+drop.appro[2] = 100
+drop.appro.def = 200
+layer.bags[10] = 5
+layer.bags[11] = 5
+layer.bags[12] = 5
+x.line.ready[2] = 2301
+x.line.ready[1] = 2300
+z.line.blink[2] = 3066
+z.line.blink[1] = 3065
+w.layer.bags[1,10] = 5
+w.layer.bags[1,11] = 5
+w.layer.bags[1,12] = 5
+w.layer.bags[2,10] = 5
+w.layer.bags[2,11] = 5
+w.layer.bags[2,12] = 5
+w.pallet.x.shif[1] = -5
+w.pallet.x.shif[2] = -5
+w.pallet.y.shif[1] = -67.5
+w.pallet.y.shif[2] = -67.5
+s.prime.teach = 2016
+x.air.on = 2243
+x.bag.defect[1] = 2211
+x.bag.defect[2] = 2212
+x.bag.ready[1] = 2201
+x.bag.ready[2] = 2202
+x.btn.start[1] = 2207
+x.btn.start[2] = 2208
+x.btn.stop[1] = 2205
+x.btn.stop[2] = 2206
+x.clamp.down = 2242
+x.clamp.up = 2241
+x.fin.l.closed = 2235
+x.fin.l.opened = 2233
+x.fin.r.closed = 2236
+x.fin.r.opened = 2234
+x.line.safe[1] = 2203
+x.line.safe[2] = 2204
+x.plt.l.closed = 2239
+x.plt.l.opened = 2237
+x.plt.r.closed = 2240
+x.plt.r.opened = 2238
+x.pallet.full[2] = 2305
+x.pallet.full[1] = 2304
+x.pick.ready[2] = 2303
+x.pick.ready[1] = 2302
+x.stop[1] = 2306
+x.stop[2] = 2307
 .END

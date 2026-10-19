@@ -51,6 +51,12 @@ N_INT14    "s.prime.main"
 N_INT15    "s.prime.home"
 N_INT16    "s.prime.teach"
 N_INT17    "s.prime.service"
+N_INT18    "s.apply.pal.sht[1]"
+N_INT19    "s.apply.pal.sht[2]"
+N_INT20    "s.apply.bag[1]"
+N_INT21    "s.apply.bag[2]"
+N_INT22    "s.apply.layer[1]"
+N_INT23    "s.apply.layer[2]"
 N_INT101    "s.bag.ready[1]"
 N_INT102    "s.bag.ready[2]"
 N_INT103    "s.line.safe[1]"
@@ -93,8 +99,8 @@ N_INT240    "x.plt.r.closed"
 N_INT241    "x.clamp.up"
 N_INT242    "x.clamp.down"
 N_INT243    "x.air.on"
-N_INT300    "x.line.ready[1]"
-N_INT301    "x.line.ready[2]"
+N_INT300    "x.line.started[1]"
+N_INT301    "x.line.started[2]"
 N_INT302    "x.pick.ready[1]"
 N_INT303    "x.pick.ready[2]"
 N_INT304    "x.pallet.full[1]"
@@ -106,6 +112,8 @@ N_INT309    "x.defect.put[2]"
 N_INT310    "x.move.to.home"
 N_INT311    "x.pallet.free[1]"
 N_INT312    "x.pallet.free[2]"
+N_INT313    "x.pg.selected[1]"
+N_INT314    "x.pg.selected[2]"
 .END
 .INTER_PANEL_D
 0,2,"","  SELECT","  PRODUCT","",10,4,3,2003,0
@@ -113,12 +121,15 @@ N_INT312    "x.pallet.free[2]"
 6,10,""," RESET","AUTOSTART","",10,4,6,1,"PCEXECUTE autostart.pc",0
 7,2,"","  LINE 1","  RESET","",10,2,13,2105,0
 8,1,"PAL 1 FREE","","","",10,15,4,10,2311,0
+9,1,"PAL 1 FULL","","","",10,15,4,10,2304,0
 11,2,""," PRIME"," MAIN","",10,4,6,2014,0
 12,2,""," RESET"," MAIN","",9,4,1,2009,-1
 13,2,""," PRIME"," HOME","",10,4,11,2015,0
 14,2,"","  LINE 2","  RESET","",10,2,13,2106,0
 15,1,"PAL 2 FREE","","","",10,15,4,10,2312,0
+16,1,"PAL 2 FULL","","","",10,15,4,10,2305,0
 21,9,8,3,15
+24,2,""," PALLET","CORRECTION","",10,4,3,2006,0
 25,2,"","  CONTROL","","",10,4,3,2002,0
 26,2,"","  LOG","","",10,4,3,2004,0
 27,2,""," DEBUG","","",10,4,3,2005,0
@@ -144,6 +155,7 @@ N_INT312    "x.pallet.free[2]"
 47,3,"","  LINE 1","  START ","",10,4,14,0,0,2107,2,-1
 48,3,"","  LINE 2","  START ","",10,4,14,0,0,2108,3,-1
 49,2,"","   MAIN","<---------","",10,4,11,2001,0
+50,2,""," DEBUG","","",10,4,3,2005,0
 53,1,"  AIR ON","","","",10,15,4,10,2243,-1
 54,2,"","  LINE 1","   STOP","",10,10,0,2105,-1
 55,2,"","  LINE 2","   STOP","",10,10,0,2106,-1
@@ -178,22 +190,70 @@ N_INT312    "x.pallet.free[2]"
 125,4,2,"PLATE R CL","","FORCE","",10,4,4,0,2140,0
 126,4,2,"BAG 1 DEF","","FORCE","",10,4,4,0,2111,0
 127,4,2,"BAG 2 DEF","","FORCE","",10,4,4,0,2112,0
-129,4,2,"CLAMP UP","","FORCE","",10,4,4,0,2141,0
-130,4,2,"CLAMP DOWN","","FORCE","",10,4,4,0,2142,0
+128,8,"cur.layer[1]","LINE 1","LAYER",10,8,2,1,-1
+129,8,"cur.bag[1]","LINE 1","BAG",10,8,2,1,-1
+130,4,2,"CLAMP UP","","FORCE","",10,4,4,0,2141,0
+131,4,2,"CLAMP DOWN","","FORCE","",10,4,4,0,2142,0
 132,4,2,"AIR ON","","FORCE","",10,4,4,0,2143,0
 133,2,"","   MAIN","<---------","",10,4,11,2001,0
+134,2,"","  CONTROL","","",10,4,3,2002,0
+135,8,"cur.layer[2]","LINE 2","LAYER",10,8,2,1,-1
+136,8,"cur.bag[2]","LINE 2","BAG",10,8,2,1,-1
 138,2,""," PRIME"," TEACH","",10,4,11,2016,0
 139,2,""," PRIME"," SERVICE","",10,4,11,2017,0
+140,8,"line.product.no[1]"," LINE 1","CURRENT NO",10,4,3,1,-1
+144,8,"line.product.no[2]"," LINE 2","CURRENT NO",10,4,3,1,-1
+147,8,"ifp.pal.z.shift[1]","LINE 1 Z","PAL SHIFT",10,6,5,2,0
+148,8,"ifp.pal.x.shift[1]","LINE 1 X","PAL SHIFT",10,6,5,2,0
+149,8,"ifp.pal.a.shift[1]","LINE 1 A","PAL SHIFT",10,6,5,2,0
+151,8,"ifp.pal.z.shift[2]","LINE 2 Z","PAL SHIFT",10,6,5,2,0
+152,8,"ifp.pal.x.shift[2]","LINE 2 X","PAL SHIFT",10,6,5,2,0
+153,8,"ifp.pal.a.shift[2]","LINE 2 A","PAL SHIFT",10,6,5,2,0
+154,8,"ifp.pal.y.shift[1]","LINE 1 Y","PAL SHIFT",10,6,5,2,0
+156,2," APPLY TO"," PALLET","","",10,4,5,2018,0
+158,8,"ifp.pal.y.shift[2]","LINE 2 Y","PAL SHIFT",10,6,5,2,0
+160,2," APPLY TO"," PALLET","","",10,4,5,2019,0
+161,2,"","   MAIN","<---------","",10,4,11,2001,0
+162,2,"","  BAG","CORRECTION","",10,4,3,2007,0
+163,2,""," PICK","CORRECTION","",10,4,3,2008,0
+168,8,"line.product.no[1]"," LINE 1","CURRENT NO",10,4,3,1,-1
+169,8,"ifp.curr.layer[1]","LINE 1","SEL LAYER",10,8,2,1,0
+170,8,"ifp.curr.bag[1]","LINE 1","SEL BAG",10,8,2,1,0
+172,8,"line.product.no[2]"," LINE 2","CURRENT NO",10,4,3,1,-1
+173,8,"ifp.curr.layer[2]","LINE 2","SEL LAYER",10,8,2,1,0
+174,8,"ifp.curr.bag[2]","LINE 2","SEL BAG",10,8,2,1,0
+175,8,"ifp.bag.z.shift[1]","LINE 1 Z","BAG SHIFT",10,6,5,2,0
+176,8,"ifp.bag.x.shift[1]","LINE 1 X","BAG SHIFT",10,6,5,2,0
+179,8,"ifp.bag.z.shift[2]","LINE 2 Z","BAG SHIFT",10,6,5,2,0
+180,8,"ifp.bag.x.shift[2]","LINE 2 X","BAG SHIFT",10,6,5,2,0
+182,8,"ifp.bag.y.shift[1]","LINE 1 Y","BAG SHIFT",10,6,5,2,0
+184,2," APPLY TO","SINGLE BAG","","",10,4,5,2020,0
+186,8,"ifp.bag.y.shift[2]","LINE 2 Y","BAG SHIFT",10,6,5,2,0
+188,2," APPLY TO","SINGLE BAG","","",10,4,5,2021,0
+189,2,"","   MAIN","<---------","",10,4,11,2001,0
+190,2,""," PALLET","CORRECTION","",10,4,3,2006,0
+191,2,""," PICK","CORRECTION","",10,4,3,2008,0
+196,8,"pick.z.shift[1]","PICK 1","Z SHIFT",10,6,5,2,0
+197,8,"pick.x.shift[1]","PICK 1","X SHIFT",10,6,5,2,0
+201,8,"pick.z.shift[2]","PICK 2","Z SHIFT",10,6,5,2,0
+202,8,"pick.x.shift[2]","PICK 2","X SHIFT",10,6,5,2,0
+203,8,"pick.y.shift[1]","PICK 1","Y SHIFT",10,6,5,2,0
+204,8,"pick.a.shift[1]","PICK 1","A SHIFT",10,6,5,2,0
+208,8,"pick.y.shift[2]","PICK 2","Y SHIFT",10,6,5,2,0
+209,8,"pick.a.shift[2]","PICK 2","A SHIFT",10,6,5,2,0
+217,2,"","   MAIN","<---------","",10,4,11,2001,0
+218,2,""," PALLET","CORRECTION","",10,4,3,2006,0
+219,2,"","  BAG","CORRECTION","",10,4,3,2007,0
 .END
 .INTER_PANEL_TITLE
-"",0
-"",0
-"",0
-"",0
-"",0
-"",0
-"",0
-"",0
+"Main",1
+"Control",1
+"Select product",1
+"Log",1
+"Debug",1
+"Pallet correction",1
+"Bag correction",1
+"Pick correction",1
 "",0
 "",0
 "",0
@@ -249,7 +309,7 @@ N_INT312    "x.pallet.free[2]"
   SPEED 20 ALWAYS
   ACCURACY 1 ALWAYS
   ;
-  POINT .service = #put[.line.no]
+  POINT .service = #put[1]
   POINT .service.appro = SHIFT(.service BY 0, 0, 400)
   ;
   JMOVE .service.appro
@@ -257,7 +317,7 @@ N_INT312    "x.pallet.free[2]"
 .END
 .PROGRAM a.teach ()
   ;
-  ; CALL STEP 9 TO LINE 1 STEP 17 TO LINE 2
+  ; CALL STEP 10 TO LINE 1 STEP 18 TO LINE 2
   ; CALL STEP 26 TO DEFECT
   ;
   SPEED 20 ALWAYS
@@ -300,8 +360,13 @@ N_INT312    "x.pallet.free[2]"
   CALL initialize.pc
 ;
   WHILE TRUE DO
+    ;
     CALL ifp.pc
-    CALL limits.pc
+    ;
+    IF TASK(6002) <> 1 THEN
+      MC NUMEXECUTE
+      TWAIT 0.5
+    END
   END
 ;
 .END
@@ -397,9 +462,9 @@ N_INT312    "x.pallet.free[2]"
   ;
   CALL log ("Check if gripper is opened")
   ; 
-  SWAIT i.fin.l.opened, i.fin.r.opened
-  SWAIT i.plt.l.opened, i.plt.r.opened
-  SWAIT i.clamp.up
+  SWAIT x.fin.l.opened, x.fin.r.opened
+  SWAIT x.plt.l.opened, x.plt.r.opened
+  SWAIT x.clamp.up
   ;
 .END
 .PROGRAM grip.release ()
@@ -417,43 +482,49 @@ N_INT312    "x.pallet.free[2]"
     CALL disp.list
     ifp.last.page = ifp.list.page
   END
-  ;
-  FOR .i = 1 TO 2
+  ; Work with products
+  FOR .line = 1 TO 2
     ;
-    IF SIG (s.apply.product[.i]) AND NOT SWITCH (CS ) THEN
-      IF ifp.prod.no[.i] > 0 THEN
-        CALL set.product (.i)
+    ifp.prod.no[.line] = MINVAL (ifp.prod.no[.line], 255)
+    ifp.prod.no[.line] = MAXVAL (ifp.prod.no[.line], -1)
+    ;
+    ; Select product
+    IF SIG (s.apply.product[.line]) AND NOT SWITCH (CS ) THEN
+      IF ifp.prod.no[.line] > 0 THEN
+        CALL set.product (.line)
       END
-      ifp.prod.no[.i] = -1
+      ifp.prod.no[.line] = -1
     END
-    ;
-    IF SIG (s.upd.prod.list) AND NOT SWITCH (CS ) THEN
+    ; Update product list
+    IF SIG (s.upd.prod.list) THEN
       CALL load.products
       CALL disp.list
     END
-    ;
-    ; Prime buttons
-    IF SIG (s.prime.main) AND NOT SWITCH (CS) AND WHICHTASK("a.main") <> 1 THEN
-      CALL log.pc1("a.main program was set to execute")
-      MC PRIME a.main
-    END
-    ;
-    IF SIG (s.prime.home) AND NOT SWITCH (CS) AND WHICHTASK("safe.home") <> 1 THEN
-      CALL log.pc1("safe.home program was set to execute")
-      MC PRIME safe.home
-    END
-    ;
-    IF SIG (s.prime.teach) AND NOT SWITCH (REPEAT) AND WHICHTASK("a.teach") <> 1 THEN
-      CALL log.pc1("a.teach program was set to execute")
-      MC PRIME a.teach
-    END
-    ;
-    IF SIG (s.prime.service) AND NOT SWITCH (REPEAT) AND WHICHTASK("a.service") <> 1 THEN
-      CALL log.pc1("a.service program was set to execute")
-      MC PRIME a.service
-    END
-    ;
   END
+  ;
+  ; Prime buttons
+  IF SIG (s.prime.main) AND NOT SWITCH (CS) AND WHICHTASK ("a.main") <> 1 THEN
+    CALL log.pc1 ("a.main program was set to execute")
+    MC PRIME a.main
+  END
+  ;
+  IF SIG (s.prime.home) AND NOT SWITCH (CS) AND WHICHTASK ("safe.home") <> 1 THEN
+    CALL log.pc1 ("safe.home program was set to execute")
+    MC PRIME safe.home
+  END
+  ;
+  IF SIG (s.prime.teach) AND NOT SWITCH (REPEAT) AND WHICHTASK ("a.teach") <> 1 THEN
+    CALL log.pc1 ("a.teach program was set to execute")
+    MC PRIME a.teach
+  END
+  ;
+  IF SIG (s.prime.service) AND NOT SWITCH (REPEAT) AND WHICHTASK ("a.service") <> 1 THEN
+    CALL log.pc1 ("a.service program was set to execute")
+    MC PRIME a.service
+  END
+  ;
+  CALL proc.correct.pc
+  ;
 .END
 .PROGRAM initialize.pc()@26/10/13 17:03 #1
 ;
@@ -465,19 +536,11 @@ N_INT312    "x.pallet.free[2]"
 ;
   CALL load.products
   CALL disp.list
-;
+  ;
   MC PRIME a.main
   TWAIT 0.5
 ;
   CALL log.pc1("Robot boot initialize completed")
-;
-.END
-.PROGRAM limits.pc()@26/10/13 16:54 #1749111
-;
-  ifp.prod.no[1] = MINVAL(ifp.prod.no[1],255)
-  ifp.prod.no[1] = MAXVAL(ifp.prod.no[1],-1)
-  ifp.prod.no[2] = MINVAL(ifp.prod.no[2],255)
-  ifp.prod.no[2] = MAXVAL(ifp.prod.no[2],-1)
 ;
 .END
 .PROGRAM load.prod.data (.line.no)
@@ -634,6 +697,17 @@ N_INT312    "x.pallet.free[2]"
   ;
   SOUT x.air.on = s.air.on OR i.air.on
   ;
+  IF line.product.no[1] == -1 THEN
+    SIGNAL -x.pg.selected[1]
+  ELSE
+    SIGNAL x.pg.selected[1]
+  END
+  IF line.product.no[2] == -1 THEN
+    SIGNAL -x.pg.selected[2]
+  ELSE
+    SIGNAL x.pg.selected[2]
+  END
+  ;
   ; Lamp if pallet is free
   IF cur.layer[1] == 1 AND cur.bag[1] == 1 THEN
     SIGNAL x.pallet.free[1]
@@ -658,37 +732,37 @@ N_INT312    "x.pallet.free[2]"
     SIGNAL -x.pallet.full[2]
   END
   ; Line ready blink
-  SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.line.safe[1] AND z.line.blink[1] OR x.line.ready[1])
-  SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.line.safe[2] AND z.line.blink[2] OR x.line.ready[2])
+  SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.pg.selected[1] AND z.line.blink[1] OR x.line.started[1])
+  SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.pg.selected[2] AND z.line.blink[2] OR x.line.started[2])
   ;
   ; Stop conditions
   SOUT x.stop[1] = x.btn.stop[1] OR x.pallet.full[1]
   SOUT x.stop[2] = x.btn.stop[2] OR x.pallet.full[2]
   ;
   ; Line start/stop
-  SOUT x.line.ready[1] = x.line.safe[1] AND x.btn.start[1] OR x.line.ready[1] AND NOT x.stop[1] AND x.line.safe[1]
-  SOUT x.line.ready[2] = x.line.safe[2] AND x.btn.start[2] OR x.line.ready[2] AND NOT x.stop[2]  AND x.line.safe[2]
+  SOUT x.line.started[1] = x.btn.start[1] AND x.pg.selected[1] OR x.line.started[1] AND NOT x.stop[1] 
+  SOUT x.line.started[2] = x.btn.start[2] AND x.pg.selected[2] OR x.line.started[2] AND NOT x.stop[2]
   ;
   ; Bag pick ready
-  SOUT x.pick.ready[1] = x.air.on AND x.line.ready[1] AND x.bag.ready[1] AND NOT x.pallet.full[1]
-  SOUT x.pick.ready[2] = x.air.on AND x.line.ready[2] AND x.bag.ready[2] AND NOT x.pallet.full[2]
+  SOUT x.pick.ready[1] = x.line.started[1] AND x.line.safe[1] AND x.air.on AND x.line.started[1] AND x.bag.ready[1]
+  SOUT x.pick.ready[2] = x.line.started[2] AND x.line.safe[2] AND x.air.on AND x.line.started[2] AND x.bag.ready[2]
   ;
   ; Check if bag is defect
   SOUT x.defect.put[1] = i.bag.defect[1] OR s.bag.defect[1] OR x.defect.put[1]
   SOUT x.defect.put[2] = i.bag.defect[2] OR s.bag.defect[2] OR x.defect.put[2]
   ;
   ; Reset pallet
-  IF SIG (z.reset.tmr[1]) AND NOT SIG(x.line.ready[1]) THEN
+  IF SIG (z.reset.tmr[1]) AND NOT SIG(x.line.started[1]) THEN
     cur.layer[1] = 1
     cur.bag[1] = 1
   END
-  IF SIG (z.reset.tmr[2]) AND NOT SIG(x.line.ready[2]) THEN
+  IF SIG (z.reset.tmr[2]) AND NOT SIG(x.line.started[2]) THEN
     cur.layer[2] = 1
     cur.bag[2] = 1
   END
   ;
   ; Move to home
-  SOUT x.move.to.home = NOT x.line.ready[1] AND NOT x.line.ready[2] AND NOT do.home
+  SOUT x.move.to.home = NOT x.line.started[1] AND NOT x.line.started[2] AND NOT do.home
   ;
 .END
 .PROGRAM pallet.reset (.line.no)
@@ -721,6 +795,8 @@ N_INT312    "x.pallet.free[2]"
   ;
   CALL log("Calculated z.appro for pick:" + $ENCODE(.z.appro))
   ;
+  POINT .pick = .pick + TRANS(pick.x.shift[.line.no], pick.y.shift[.line.no], pick.z.shift[.line.no], pick.a.shift[.line.no])
+  ;
   POINT .pick.appro = .pick
   POINT/Z .pick.appro = TRANS (0, 0, .z.appro)
   POINT .pick.depart = .pick.appro
@@ -747,14 +823,127 @@ N_INT312    "x.pallet.free[2]"
   SIGNAL o.fingers.close, -o.fingers.open
   ;
   ; Wait for sensors
-  SWAIT i.plt.l.closed, i.plt.r.closed
-  SWAIT i.fin.l.closed, i.fin.r.closed
+  SWAIT x.plt.l.closed, x.plt.r.closed
+  SWAIT x.fin.l.closed, x.fin.r.closed
   ;
   ; Depart
   LMOVE .pick.depart
   ;
   ; Down clamp while move
   SIGNAL o.clamp.down
+  ;
+.END
+.PROGRAM proc.correct.pc ()
+  ; Correction tool
+  FOR .line = 1 TO 2
+    ;
+    ifp.curr.layer[.line] = MAXVAL (ifp.curr.layer[.line], 1)
+    ifp.curr.layer[.line] = MINVAL (ifp.curr.layer[.line], w.max.layers[.line])
+    ifp.curr.bag[.line] = MAXVAL (ifp.curr.bag[.line], 1)
+    ifp.curr.bag[.line] = MINVAL (ifp.curr.bag[.line], w.layer.bags[.line, ifp.curr.layer[.line]])
+    ;
+    ;
+    .product = line.product.no[.line]
+    .layer = ifp.curr.layer[.line]
+    .bag = ifp.curr.bag[.line]
+    ;
+    .$line = $ENCODE (/L, .line)
+    .$prod = $ENCODE (/L, .product)
+    .$layer = $ENCODE (/L, .layer)
+    .$bag = $ENCODE (/L, .bag)
+    ;
+    .prod.chg = ifp.last.prod[.line] <> line.product.no[.line]
+    .prod.exist = line.product.no[.line] <> -1
+    .layer.chg = ifp.last.layer[.line] <> ifp.curr.layer[.line]
+    .bag.chg = ifp.last.bag[.line] <> ifp.curr.bag[.line]
+    .load.data = (.prod.chg OR .layer.chg OR .bag.chg) AND .prod.exist
+    ;
+    IF .load.data  THEN
+      ;
+      IF .prod.chg THEN
+        ifp.curr.layer[.line] = 1
+        ifp.curr.bag[.line] = 1
+      END
+      ;
+      ifp.last.prod[.line] = line.product.no[.line]
+      ifp.last.layer[.line] = ifp.curr.layer[.line]
+      ifp.last.bag[.line] = ifp.curr.bag[.line]
+      
+      ;
+      ; Global pallet shifts
+      IF .prod.chg THEN
+        ; Check if already exists
+        .$var = "pallet.shift[" +.$prod + "," + .$line + "]"
+        IF NOT EXISTTRANS (.$var) THEN
+          POINT pallet.shift[.product, .line] = NULL
+        END
+        ;
+        ; Decompose to global coordinates
+        DECOMPOSE .c[1] = pallet.shift[.product, .line]
+        ifp.pal.x.shift[.line] = .c[1]
+        ifp.pal.y.shift[.line] = .c[2]
+        ifp.pal.z.shift[.line] = .c[3]
+        ifp.pal.a.shift[.line] = .c[4]
+        CALL log.pc1 ("Loaded pallet correction for product: " + .$prod + " line: " + .$line)
+      END
+      ;
+      IF .line == 1 THEN
+        .$var = "l1.bag.shift[" +.$prod + "," + .$layer + "," + .$bag + "]"
+        IF NOT EXISTTRANS (.$var) THEN
+          POINT l1.bag.shift[.product, .layer, .bag] = NULL
+        END
+        ;
+        ; Decompose to global coordinates
+        DECOMPOSE .c[1] = l1.bag.shift[.product, .layer, .bag]
+      ELSE
+        .$var = "l2.bag.shift[" +.$prod + "," + .$layer + "," + .$bag + "]"
+        IF NOT EXISTTRANS (.$var) THEN
+          POINT l2.bag.shift[.product, .layer, .bag] = NULL
+        END
+        ;
+        ; Decompose to global coordinates
+        DECOMPOSE .c[1] = l2.bag.shift[.product, .layer, .bag]
+      END
+      ifp.bag.x.shift[.line] = .c[1]
+      ifp.bag.y.shift[.line] = .c[2]
+      ifp.bag.z.shift[.line] = .c[3]
+      CALL log.pc1 ("Loaded bag correction for product: " + .$prod + " line: " + .$line + " layer: " + .$layer + " bag: " + .$bag)
+      ;
+    END
+    ;
+    ; Global corrections
+    IF SIG (s.apply.pal.sht[.line]) AND line.product.no[.line] <> -1  THEN
+      .c[1] = ifp.pal.x.shift[.line]
+      .c[2] = ifp.pal.y.shift[.line]
+      .c[3] = ifp.pal.z.shift[.line]
+      .c[4] = ifp.pal.a.shift[.line]
+      ;
+      POINT .temp = TRANS (.c[1], .c[2], .c[3], .c[4], 0, 0, 0)
+      IF DISTANCE (.temp, pallet.shift[ifp.last.prod[.line], .line]) > 0 THEN
+        POINT pallet.shift[ifp.last.prod[.line], .line] = TRANS (.c[1], .c[2], .c[3], .c[4], 0, 0, 0)
+        CALL log.pc1 ("Saved pallet correction for product: " + .$prod + " line: " + .$line)
+      END
+    END
+    ;
+    IF SIG (s.apply.bag[.line]) AND line.product.no[.line] <> -1  THEN
+      .c[1] = ifp.bag.x.shift[.line]
+      .c[2] = ifp.bag.y.shift[.line]
+      .c[3] = ifp.bag.z.shift[.line]
+      ;
+      POINT .temp = TRANS (.c[1], .c[2], .c[3], .c[4], 0, 0, 0)
+      IF .line == 1 THEN
+        IF DISTANCE (.temp, l1.bag.shift[.product, .layer, .bag]) > 0 THEN
+          POINT l1.bag.shift[.product, .layer, .bag] = TRANS (.c[1], .c[2], .c[3], .c[4], 0, 0, 0)
+        END
+      ELSE
+        IF DISTANCE (.temp, l2.bag.shift[.product, .layer, .bag]) > 0 THEN
+          POINT l2.bag.shift[.product, .layer, .bag] = TRANS (.c[1], .c[2], .c[3], .c[4], 0, 0, 0)
+        END
+      END
+      CALL log.pc1 ("Loaded bag correction for product: " + .$prod + " line: " + .$line + " layer: " + .$layer + " bag: " + .$bag)
+    END
+    ;
+  END
   ;
 .END
 .PROGRAM product.demo ()
@@ -976,6 +1165,98 @@ N_INT312    "x.pallet.free[2]"
   ; Default layout
   ;
   max.layers = 9
+  ;
+  layer.bags[1] = 5
+  POINT pb[1, 1] = TRANS (0.5 * .w, 0.5 * .l, .h, 0)
+  POINT pb[1, 2] = TRANS (0.5 * .w, 1.5 * .l + .g3, .h, 0)
+  POINT pb[1, 3] = TRANS (.w + 0.5 * .l + .g1, 0.5 * .w, .h, 90)
+  POINT pb[1, 4] = TRANS (.w + 0.5 * .l + .g1, 1.5 * .w + .g2, .h, 90)
+  POINT pb[1, 5] = TRANS (.w + 0.5 * .l + .g1, 2.5 * .w + 2 * .g2, .h, 90)
+  ;
+  layer.bags[2] = 5
+  POINT pb[2, 1] = TRANS (0.5 * .l, 0.5 * .w, 2 * .h, 90)
+  POINT pb[2, 2] = TRANS (0.5 * .l, 1.5 * .w + .g1, 2 * .h, 90)
+  POINT pb[2, 3] = TRANS (0.5 * .l, 2.5 * .w + 2 * .g1, 2 * .h, 90)
+  POINT pb[2, 4] = TRANS (.l + 0.5 * .w + .g1, 0.5 * .l, 2 * .h, 0)
+  POINT pb[2, 5] = TRANS (.l + 0.5 * .w + .g1, 1.5 * .l + .g3, 2 * .h, 0)
+  ;
+  layer.bags[3] = 5
+  POINT pb[3, 1] = TRANS (0.5 * .w, 0.5 * .l, 3 * .h, 0)
+  POINT pb[3, 2] = TRANS (0.5 * .w, 1.5 * .l + .g3, 3 * .h, 0)
+  POINT pb[3, 3] = TRANS (.w + 0.5 * .l + .g1, 0.5 * .w, 3 * .h, 90)
+  POINT pb[3, 4] = TRANS (.w + 0.5 * .l + .g1, 1.5 * .w + .g2, 3 * .h, 90)
+  POINT pb[3, 5] = TRANS (.w + 0.5 * .l + .g1, 2.5 * .w + 2 * .g2, 3 * .h, 90)
+  ;
+  layer.bags[4] = 5
+  POINT pb[4, 1] = TRANS (0.5 * .l, 0.5 * .w, 4 * .h, 90)
+  POINT pb[4, 2] = TRANS (0.5 * .l, 1.5 * .w + .g1, 4 * .h, 90)
+  POINT pb[4, 3] = TRANS (0.5 * .l, 2.5 * .w + 2 * .g1, 4 * .h, 90)
+  POINT pb[4, 4] = TRANS (.l + 0.5 * .w + .g1, 0.5 * .l, 4 * .h, 0)
+  POINT pb[4, 5] = TRANS (.l + 0.5 * .w + .g1, 1.5 * .l + .g3, 4 * .h, 0)
+  ;
+  layer.bags[5] = 5
+  POINT pb[5, 1] = TRANS (0.5 * .w, 0.5 * .l, 5 * .h, 0)
+  POINT pb[5, 2] = TRANS (0.5 * .w, 1.5 * .l + .g3, 5 * .h, 0)
+  POINT pb[5, 3] = TRANS (.w + 0.5 * .l + .g1, 0.5 * .w, 5 * .h, 90)
+  POINT pb[5, 4] = TRANS (.w + 0.5 * .l + .g1, 1.5 * .w + .g2, 5 * .h, 90)
+  POINT pb[5, 5] = TRANS (.w + 0.5 * .l + .g1, 2.5 * .w + 2 * .g2, 5 * .h, 90)
+  ;
+  layer.bags[6] = 5
+  POINT pb[6, 1] = TRANS (0.5 * .l, 0.5 * .w, 6 * .h, 90)
+  POINT pb[6, 2] = TRANS (0.5 * .l, 1.5 * .w + .g1, 6 * .h, 90)
+  POINT pb[6, 3] = TRANS (0.5 * .l, 2.5 * .w + 2 * .g1, 6 * .h, 90)
+  POINT pb[6, 4] = TRANS (.l + 0.5 * .w + .g1, 0.5 * .l, 6 * .h, 0)
+  POINT pb[6, 5] = TRANS (.l + 0.5 * .w + .g1, 1.5 * .l + .g3, 6 * .h, 0)
+  ;
+  layer.bags[7] = 5
+  POINT pb[7, 1] = TRANS (0.5 * .w, 0.5 * .l, 7 * .h, 0)
+  POINT pb[7, 2] = TRANS (0.5 * .w, 1.5 * .l + .g3, 7 * .h, 0)
+  POINT pb[7, 3] = TRANS (.w + 0.5 * .l + .g1, 0.5 * .w, 7 * .h, 90)
+  POINT pb[7, 4] = TRANS (.w + 0.5 * .l + .g1, 1.5 * .w + .g2, 7 * .h, 90)
+  POINT pb[7, 5] = TRANS (.w + 0.5 * .l + .g1, 2.5 * .w + 2 * .g2, 7 * .h, 90)
+  ;
+  layer.bags[8] = 5
+  POINT pb[8, 1] = TRANS (0.5 * .l, 0.5 * .w, 8 * .h, 90)
+  POINT pb[8, 2] = TRANS (0.5 * .l, 1.5 * .w + .g1, 8 * .h, 90)
+  POINT pb[8, 3] = TRANS (0.5 * .l, 2.5 * .w + 2 * .g1, 8 * .h, 90)
+  POINT pb[8, 4] = TRANS (.l + 0.5 * .w + .g1, 0.5 * .l, 8 * .h, 0)
+  POINT pb[8, 5] = TRANS (.l + 0.5 * .w + .g1, 1.5 * .l + .g3, 8 * .h, 0)
+  ;
+  layer.bags[9] = 5
+  POINT pb[9, 1] = TRANS (0.5 * .w, 0.5 * .l, 9 * .h, 0)
+  POINT pb[9, 2] = TRANS (0.5 * .w, 1.5 * .l + .g3, 9 * .h, 0)
+  POINT pb[9, 3] = TRANS (.w + 0.5 * .l + .g1, 0.5 * .w, 9 * .h, 90)
+  POINT pb[9, 4] = TRANS (.w + 0.5 * .l + .g1, 1.5 * .w + .g2, 9 * .h, 90)
+  POINT pb[9, 5] = TRANS (.w + 0.5 * .l + .g1, 2.5 * .w + 2 * .g2, 9 * .h, 90)
+  ;
+.END
+.PROGRAM product11 ()
+  ;
+  $product.name = "Testing"
+  ;
+  bag.length = 620
+  bag.width = 420
+  bag.height = 120
+  ;
+  bag.weight = 30
+  ;
+  pallet.length = 1200
+  pallet.width = 1000
+  pallet.height = 150
+  ;
+  .l = bag.length
+  .w = bag.width
+  .h = bag.height
+  .g1 = 5
+  .g2 = 5
+  .g3 = 3 * .w - 2 * .l + 2 * .g2
+  ;
+  pallet.x.shift = (pallet.width - (.w + .l + .g1)) / 2
+  pallet.y.shift = (pallet.length - (2 * .l + .g2)) / 2
+  ;
+  ; Default layout
+  ;
+  max.layers = 3
   ;
   layer.bags[1] = 5
   POINT pb[1, 1] = TRANS (0.5 * .w, 0.5 * .l, .h, 0)
@@ -1883,13 +2164,19 @@ N_INT312    "x.pallet.free[2]"
 .END
 .PROGRAM put.pallet (.line.no)
   ;
+  .product = line.product.no[.line.no]
   .layer = cur.layer[.line.no]
   .bag = cur.bag[.line.no]
   .t.shift = pick.shift[.line.no] - w.bag.length[.line.no] / 2
   ;
+  .$prod = $ENCODE (/L, .product)
+  .$line = $ENCODE (/L, .line.no)
+  .$layer = $ENCODE (/L, .layer)
+  .$bag = $ENCODE (/L, .bag)
+  ;
   .$no = $ENCODE (/L, .line.no)
-  .$l = $ENCODE(/L, .layer)
-  .$b = $ENCODE(/L, .bag)
+  .$l = $ENCODE (/L, .layer)
+  .$b = $ENCODE (/L, .bag)
   .$temp = "Put bag from line: " + .$no + " to layer: " + .$l + " bag: " + .$b
   CALL log (.$temp)
   ;
@@ -1897,13 +2184,35 @@ N_INT312    "x.pallet.free[2]"
   ;
   POINT .pick = #pick[.line.no]
   POINT .put.base = #put[.line.no]
+  ;
+  ; Calculate shifts
+  .$var = "pallet.shift[" +.$prod + "," + .$line + "]"
+  IF NOT EXISTTRANS (.$var) THEN
+    POINT pallet.shift[.product, .line.no] = NULL
+  END
+  ;
+  POINT .put.base = .put.base + pallet.shift[.product, .line.no]
+  ;
+  IF .line.no == 1 THEN
+    .$var = "l1.bag.shift[" +.$prod + "," + .$layer + "," + .$bag + "]"
+    IF NOT EXISTTRANS (.$var) THEN
+      POINT l1.bag.shift[.product, .layer, .bag] = NULL
+    END
+    POINT .put.base = .put.base + l1.bag.shift[.product, .layer, .bag]
+  ELSE
+    .$var = "l2.bag.shift[" +.$prod + "," + .$layer + "," + .$bag + "]"
+    IF NOT EXISTTRANS (.$var) THEN
+      POINT l2.bag.shift[.product, .layer, .bag] = NULL
+    END
+    POINT .put.base = .put.base + l2.bag.shift[.product, .layer, .bag]
+  END
+  ;
   POINT .put = .put.base + put.base[.line.no, .layer, .bag]
   POINT .put = .put + TRANS (0, -.t.shift, 0)
   ;
   .pick.z = DZ (.pick) + pick.appro[.line.no]
   .put.z = DZ (.put) + put.appro[.line.no]
   .z.appro = MAXVAL (.put.z, .pick.z)
-  ;
   CALL log ("Calculated z.appro for put:" + $ENCODE (.z.appro))
   ;
   POINT .put.appro = .put
@@ -2105,8 +2414,20 @@ N_INT312    "x.pallet.free[2]"
   s.prime.teach = 2016
   s.prime.service = 2017
   ;
-  x.line.ready[1] = 2300
-  x.line.ready[2] = 2301
+  s.apply.pal.sht[1] = 2018
+  s.apply.pal.sht[2] = 2019
+  ;
+  s.apply.bag[1] = 2020
+  s.apply.bag[2] = 2021
+  ;
+  s.apply.layer[1] = 2022
+  s.apply.layer[2] = 2023
+  ;
+  ;s.apply.even[1] 
+  ;s.apply.even[2] 
+  ;
+  x.line.started[1] = 2300
+  x.line.started[2] = 2301
   ;
   x.pick.ready[1] = 2302
   x.pick.ready[2] = 2303
@@ -2124,6 +2445,9 @@ N_INT312    "x.pallet.free[2]"
   ;
   x.pallet.free[1] = 2311
   x.pallet.free[2] = 2312
+  ;
+  x.pg.selected[1] = 2313
+  x.pg.selected[2] = 2314
   ;
   z.line.blink[1] = 3065
   z.line.blink[2] = 3066
@@ -2201,6 +2525,13 @@ N_INT312    "x.pallet.free[2]"
   ;
   CALL ciner("drop.appro.def", drop.appro.def, 200)
   ;
+  CALL ciner("pick.x.shift[1]", pick.x.shift[1], 0)
+  CALL ciner("pick.x.shift[2]", pick.x.shift[2], 0)
+  CALL ciner("pick.y.shift[1]", pick.y.shift[1], 0)
+  CALL ciner("pick.y.shift[2]", pick.y.shift[2], 0)
+  CALL ciner("pick.z.shift[1]", pick.z.shift[1], 0)
+  CALL ciner("pick.z.shift[2]", pick.z.shift[2], 0)
+  ;
   ifp.prod.no[1] = -1
   ifp.prod.no[2] = -1
   ;
@@ -2210,22 +2541,38 @@ N_INT312    "x.pallet.free[2]"
   ; Last selected elements for correction tool
   ifp.last.prod[1] = -1
   ifp.last.prod[2] = -1
+  ;
+  ifp.curr.layer[1] = 1
+  ifp.curr.layer[2] = 1
   ifp.last.layer[1] = -1
   ifp.last.layer[2] = -1
-  ifp.last.bag[1] = -1
-  ifp.last.bag[2] = -1
   ;
+  ifp.curr.bag[1] = 1
+  ifp.curr.bag[2] = 1
+  ifp.last.bag[1] = -1
+  ifp.last.bag[2] = -1 
   ;
   ; Corrections on interface panel
   ifp.pal.x.shift[1] = 0
-  ifp.pal.y.shift[1] = 0
-  ifp.pal.z.shift[1] = 0
-  ifp.pal.a.shift[1] = 0
-  ;
   ifp.pal.x.shift[2] = 0
+  ifp.pal.y.shift[1] = 0
   ifp.pal.y.shift[2] = 0
+  ifp.pal.z.shift[1] = 0
   ifp.pal.z.shift[2] = 0
+  ifp.pal.a.shift[1] = 0
   ifp.pal.a.shift[2] = 0
+  ;
+  ifp.bag.x.shift[1] = 0
+  ifp.bag.x.shift[2] = 0
+  ifp.bag.y.shift[1] = 0
+  ifp.bag.y.shift[2] = 0
+  ifp.bag.z.shift[1] = 0
+  ifp.bag.z.shift[2] = 0
+  ;
+  ;ifp.l1.x.shift
+  ;ifp.locv.cur.y = 0
+  ;ifp.locv.cur.z = 0
+  ;ifp.locv.cur.a = 0
   ;
   ;
 .END
@@ -2271,8 +2618,8 @@ N_INT312    "x.pallet.free[2]"
   ;BREAK
   ;
   ; Close gripper
-  SWAIT i.plt.l.closed, i.plt.r.closed
-  SWAIT i.fin.l.closed, i.fin.r.closed
+  SWAIT x.plt.l.closed, x.plt.r.closed
+  SWAIT x.fin.l.closed, x.fin.r.closed
   ;
   ; Depart
   LMOVE .pick.depart
@@ -2375,13 +2722,16 @@ N_INT312    "x.pallet.free[2]"
 	; PalletWizardEco
 	; @@@ HISTORY @@@
 	; @@@ INSPECTION @@@
-	; z.reset.tmr[1]
 	; x.pallet.full[1]
-	; x.move.to.home
+	; x.btn.stop[1]
+	; x.line.safe[1]
+	; x.btn.start[1]
 	; x.line.ready[1]
-	; x.line.ready[2]
-	; do.home
-	; x.pallet.full[2]
+	; line.product.no[1]
+	; x.pg.selected[1]
+	; pallet.shift[1,2]
+	; pallet.shift[1,1]
+	; line.product.no[2]
 	; @@@ CONNECTION @@@
 	; KROSET R01
 	; 127.0.0.1
@@ -2430,8 +2780,6 @@ N_INT312    "x.pallet.free[2]"
 	;       .g1 
 	;       .g2 
 	;       .g3 
-	;       .d1 
-	;       .d2 
 	;     2:product2:F
 	;       .l 
 	;       .w 
@@ -2506,6 +2854,13 @@ N_INT312    "x.pallet.free[2]"
 	;       .d1 
 	;       .g2 
 	;       .d2 
+	;     2:product11:F
+	;       .l 
+	;       .w 
+	;       .h 
+	;       .g1 
+	;       .g2 
+	;       .g3 
 	;   Group:Motion:3
 	;     3:pick:F
 	;       .line.no 
@@ -2560,6 +2915,9 @@ N_INT312    "x.pallet.free[2]"
 	;       .line.no 
 	;     5:a.teach:F
 	;     5:a.service:F
+	;       .service 
+	;       .service.appro 
+	;       .line.no 
 	;   Group:Log:6
 	;     6:log:F
 	;       .$msg 
@@ -2576,6 +2934,7 @@ N_INT312    "x.pallet.free[2]"
 	;     6:log.clear:F
 	;       .i 
 	;   0:a.main:F
+	;     .i 
 	;   0:pg0:F
 	;   Group:Product:7
 	;     7:load.products:B
@@ -2616,8 +2975,14 @@ N_INT312    "x.pallet.free[2]"
 	;       .$text 
 	;   Group:Background:8
 	;     8:ifp.pc:B
-	;       .i 
-	;     8:limits.pc:B
+	;       .line 
+	;       .$prod 
+	;       .$line 
+	;       .$var 
+	;       .c 
+	;       .temp 
+	;       .$l 
+	;     8:proc.correct.pc:B
 	;   Group:Initialization:9
 	;     9:initialize.pc:B
 	;     9:set.io.pc:B
@@ -2632,7 +2997,6 @@ N_INT312    "x.pallet.free[2]"
 	;     9:set.vars.pc:B
 	;   0:autostart.pc:B
 	;   0:numpg:N
-	;     .sign 
 	; @@@ TRANS @@@
 	; bp[] 
 	; pb[] 
@@ -2685,6 +3049,18 @@ N_INT312    "x.pallet.free[2]"
 	; drop.appro.def 
 	; w.pallet.x.shif[] 
 	; w.pallet.y.shif[] 
+	; ifp.last.bag[] 
+	; ifp.last.layer[] 
+	; ifp.last.prod[] 
+	; ifp.pal.a.shift[] 
+	; ifp.pal.y.shift[] 
+	; ifp.pal.x.shift[] 
+	; x.line.ready[] 
+	; x.pal.free[] 
+	; x.start[] 
+	; ifp.pal.z.shift[] 
+	; x 
+	; xxx 
 	; @@@ STRINGS @@@
 	; @@@ INTEGER @@@
 	; @@@ SIGNALS @@@
@@ -2740,7 +3116,7 @@ N_INT312    "x.pallet.free[2]"
 	; s.prime.home 
 	; s.plt.r.opened 
 	; s.fin.r.opened 
-	; x.line.ready[] 
+	; x.line.started[] 
 	; z.line.blink[] 
 	; s.prime.teach 
 	; x.air.on 
@@ -2767,6 +3143,10 @@ N_INT312    "x.pallet.free[2]"
 	; x.move.to.home 
 	; x.pallet.free[] 
 	; di.reset.main 
+	; x.pg.selected[] 
+	; s.apply.pal.sht[] 
+	; s.apply.bag[] 
+	; s.apply.layer[] 
 	; @@@ TOOLS @@@
 	; @@@ BASE @@@
 	; @@@ FRAME @@@
@@ -2782,184 +3162,249 @@ N_INT312    "x.pallet.free[2]"
 bp[9,5] 785.000000 1237.500000 990.000000 0.000000 0.000000 0.000000
 bp[9,4] 785.000000 742.500000 990.000000 0.000000 0.000000 0.000000
 bp[9,3] 785.000000 247.500000 990.000000 0.000000 0.000000 0.000000
-bp[9,2] 247.500000 870.000000 990.000000 90.000008 0.000000 0.000000
-bp[9,1] 247.500000 290.000000 990.000000 90.000008 0.000000 0.000000
-bp[8,5] 827.500000 870.000000 880.000000 90.000008 0.000000 0.000000
-bp[8,4] 827.500000 290.000000 880.000000 90.000008 0.000000 0.000000
+bp[9,2] 247.500000 870.000000 990.000000 90.000031 0.000000 0.000000
+bp[9,1] 247.500000 290.000000 990.000000 90.000031 0.000000 0.000000
+bp[8,5] 827.500000 870.000000 880.000000 90.000031 0.000000 0.000000
+bp[8,4] 827.500000 290.000000 880.000000 90.000031 0.000000 0.000000
 bp[8,3] 290.000000 1237.500000 880.000000 0.000000 0.000000 0.000000
 bp[8,2] 290.000000 742.500000 880.000000 0.000000 0.000000 0.000000
 bp[8,1] 290.000000 247.500000 880.000000 0.000000 0.000000 0.000000
 bp[7,5] 785.000000 1237.500000 770.000000 0.000000 0.000000 0.000000
 bp[7,4] 785.000000 742.500000 770.000000 0.000000 0.000000 0.000000
 bp[7,3] 785.000000 247.500000 770.000000 0.000000 0.000000 0.000000
-bp[7,2] 247.500000 870.000000 770.000000 90.000008 0.000000 0.000000
-bp[7,1] 247.500000 290.000000 770.000000 90.000008 0.000000 0.000000
-bp[6,5] 827.500000 870.000000 660.000000 90.000008 0.000000 0.000000
-bp[6,4] 827.500000 290.000000 660.000000 90.000008 0.000000 0.000000
+bp[7,2] 247.500000 870.000000 770.000000 90.000031 0.000000 0.000000
+bp[7,1] 247.500000 290.000000 770.000000 90.000031 0.000000 0.000000
+bp[6,5] 827.500000 870.000000 660.000000 90.000031 0.000000 0.000000
+bp[6,4] 827.500000 290.000000 660.000000 90.000031 0.000000 0.000000
 bp[6,3] 290.000000 1237.500000 660.000000 0.000000 0.000000 0.000000
 bp[6,2] 290.000000 742.500000 660.000000 0.000000 0.000000 0.000000
 bp[6,1] 290.000000 247.500000 660.000000 0.000000 0.000000 0.000000
 bp[5,5] 785.000000 1237.500000 550.000000 0.000000 0.000000 0.000000
 bp[5,4] 785.000000 742.500000 550.000000 0.000000 0.000000 0.000000
 bp[5,3] 785.000000 247.500000 550.000000 0.000000 0.000000 0.000000
-bp[5,2] 247.500000 870.000000 550.000000 90.000008 0.000000 0.000000
-bp[5,1] 247.500000 290.000000 550.000000 90.000008 0.000000 0.000000
-bp[4,5] 827.500000 870.000000 440.000000 90.000008 0.000000 0.000000
-bp[4,4] 827.500000 290.000000 440.000000 90.000008 0.000000 0.000000
+bp[5,2] 247.500000 870.000000 550.000000 90.000031 0.000000 0.000000
+bp[5,1] 247.500000 290.000000 550.000000 90.000031 0.000000 0.000000
+bp[4,5] 827.500000 870.000000 440.000000 90.000031 0.000000 0.000000
+bp[4,4] 827.500000 290.000000 440.000000 90.000031 0.000000 0.000000
 bp[4,3] 290.000000 1237.500000 440.000000 0.000000 0.000000 0.000000
 bp[4,2] 290.000000 742.500000 440.000000 0.000000 0.000000 0.000000
 bp[4,1] 290.000000 247.500000 440.000000 0.000000 0.000000 0.000000
 bp[3,5] 785.000000 1237.500000 330.000000 0.000000 0.000000 0.000000
 bp[3,4] 785.000000 742.500000 330.000000 0.000000 0.000000 0.000000
 bp[3,3] 785.000000 247.500000 330.000000 0.000000 0.000000 0.000000
-bp[3,2] 247.500000 870.000000 330.000000 90.000008 0.000000 0.000000
-bp[3,1] 247.500000 290.000000 330.000000 90.000008 0.000000 0.000000
-bp[2,5] 827.500000 870.000000 220.000000 90.000008 0.000000 0.000000
-bp[2,4] 827.500000 290.000000 220.000000 90.000008 0.000000 0.000000
+bp[3,2] 247.500000 870.000000 330.000000 90.000031 0.000000 0.000000
+bp[3,1] 247.500000 290.000000 330.000000 90.000031 0.000000 0.000000
+bp[2,5] 827.500000 870.000000 220.000000 90.000031 0.000000 0.000000
+bp[2,4] 827.500000 290.000000 220.000000 90.000031 0.000000 0.000000
 bp[2,3] 290.000000 1237.500000 220.000000 0.000000 0.000000 0.000000
 bp[2,2] 290.000000 742.500000 220.000000 0.000000 0.000000 0.000000
 bp[2,1] 290.000000 247.500000 220.000000 0.000000 0.000000 0.000000
 bp[1,5] 785.000000 1237.500000 110.000000 0.000000 0.000000 0.000000
 bp[1,4] 785.000000 742.500000 110.000000 0.000000 0.000000 0.000000
 bp[1,3] 785.000000 247.500000 110.000000 0.000000 0.000000 0.000000
-bp[1,2] 247.500000 870.000000 110.000000 90.000008 0.000000 0.000000
-bp[1,1] 247.500000 290.000000 110.000000 90.000008 0.000000 0.000000
-pb[1,1] 247.500000 290.000000 110.000000 0.000000 0.000000 0.000000
-pb[1,2] 247.500000 870.000000 110.000000 0.000000 0.000000 0.000000
-pb[1,3] 785.000000 247.500000 110.000000 90.000008 0.000000 0.000000
-pb[1,4] 785.000000 742.500000 110.000000 90.000008 0.000000 0.000000
-pb[1,5] 785.000000 1237.500000 110.000000 90.000008 0.000000 0.000000
-pb[2,1] 290.000000 247.500000 220.000000 90.000008 0.000000 0.000000
-pb[2,2] 290.000000 742.500000 220.000000 90.000008 0.000000 0.000000
-pb[2,3] 290.000000 1237.500000 220.000000 90.000008 0.000000 0.000000
-pb[2,4] 827.500000 290.000000 220.000000 0.000000 0.000000 0.000000
-pb[2,5] 827.500000 870.000000 220.000000 0.000000 0.000000 0.000000
-pb[3,1] 247.500000 290.000000 330.000000 0.000000 0.000000 0.000000
-pb[3,2] 247.500000 870.000000 330.000000 0.000000 0.000000 0.000000
-pb[3,3] 785.000000 247.500000 330.000000 90.000008 0.000000 0.000000
-pb[3,4] 785.000000 742.500000 330.000000 90.000008 0.000000 0.000000
-pb[3,5] 785.000000 1237.500000 330.000000 90.000008 0.000000 0.000000
-pb[4,1] 290.000000 247.500000 440.000000 90.000008 0.000000 0.000000
-pb[4,2] 290.000000 742.500000 440.000000 90.000008 0.000000 0.000000
-pb[4,3] 290.000000 1237.500000 440.000000 90.000008 0.000000 0.000000
-pb[4,4] 827.500000 290.000000 440.000000 0.000000 0.000000 0.000000
-pb[4,5] 827.500000 870.000000 440.000000 0.000000 0.000000 0.000000
-pb[5,1] 247.500000 290.000000 550.000000 0.000000 0.000000 0.000000
-pb[5,2] 247.500000 870.000000 550.000000 0.000000 0.000000 0.000000
-pb[5,3] 785.000000 247.500000 550.000000 90.000008 0.000000 0.000000
-pb[5,4] 785.000000 742.500000 550.000000 90.000008 0.000000 0.000000
-pb[5,5] 785.000000 1237.500000 550.000000 90.000008 0.000000 0.000000
-pb[6,1] 290.000000 247.500000 660.000000 90.000008 0.000000 0.000000
-pb[6,2] 290.000000 742.500000 660.000000 90.000008 0.000000 0.000000
-pb[6,3] 290.000000 1237.500000 660.000000 90.000008 0.000000 0.000000
-pb[6,4] 827.500000 290.000000 660.000000 0.000000 0.000000 0.000000
-pb[6,5] 827.500000 870.000000 660.000000 0.000000 0.000000 0.000000
-pb[7,1] 247.500000 290.000000 770.000000 0.000000 0.000000 0.000000
-pb[7,2] 247.500000 870.000000 770.000000 0.000000 0.000000 0.000000
-pb[7,3] 785.000000 247.500000 770.000000 90.000008 0.000000 0.000000
-pb[7,4] 785.000000 742.500000 770.000000 90.000008 0.000000 0.000000
-pb[7,5] 785.000000 1237.500000 770.000000 90.000008 0.000000 0.000000
-pb[8,1] 290.000000 247.500000 880.000000 90.000008 0.000000 0.000000
-pb[8,2] 290.000000 742.500000 880.000000 90.000008 0.000000 0.000000
-pb[8,3] 290.000000 1237.500000 880.000000 90.000008 0.000000 0.000000
-pb[8,4] 827.500000 290.000000 880.000000 0.000000 0.000000 0.000000
-pb[8,5] 827.500000 870.000000 880.000000 0.000000 0.000000 0.000000
-pb[9,1] 247.500000 290.000000 990.000000 0.000000 0.000000 0.000000
-pb[9,2] 247.500000 870.000000 990.000000 0.000000 0.000000 0.000000
-pb[9,3] 785.000000 247.500000 990.000000 90.000008 0.000000 0.000000
-pb[9,4] 785.000000 742.500000 990.000000 90.000008 0.000000 0.000000
-pb[9,5] 785.000000 1237.500000 990.000000 90.000008 0.000000 0.000000
-put.base[1,1,1] 247.500000 290.000000 110.000000 0.000000 0.000000 0.000000
-put.base[1,1,2] 247.500000 870.000000 110.000000 0.000000 0.000000 0.000000
-put.base[1,1,3] 785.000000 247.500000 110.000000 90.000008 0.000000 0.000000
-put.base[1,1,4] 785.000000 742.500000 110.000000 90.000008 0.000000 0.000000
-put.base[1,1,5] 785.000000 1237.500000 110.000000 90.000008 0.000000 0.000000
-put.base[1,2,1] 290.000000 247.500000 220.000000 90.000008 0.000000 0.000000
-put.base[1,2,2] 290.000000 742.500000 220.000000 90.000008 0.000000 0.000000
-put.base[1,2,3] 290.000000 1237.500000 220.000000 90.000008 0.000000 0.000000
-put.base[1,2,4] 827.500000 290.000000 220.000000 0.000000 0.000000 0.000000
-put.base[1,2,5] 827.500000 870.000000 220.000000 0.000000 0.000000 0.000000
-put.base[1,3,1] 247.500000 290.000000 330.000000 0.000000 0.000000 0.000000
-put.base[1,3,2] 247.500000 870.000000 330.000000 0.000000 0.000000 0.000000
-put.base[1,3,3] 785.000000 247.500000 330.000000 90.000008 0.000000 0.000000
-put.base[1,3,4] 785.000000 742.500000 330.000000 90.000008 0.000000 0.000000
-put.base[1,3,5] 785.000000 1237.500000 330.000000 90.000008 0.000000 0.000000
-put.base[1,4,1] 290.000000 247.500000 440.000000 90.000008 0.000000 0.000000
-put.base[1,4,2] 290.000000 742.500000 440.000000 90.000008 0.000000 0.000000
-put.base[1,4,3] 290.000000 1237.500000 440.000000 90.000008 0.000000 0.000000
-put.base[1,4,4] 827.500000 290.000000 440.000000 0.000000 0.000000 0.000000
-put.base[1,4,5] 827.500000 870.000000 440.000000 0.000000 0.000000 0.000000
-put.base[1,5,1] 247.500000 290.000000 550.000000 0.000000 0.000000 0.000000
-put.base[1,5,2] 247.500000 870.000000 550.000000 0.000000 0.000000 0.000000
-put.base[1,5,3] 785.000000 247.500000 550.000000 90.000008 0.000000 0.000000
-put.base[1,5,4] 785.000000 742.500000 550.000000 90.000008 0.000000 0.000000
-put.base[1,5,5] 785.000000 1237.500000 550.000000 90.000008 0.000000 0.000000
-put.base[1,6,1] 290.000000 247.500000 660.000000 90.000008 0.000000 0.000000
-put.base[1,6,2] 290.000000 742.500000 660.000000 90.000008 0.000000 0.000000
-put.base[1,6,3] 290.000000 1237.500000 660.000000 90.000008 0.000000 0.000000
-put.base[1,6,4] 827.500000 290.000000 660.000000 0.000000 0.000000 0.000000
-put.base[1,6,5] 827.500000 870.000000 660.000000 0.000000 0.000000 0.000000
-put.base[1,7,1] 247.500000 290.000000 770.000000 0.000000 0.000000 0.000000
-put.base[1,7,2] 247.500000 870.000000 770.000000 0.000000 0.000000 0.000000
-put.base[1,7,3] 785.000000 247.500000 770.000000 90.000008 0.000000 0.000000
-put.base[1,7,4] 785.000000 742.500000 770.000000 90.000008 0.000000 0.000000
-put.base[1,7,5] 785.000000 1237.500000 770.000000 90.000008 0.000000 0.000000
-put.base[1,8,1] 290.000000 247.500000 880.000000 90.000008 0.000000 0.000000
-put.base[1,8,2] 290.000000 742.500000 880.000000 90.000008 0.000000 0.000000
-put.base[1,8,3] 290.000000 1237.500000 880.000000 90.000008 0.000000 0.000000
-put.base[1,8,4] 827.500000 290.000000 880.000000 0.000000 0.000000 0.000000
-put.base[1,8,5] 827.500000 870.000000 880.000000 0.000000 0.000000 0.000000
-put.base[1,9,1] 247.500000 290.000000 990.000000 0.000000 0.000000 0.000000
-put.base[1,9,2] 247.500000 870.000000 990.000000 0.000000 0.000000 0.000000
-put.base[1,9,3] 785.000000 247.500000 990.000000 90.000008 0.000000 0.000000
-put.base[1,9,4] 785.000000 742.500000 990.000000 90.000008 0.000000 0.000000
-put.base[1,9,5] 785.000000 1237.500000 990.000000 90.000008 0.000000 0.000000
+bp[1,2] 247.500000 870.000000 110.000000 90.000031 0.000000 0.000000
+bp[1,1] 247.500000 290.000000 110.000000 90.000031 0.000000 0.000000
+pb[1,1] 210.000000 310.000000 120.000000 0.000000 0.000000 0.000000
+pb[1,2] 210.000000 960.000000 120.000000 0.000000 0.000000 0.000000
+pb[1,3] 735.000000 210.000000 120.000000 90.000008 0.000000 0.000000
+pb[1,4] 735.000000 635.000000 120.000000 90.000008 0.000000 0.000000
+pb[1,5] 735.000000 1060.000000 120.000000 90.000008 0.000000 0.000000
+pb[2,1] 310.000000 210.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,2] 310.000000 635.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,3] 310.000000 1060.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,4] 835.000000 310.000000 240.000000 0.000000 0.000000 0.000000
+pb[2,5] 835.000000 960.000000 240.000000 0.000000 0.000000 0.000000
+pb[3,1] 210.000000 310.000000 360.000000 0.000000 0.000000 0.000000
+pb[3,2] 210.000000 960.000000 360.000000 0.000000 0.000000 0.000000
+pb[3,3] 735.000000 210.000000 360.000000 90.000008 0.000000 0.000000
+pb[3,4] 735.000000 635.000000 360.000000 90.000008 0.000000 0.000000
+pb[3,5] 735.000000 1060.000000 360.000000 90.000008 0.000000 0.000000
+pb[4,1] 310.000000 210.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,2] 310.000000 635.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,3] 310.000000 1060.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,4] 835.000000 310.000000 480.000000 0.000000 0.000000 0.000000
+pb[4,5] 835.000000 960.000000 480.000000 0.000000 0.000000 0.000000
+pb[5,1] 210.000000 310.000000 600.000000 0.000000 0.000000 0.000000
+pb[5,2] 210.000000 960.000000 600.000000 0.000000 0.000000 0.000000
+pb[5,3] 735.000000 210.000000 600.000000 90.000008 0.000000 0.000000
+pb[5,4] 735.000000 635.000000 600.000000 90.000008 0.000000 0.000000
+pb[5,5] 735.000000 1060.000000 600.000000 90.000008 0.000000 0.000000
+pb[6,1] 310.000000 210.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,2] 310.000000 635.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,3] 310.000000 1060.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,4] 835.000000 310.000000 720.000000 0.000000 0.000000 0.000000
+pb[6,5] 835.000000 960.000000 720.000000 0.000000 0.000000 0.000000
+pb[7,1] 210.000000 310.000000 840.000000 0.000000 0.000000 0.000000
+pb[7,2] 210.000000 960.000000 840.000000 0.000000 0.000000 0.000000
+pb[7,3] 735.000000 210.000000 840.000000 90.000008 0.000000 0.000000
+pb[7,4] 735.000000 635.000000 840.000000 90.000008 0.000000 0.000000
+pb[7,5] 735.000000 1060.000000 840.000000 90.000008 0.000000 0.000000
+pb[8,1] 310.000000 210.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,2] 310.000000 635.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,3] 310.000000 1060.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,4] 835.000000 310.000000 960.000000 0.000000 0.000000 0.000000
+pb[8,5] 835.000000 960.000000 960.000000 0.000000 0.000000 0.000000
+pb[9,1] 210.000000 310.000000 1080.000000 0.000000 0.000000 0.000000
+pb[9,2] 210.000000 960.000000 1080.000000 0.000000 0.000000 0.000000
+pb[9,3] 735.000000 210.000000 1080.000000 90.000008 0.000000 0.000000
+pb[9,4] 735.000000 635.000000 1080.000000 90.000008 0.000000 0.000000
+pb[9,5] 735.000000 1060.000000 1080.000000 90.000008 0.000000 0.000000
+put.base[1,1,1] 210.000000 310.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,2] 210.000000 960.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,3] 735.000000 210.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,1,4] 735.000000 635.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,1,5] 735.000000 1060.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,2,1] 310.000000 210.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,2] 310.000000 635.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,3] 310.000000 1060.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,4] 835.000000 310.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[1,2,5] 835.000000 960.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[1,3,1] 210.000000 310.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,2] 210.000000 960.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,3] 735.000000 210.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,3,4] 735.000000 635.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,3,5] 735.000000 1060.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,4,1] 287.500000 187.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,2] 287.500000 612.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,3] 287.500000 1037.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,4] 812.500000 287.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[1,4,5] 812.500000 937.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[1,5,1] 187.500000 287.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,2] 187.500000 937.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,3] 712.500000 187.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,5,4] 712.500000 612.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,5,5] 712.500000 1037.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,6,1] 287.500000 187.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,2] 287.500000 612.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,3] 287.500000 1037.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,4] 812.500000 287.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[1,6,5] 812.500000 937.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[1,7,1] 187.500000 287.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,2] 187.500000 937.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,3] 712.500000 187.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,7,4] 712.500000 612.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,7,5] 712.500000 1037.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,8,1] 287.500000 187.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,2] 287.500000 612.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,3] 287.500000 1037.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,4] 812.500000 287.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[1,8,5] 812.500000 937.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[1,9,1] 187.500000 287.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[1,9,2] 187.500000 937.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[1,9,3] 712.500000 187.500000 -1080.000000 90.000023 0.000000 0.000000
+put.base[1,9,4] 712.500000 612.500000 -1080.000000 90.000023 0.000000 0.000000
+put.base[1,9,5] 712.500000 1037.500000 -1080.000000 90.000023 0.000000 0.000000
 tool.gripper 0.000000 0.000000 350.000000 0.000000 0.000000 0.000000
-put.base[2,1,1] 247.500000 290.000000 110.000000 0.000000 0.000000 0.000000
-put.base[2,1,2] 247.500000 870.000000 110.000000 0.000000 0.000000 0.000000
-put.base[2,1,3] 785.000000 247.500000 110.000000 90.000008 0.000000 0.000000
-put.base[2,1,4] 785.000000 742.500000 110.000000 90.000008 0.000000 0.000000
-put.base[2,1,5] 785.000000 1237.500000 110.000000 90.000008 0.000000 0.000000
-put.base[2,2,1] 290.000000 247.500000 220.000000 90.000008 0.000000 0.000000
-put.base[2,2,2] 290.000000 742.500000 220.000000 90.000008 0.000000 0.000000
-put.base[2,2,3] 290.000000 1237.500000 220.000000 90.000008 0.000000 0.000000
-put.base[2,2,4] 827.500000 290.000000 220.000000 0.000000 0.000000 0.000000
-put.base[2,2,5] 827.500000 870.000000 220.000000 0.000000 0.000000 0.000000
-put.base[2,3,1] 247.500000 290.000000 330.000000 0.000000 0.000000 0.000000
-put.base[2,3,2] 247.500000 870.000000 330.000000 0.000000 0.000000 0.000000
-put.base[2,3,3] 785.000000 247.500000 330.000000 90.000008 0.000000 0.000000
-put.base[2,3,4] 785.000000 742.500000 330.000000 90.000008 0.000000 0.000000
-put.base[2,3,5] 785.000000 1237.500000 330.000000 90.000008 0.000000 0.000000
-put.base[2,4,1] 290.000000 247.500000 440.000000 90.000008 0.000000 0.000000
-put.base[2,4,2] 290.000000 742.500000 440.000000 90.000008 0.000000 0.000000
-put.base[2,4,3] 290.000000 1237.500000 440.000000 90.000008 0.000000 0.000000
-put.base[2,4,4] 827.500000 290.000000 440.000000 0.000000 0.000000 0.000000
-put.base[2,4,5] 827.500000 870.000000 440.000000 0.000000 0.000000 0.000000
-put.base[2,5,1] 247.500000 290.000000 550.000000 0.000000 0.000000 0.000000
-put.base[2,5,2] 247.500000 870.000000 550.000000 0.000000 0.000000 0.000000
-put.base[2,5,3] 785.000000 247.500000 550.000000 90.000008 0.000000 0.000000
-put.base[2,5,4] 785.000000 742.500000 550.000000 90.000008 0.000000 0.000000
-put.base[2,5,5] 785.000000 1237.500000 550.000000 90.000008 0.000000 0.000000
-put.base[2,6,1] 290.000000 247.500000 660.000000 90.000008 0.000000 0.000000
-put.base[2,6,2] 290.000000 742.500000 660.000000 90.000008 0.000000 0.000000
-put.base[2,6,3] 290.000000 1237.500000 660.000000 90.000008 0.000000 0.000000
-put.base[2,6,4] 827.500000 290.000000 660.000000 0.000000 0.000000 0.000000
-put.base[2,6,5] 827.500000 870.000000 660.000000 0.000000 0.000000 0.000000
-put.base[2,7,1] 247.500000 290.000000 770.000000 0.000000 0.000000 0.000000
-put.base[2,7,2] 247.500000 870.000000 770.000000 0.000000 0.000000 0.000000
-put.base[2,7,3] 785.000000 247.500000 770.000000 90.000008 0.000000 0.000000
-put.base[2,7,4] 785.000000 742.500000 770.000000 90.000008 0.000000 0.000000
-put.base[2,7,5] 785.000000 1237.500000 770.000000 90.000008 0.000000 0.000000
-put.base[2,8,1] 290.000000 247.500000 880.000000 90.000008 0.000000 0.000000
-put.base[2,8,2] 290.000000 742.500000 880.000000 90.000008 0.000000 0.000000
-put.base[2,8,3] 290.000000 1237.500000 880.000000 90.000008 0.000000 0.000000
-put.base[2,8,4] 827.500000 290.000000 880.000000 0.000000 0.000000 0.000000
-put.base[2,8,5] 827.500000 870.000000 880.000000 0.000000 0.000000 0.000000
-put.base[2,9,1] 247.500000 290.000000 990.000000 0.000000 0.000000 0.000000
-put.base[2,9,2] 247.500000 870.000000 990.000000 0.000000 0.000000 0.000000
-put.base[2,9,3] 785.000000 247.500000 990.000000 90.000008 0.000000 0.000000
-put.base[2,9,4] 785.000000 742.500000 990.000000 90.000008 0.000000 0.000000
-put.base[2,9,5] 785.000000 1237.500000 990.000000 90.000008 0.000000 0.000000
+put.base[2,1,1] 210.000000 310.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[2,1,2] 210.000000 960.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[2,1,3] 735.000000 210.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,1,4] 735.000000 635.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,1,5] 735.000000 1060.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,2,1] 310.000000 210.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,2] 310.000000 635.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,3] 310.000000 1060.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,4] 835.000000 310.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[2,2,5] 835.000000 960.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[2,3,1] 210.000000 310.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[2,3,2] 210.000000 960.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[2,3,3] 735.000000 210.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,3,4] 735.000000 635.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,3,5] 735.000000 1060.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,4,1] 287.500000 187.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,2] 287.500000 612.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,3] 287.500000 1037.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,4] 812.500000 287.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[2,4,5] 812.500000 937.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[2,5,1] 187.500000 287.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[2,5,2] 187.500000 937.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[2,5,3] 712.500000 187.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,5,4] 712.500000 612.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,5,5] 712.500000 1037.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,6,1] 287.500000 187.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,2] 287.500000 612.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,3] 287.500000 1037.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,4] 812.500000 287.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[2,6,5] 812.500000 937.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[2,7,1] 187.500000 287.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[2,7,2] 187.500000 937.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[2,7,3] 712.500000 187.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,7,4] 712.500000 612.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,7,5] 712.500000 1037.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,8,1] 287.500000 187.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,2] 287.500000 612.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,3] 287.500000 1037.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,4] 812.500000 287.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[2,8,5] 812.500000 937.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[2,9,1] 187.500000 287.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[2,9,2] 187.500000 937.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[2,9,3] 712.500000 187.500000 -1080.000000 90.000031 0.000000 0.000000
+put.base[2,9,4] 712.500000 612.500000 -1080.000000 90.000031 0.000000 0.000000
+put.base[2,9,5] 712.500000 1037.500000 -1080.000000 90.000031 0.000000 0.000000
+pb[1,6] 782.500000 1012.500000 120.000000 0.000000 0.000000 0.000000
+pb[1,7] 222.500000 617.500000 120.000000 90.000008 0.000000 0.000000
+pb[1,8] 712.500000 617.500000 120.000000 90.000008 0.000000 0.000000
+pb[2,6] 712.500000 462.500000 240.000000 90.000008 0.000000 0.000000
+pb[2,7] 712.500000 772.500000 240.000000 90.000008 0.000000 0.000000
+pb[2,8] 712.500000 1082.500000 240.000000 90.000008 0.000000 0.000000
+pb[3,6] 782.500000 1012.500000 360.000000 0.000000 0.000000 0.000000
+pb[3,7] 222.500000 617.500000 360.000000 90.000008 0.000000 0.000000
+pb[3,8] 712.500000 617.500000 360.000000 90.000008 0.000000 0.000000
+pb[4,6] 712.500000 462.500000 480.000000 90.000008 0.000000 0.000000
+pb[4,7] 712.500000 772.500000 480.000000 90.000008 0.000000 0.000000
+pb[4,8] 712.500000 1082.500000 480.000000 90.000008 0.000000 0.000000
+pb[5,6] 782.500000 1012.500000 600.000000 0.000000 0.000000 0.000000
+pb[5,7] 222.500000 617.500000 600.000000 90.000008 0.000000 0.000000
+pb[5,8] 712.500000 617.500000 600.000000 90.000008 0.000000 0.000000
+pb[6,6] 712.500000 462.500000 720.000000 90.000008 0.000000 0.000000
+pb[6,7] 712.500000 772.500000 720.000000 90.000008 0.000000 0.000000
+pb[6,8] 712.500000 1082.500000 720.000000 90.000008 0.000000 0.000000
+pb[7,6] 782.500000 1012.500000 840.000000 0.000000 0.000000 0.000000
+pb[7,7] 222.500000 617.500000 840.000000 90.000008 0.000000 0.000000
+pb[7,8] 712.500000 617.500000 840.000000 90.000008 0.000000 0.000000
+pb[8,6] 712.500000 462.500000 960.000000 90.000008 0.000000 0.000000
+pb[8,7] 712.500000 772.500000 960.000000 90.000008 0.000000 0.000000
+pb[8,8] 712.500000 1082.500000 960.000000 90.000008 0.000000 0.000000
+pb[10,1] 290.000000 190.000000 1200.000000 90.000008 0.000000 0.000000
+pb[10,2] 290.000000 590.000000 1200.000000 90.000008 0.000000 0.000000
+pb[10,3] 290.000000 990.000000 1200.000000 90.000008 0.000000 0.000000
+pb[10,4] 790.000000 290.000000 1200.000000 0.000000 0.000000 0.000000
+pb[10,5] 790.000000 890.000000 1200.000000 0.000000 0.000000 0.000000
+pb[11,1] 190.000000 290.000000 1320.000000 0.000000 0.000000 0.000000
+pb[11,2] 190.000000 890.000000 1320.000000 0.000000 0.000000 0.000000
+pb[11,3] 690.000000 190.000000 1320.000000 90.000008 0.000000 0.000000
+pb[11,4] 690.000000 590.000000 1320.000000 90.000008 0.000000 0.000000
+pb[11,5] 690.000000 990.000000 1320.000000 90.000008 0.000000 0.000000
+pb[12,1] 290.000000 190.000000 1440.000000 90.000008 0.000000 0.000000
+pb[12,2] 290.000000 590.000000 1440.000000 90.000008 0.000000 0.000000
+pb[12,3] 290.000000 990.000000 1440.000000 90.000008 0.000000 0.000000
+pb[12,4] 790.000000 290.000000 1440.000000 0.000000 0.000000 0.000000
+pb[12,5] 790.000000 890.000000 1440.000000 0.000000 0.000000 0.000000
+put.base[1,1,6] 840.000000 1017.500000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,7] 245.000000 600.000000 -120.000000 90.000031 0.000000 0.000000
+put.base[1,1,8] 755.000000 600.000000 -120.000000 90.000031 0.000000 0.000000
+put.base[1,2,6] 755.000000 432.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,2,7] 755.000000 767.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,2,8] 755.000000 1102.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,3,6] 840.000000 1017.500000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,7] 245.000000 600.000000 -360.000000 90.000031 0.000000 0.000000
+put.base[1,3,8] 755.000000 600.000000 -360.000000 90.000031 0.000000 0.000000
+put.base[1,4,6] 755.000000 432.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,4,7] 755.000000 767.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,4,8] 755.000000 1102.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,5,6] 840.000000 1017.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,7] 245.000000 600.000000 -600.000000 90.000031 0.000000 0.000000
+put.base[1,5,8] 755.000000 600.000000 -600.000000 90.000031 0.000000 0.000000
+put.base[1,6,6] 755.000000 432.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,6,7] 755.000000 767.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,6,8] 755.000000 1102.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,7,6] 840.000000 1017.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,7] 245.000000 600.000000 -840.000000 90.000031 0.000000 0.000000
+put.base[1,7,8] 755.000000 600.000000 -840.000000 90.000031 0.000000 0.000000
+put.base[1,10,1] 300.000000 200.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,2] 300.000000 600.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,3] 300.000000 1000.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,4] 800.000000 300.000000 -1200.000000 0.000000 0.000000 0.000000
+put.base[1,10,5] 800.000000 900.000000 -1200.000000 0.000000 0.000000 0.000000
 .END
 .JOINTS
 #pick[1] -34.336190 12.556730 -50.816590 32.933620 0.000000 0.000000
@@ -3028,9 +3473,9 @@ put.appro[2] = 400
 s.apply.product[1] = 2011
 s.apply.product[2] = 2012
 bag.height = 120
-bag.length = 580
-bag.weight = 25
-bag.width = 380
+bag.length = 620
+bag.weight = 30
+bag.width = 420
 cur.bag[1] = 1
 cur.layer[1] = 1
 ifp.last.page = 1
@@ -3044,12 +3489,12 @@ layer.bags[6] = 5
 layer.bags[7] = 5
 layer.bags[8] = 5
 layer.bags[9] = 5
-line.product.no[1] = -1
-max.layers = 9
+line.product.no[1] = 5
+max.layers = 3
 pallet.height = 150
 pallet.length = 1200
 pallet.width = 1000
-line.product.no[2] = -1
+line.product.no[2] = 1
 s.upd.prod.list = 2013
 color.pink = 8
 color.yellow = 6
@@ -3060,11 +3505,11 @@ pick.shift[2] = 342
 w.bag.height[1] = 120
 w.bag.height[2] = 120
 w.bag.length[1] = 500
-w.bag.length[2] = 500
+w.bag.length[2] = 620
 w.bag.weight[1] = 25
-w.bag.weight[2] = 25
+w.bag.weight[2] = 30
 w.bag.width[1] = 330
-w.bag.width[2] = 330
+w.bag.width[2] = 420
 w.layer.bags[1,1] = 8
 w.layer.bags[1,2] = 8
 w.layer.bags[1,3] = 8
@@ -3074,25 +3519,25 @@ w.layer.bags[1,6] = 8
 w.layer.bags[1,7] = 8
 w.layer.bags[1,8] = 5
 w.layer.bags[1,9] = 5
-w.layer.bags[2,1] = 8
-w.layer.bags[2,2] = 8
-w.layer.bags[2,3] = 8
-w.layer.bags[2,4] = 8
-w.layer.bags[2,5] = 8
-w.layer.bags[2,6] = 8
-w.layer.bags[2,7] = 8
+w.layer.bags[2,1] = 5
+w.layer.bags[2,2] = 5
+w.layer.bags[2,3] = 5
+w.layer.bags[2,4] = 5
+w.layer.bags[2,5] = 5
+w.layer.bags[2,6] = 5
+w.layer.bags[2,7] = 5
 w.layer.bags[2,8] = 5
 w.layer.bags[2,9] = 5
 w.max.layers[1] = 7
-w.max.layers[2] = 7
+w.max.layers[2] = 9
 w.pallet.height[1] = 150
 w.pallet.height[2] = 150
 w.pallet.length[1] = 1200
 w.pallet.length[2] = 1200
 w.pallet.width[1] = 1000
 w.pallet.width[2] = 1000
-pallet.x.shift = 10
-pallet.y.shift = 10
+pallet.x.shift = -22.5
+pallet.y.shift = -22.5
 s.clamp.down = 2142
 s.btn.stop[2] = 2106
 s.btn.stop[1] = 2105
@@ -3125,8 +3570,8 @@ drop.appro.def = 200
 layer.bags[10] = 5
 layer.bags[11] = 5
 layer.bags[12] = 5
-x.line.ready[2] = 2301
-x.line.ready[1] = 2300
+x.line.started[2] = 2301
+x.line.started[1] = 2300
 z.line.blink[2] = 3066
 z.line.blink[1] = 3065
 w.layer.bags[1,10] = 5
@@ -3136,9 +3581,9 @@ w.layer.bags[2,10] = 5
 w.layer.bags[2,11] = 5
 w.layer.bags[2,12] = 5
 w.pallet.x.shif[1] = -5
-w.pallet.x.shif[2] = -5
+w.pallet.x.shif[2] = -22.5
 w.pallet.y.shif[1] = -67.5
-w.pallet.y.shif[2] = -67.5
+w.pallet.y.shif[2] = -22.5
 s.prime.teach = 2016
 x.air.on = 2243
 x.bag.defect[1] = 2211
@@ -3175,4 +3620,34 @@ x.move.to.home = 2310
 x.pallet.free[1] = 2311
 x.pallet.free[2] = 2312
 di.reset.main = 2009
+x.pg.selected[1] = 2313
+x.pg.selected[2] = 2314
+ifp.last.bag[1] = -1
+ifp.last.bag[2] = -1
+ifp.last.layer[1] = -1
+ifp.last.layer[2] = -1
+ifp.last.prod[1] = 5
+ifp.last.prod[2] = 1
+s.apply.pal.sht[2] = 2019
+s.apply.pal.sht[1] = 2018
+ifp.pal.a.shift[2] = 0
+ifp.pal.a.shift[1] = 0
+ifp.pal.y.shift[2] = 0
+ifp.pal.y.shift[1] = 2
+ifp.pal.x.shift[2] = 0
+ifp.pal.x.shift[1] = 11
+x.line.ready[1] = 2300
+x.pal.free[1] = 2311
+x.pal.free[2] = 2312
+x.start[1] = 2030
+x.start[2] = 2031
+ifp.pal.z.shift[1] = 11
+ifp.pal.z.shift[2] = 0
+x = 23
+x.line.ready[2] = 2301
+xxx = 23
+s.apply.bag[1] = 2020
+s.apply.bag[2] = 2021
+s.apply.layer[1] = 2022
+s.apply.layer[2] = 2023
 .END

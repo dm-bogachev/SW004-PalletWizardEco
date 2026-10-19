@@ -16,11 +16,11 @@
 .NETCONF     0.0.0.0,"",0.0.0.0,0.0.0.0,0.0.0.0,0.0.0.0,""
 .NETCONF2     0.0.0.0,0.0.0.0,0.0.0.0
 .ROBOTDATA1
-ZROBOT.TYPE    44  11   4   1        -901   CP180L-AC01 ( 2026-10-16 00:14 )
+ZROBOT.TYPE    44  11   4   1        -901   CP180L-AC01 ( 2026-10-19 21:47 )
 ZSYSTEM         1   5   1        -106
 ZLINEAR         0   0   0   0   0   0  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1         179
 CONT_CODE     701      -10516
-ZZERO         267687656 268077419 268923507 268361819 268435456         0 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456   278806800
+ZZERO         268435456 268435456 268435456 268435456 268435456         0 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456 268435456   268435455
 ENDLESS_POS   0 100 1       -1516
 ZLANGUAGE     ON  -3683
 LANG_NO         0   1
@@ -113,7 +113,7 @@ ZSETKVFF_SVSPEC2    0.000   0.000   0.000   0.000   0.000   0.000  -1.000  -1.00
 ZSETKVFFACC_SVSPEC2    0.000   0.000   0.000   0.000   0.000   0.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -1832648705
 ZSETKVFFJRK_SVSPEC2    0.000   0.000   0.000   0.000   0.000   0.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -11.000 -1832648705
 ZSETKAFF2_SVSPEC2    1.200   0.000   0.000   0.000   0.000   0.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000  -1.000 -1369440260
-ZSAVEMR                 0           0       65535           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0     -983026
+ZSAVEMR                11           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0        -166
 ZRADIUS        3875.000  1200.000  1550.000   620.000  3875.000   620.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000  -490889217
 ZJTSPEED        130.000   120.000   125.000   330.000   130.000    10.000   330.000    10.000    10.000    10.000    10.000    10.000    10.000    10.000    10.000    10.000    10.000    10.000   -90791937
 ZJTSPEED_WSPEC1    140.000   125.000   130.000   400.000   140.000    10.000   -39305217
@@ -570,7 +570,7 @@ OP_ACCUTYPE2  ON  -3818
 OP_MTN_CHK    OFF -4417
 OP_CHKINCHING  OFF -4345
 OP_COLDET     OFF -4300
-OP_BLTARM OFF -4280
+OP_BLTARM     OFF -4280
 OP_IPKALM     OFF -4145
 OP_KADOUINFO  ON  -4586
 OP_IMON2      OFF -3341
@@ -1501,38 +1501,6 @@ ZSWITCH ZBRKSTS_CHECK   ON   -515
 ZSWITCH ZBRKSHUT_1YH    OFF  -515
 ZSWITCH ZASIDE_BP       ON   -507
 .END
-.OPE_INFO1
-OPEINFO  44 11 6 1  1791804355  ;(26/10/12 20:25:55) CP180L-AC01 
-CONT_TIM  41.3 
-SERV_TIM  19.5 
-MTON_CNT  145 
-ESTP_CNT  43 
-BRKE_CNT  145 
-CON_PWR  2.567 
-SUP_PWR  2.567 
-REG_PWR  0.000 
-MOVE_TJT  4.4 4.8 3.9 4.1 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
-DIST_DJT  410.045 286.729 267.312 488.041 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
-DIST_DJT_PLUS  205.126 143.263 133.737 244.134 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
-OPEINFO TP_BKLIGHT  0 14.6 50000 
-OPEINFO MC  0 145 2000000 0 0 2000000 0 0 2000000 
-OPEINFO PARTS1  0 0 0 0 0 0 0 0 0 0 0 
-OPEINFO PARTS2  0 0 0 0 0 0 0 0 0 0 0 
-OPEINFO PARTS3  0 0 0 0 0 0 0 0 0 0 0 
-M_OPEINFO  44 11 6 1  1791804355  ;(26/10/12 20:25:55) CP180L-AC01 
-M_CONT_TIM  41.3 
-M_SERV_TIM  19.5 
-M_MTON_CNT  145 
-M_ESTP_CNT  43 
-M_BRKE_CNT  145 
-M_CON_PWR  2.567 
-M_SUP_PWR  2.567 
-M_REG_PWR  0.000 
-M_MOVE_TJT  4.4 4.8 3.9 4.1 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
-M_DIST_DJT  410.045 286.729 267.312 488.041 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
-M_DIST_DJT_PLUS  205.126 143.263 133.737 244.134 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
-HOUR_MTR  41.3 
-.END
 .SYSDATA
 REG_POINT       0
 REG_ANGLE          0
@@ -2342,7 +2310,7 @@ SWITCH AUTOSTART2.PC   OFF
 SWITCH AUTOSTART3.PC   OFF
 SWITCH AUTOSTART4.PC   OFF
 SWITCH AUTOSTART5.PC   OFF
-SWITCH ERRSTART.PC     ON 
+SWITCH ERRSTART.PC     OFF
 SWITCH AUTOSTART.LSQ   OFF
 SWITCH DISPIO_01       OFF
 SWITCH HOLD.STEP       ON 
@@ -2408,175 +2376,6 @@ SWITCH LOCAL_VAR_DISP  OFF
 SWITCH REP_SINGULAR    OFF
 SWITCH TCH_SINGULAR    OFF
 SWITCH LIST_VERTICAL   OFF
-.END
-.CONDITION
-AS_VER       ASE_0103@0X58
-ELOG_NUM            948
-CHK_ONCE      255
-MAN_SPEED     1
-CHK_SPEED     1
-MON_SPEED        50.000
-PRG_ACCEL       100.000
-PRG_SPEED       100.000
-PRG_DECEL       100.000
-PRM_SPEED       100.000
-PRM_ACCEL       100.000
-PRM_DECEL       100.000
-BLK_SPEED       100.000
-PRG_TIME      0
-PRM_TIME      0
-PRG_NOT_SPEED    100.000
-PRM_NOT_SPEED    100.000
-ACCEL_TICK           -1
-DECEL_TICK           -1
-ABS_SPEED         0.000
-SPEED_TYPE2       0.000
-VEL_E             0.000
-EXT_R1            0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000
-EXT_R2            0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000
-CINT_PRM_SPEED1    100.000
-CINT_PRG_SPEED1    100.000
-CINT_PRM_SPEED2    100.000
-CINT_PRG_SPEED2    100.000
-CINT_PRM_SPEED3    100.000
-CINT_PRG_SPEED3    100.000
-CINT_PRM_ACCEL    100.000
-CINT_PRG_ACCEL    100.000
-CINT_PRM_DECEL    100.000
-CINT_PRG_DECEL    100.000
-PRG_ACCEL_ORG    100.000
-PRG_SPEED_ORG     10.000
-PRG_DECEL_ORG    100.000
-PRG_JT_ACCEL    100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000
-PRG_JT_DECEL    100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000
-PRM_JT_ACCEL    100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000
-PRM_JT_DECEL    100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000   100.000
-STEP1ENV_CALL_PRGNAME a.main
-STEP1ENV_PRG_STEP          1
-STEP2ENV0_CALL_PRGNAME autostart.pc
-STEP2ENV0_PRG_STEP          7
-STEP3ENV_PRG_STEP         40
-USR_DO1      00001100000010000000000000000010
-USR_DO2      00000000000000000000000000000101
-USR_DO3      00000000000000000000000000000000
-USR_DO4      00000000000000000000000000000000
-USR_DO5      00000000000000000000000000000000
-USR_DO6      00000000000000000000000000000000
-USR_DO7      00000000000000000000000000000000
-USR_DO8      00000000000000000000000000000000
-USR_DO9      00000000000000000000000000000000
-USR_DO10     00000000000000000000000000000000
-USR_DO11     00000000000000000000000000000000
-USR_DO12     00000000000000000000000000000000
-USR_DO13     00000000000000000000000000000000
-USR_DO14     00000000000000000000000000000000
-USR_DO15     00000000000000000000000000000000
-USR_DO16     00000000000000000000000000000000
-USR_DO17     00000000000000000000000000000000
-USR_DO18     00000000000000000000000000000000
-USR_DO19     00000000000000000000000000000000
-USR_DO20     00000000000000000000000000000000
-USR_DO21     00000000000000000000000000000000
-USR_DO22     00000000000000000000000000000000
-USR_DO23     00000000000000000000000000000000
-USR_DO24     00000000000000000000000000000000
-USR_DO25     00000000000000000000000000000000
-USR_DO26     00000000000000000000000000000000
-USR_DO27     00000000000000000000000000000000
-USR_DO28     00000000000000000000000000000000
-USR_DO29     00000000000000000000000000000000
-USR_DO30     00000000000000000000000000000000
-USR_INTERNAL 00000000000000000000000000000000
-USR_INTERNAL1 00000000000000000000000000000000
-USR_INTERNAL2 00000000000000000000000000000000
-USR_INTERNAL3 00000000000000000000000000000000
-USR_INTERNAL4 00000000000000000000000011110000
-USR_INTERNAL5 00000000000000000111111111110000
-USR_INTERNAL6 00000000000000000000000000000000
-USR_INTERNAL7 00000000000000000000111100000000
-USR_INTERNAL8 00000000000001111111111100000000
-USR_INTERNAL9 00000000000000000000000000000000
-USR_INTERNAL10 00000000001001010000000000000000
-USR_INTERNAL11 00000000000000000000000000000000
-USR_INTERNAL12 00000000000000000000000000000000
-USR_INTERNAL13 00000000000000000000000000000000
-USR_INTERNAL14 00000000000000000000000000000000
-USR_INTERNAL15 00000000000000000000000000000000
-USR_INTERNAL16 00000000000000000000000000000000
-USR_INTERNAL17 00000000000000000000000000000000
-USR_INTERNAL18 00000000000000000000000000000000
-USR_INTERNAL19 00000000000000000000000000000000
-USR_INTERNAL20 00000000000000000000000000000000
-USR_INTERNAL21 00000000000000000000000000000000
-USR_INTERNAL22 00000000000000000000000000000000
-USR_INTERNAL23 00000000000000000000000000000000
-USR_INTERNAL24 00000000000000000000000000000000
-USR_INTERNAL25 00000000000000000000000000000000
-USR_INTERNAL26 00000000000000000000000000000000
-USR_INTERNAL27 00000000000000000000000000000000
-USR_INTERNAL28 00000000000000000000000000000000
-USR_INTERNAL29 00000000000000000000000000000000
-USR_INTERNAL30 00000000000000000000000000000000
-USR_AD       00000000000000000000000000000000
-USR_DA                0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
-USR_ADO_1          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_2          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_3          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_4          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_5          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_6          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_7          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO_8          0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_1         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_2         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_3         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_4         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_5         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_6         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_7         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-USR_ADO2_8         0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
-UCINDENT1          0
-UCLINE1            0
-UCFGCOLOR1        11
-UCBGCOLOR1        10
-UCCHARWINSTR1 00:19:45 Found 10 products\00:19:46 Robot boot initialize completed\00:21:08 Getting loaded products\00:21:08 Found 10 products\
-UCINDENT2          0
-UCLINE2            0
-UCFGCOLOR2        11
-UCBGCOLOR2        10
-UCCHARWINSTR2 00:21:08 Robot boot initialize completed\00:21:15 safe.home program was set to execute\00:21:20 a.main program was set to execute\00:23:51 safe.home program was set to execute\
-UCINDENT3          0
-UCLINE3            0
-UCFGCOLOR3        11
-UCBGCOLOR3        10
-UCCHARWINSTR3 00:23:52 a.main program was set to execute\00:24:00 a.teach program was set to execute\00:24:00 a.service program was set to execute\00:29:34 a.main program was set to execute\
-UCINDENT4          0
-UCLINE4            0
-UCFGCOLOR4        11
-UCBGCOLOR4        16
-UCCHARWINSTR4   1: Program  1: 58x49.5x11, 30kg, 9x5\  2: Program  2: 54x45x11,   30kg, 9x5\  3: Program  3: 54x45x11,   40kg, 7x5\  4: Program  4: 41x37x11,   25kg, 7x8\
-UCINDENT5          0
-UCLINE5            0
-UCFGCOLOR5        11
-UCBGCOLOR5        16
-UCCHARWINSTR5   5: Program  5: 49x40x11,   25kg, 7x8\  6: Program  6: 54x45x11,   25kg, 10x5\  7: Program  7: 41x37x11,   20kg, 8x8\  8: Program  8: 58x49.5x11, 30kg, 12x5\
-UCINDENT6          0
-UCLINE6            0
-UCFGCOLOR6        11
-UCBGCOLOR6        16
-UCCHARWINSTR6   9: Program  9: 54x45x11,   30kg, 12x5\ 10: Program 10: 54x45x11,   40kg, 9x5\ 11: Empty\ 12: Empty\
-UCINDENT7          0
-UCLINE7            0
-UCFGCOLOR7        11
-UCBGCOLOR7         9
-UCCHARWINSTR7 Line 1 product: Program  3: 54x45x11,   40kg, 7x5\ \Line 2 product: Program  3: 54x45x11,   40kg, 7x5\
-UCINDENT8          0
-UCLINE8            0
-UCFGCOLOR8        11
-UCBGCOLOR8         6
-UCCHARWINSTR8 Robot: CP180L-AC01  S/N: C1\Controller: E03 S/N: C0\ \Powered by Robowizard Co.Ltd.\
-SEQEXECUTE            1
-TPHOLDSTAT    ON 
 .END
 .AUXDATA
 ROB_START_LIM      0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000     0.000
@@ -2992,24 +2791,6 @@ ROB_EXTERNAL_RESTART          0
 ROB_OP_AFTER_ERROR          0
 MOVING_AREA       0.000     0.000     0.000     0.000     0.000     0.000
 ENC_ALARM              0          0          0          0          0          0
-N_WX3    "i.line.safe[1]"
-N_WX4    "i.line.safe[2]"
-N_INT9    "di.reset.main"
-N_INT103   "s.line.safe[1]"
-N_INT104   "s.line.safe[2]"
-N_INT203   "x.line.safe[1]"
-N_INT204   "x.line.safe[2]"
-N_INT300   "x.line.ready[1]"
-N_INT301   "x.line.ready[2]"
-N_INT302   "x.pick.ready[1]"
-N_INT303   "x.pick.ready[2]"
-N_INT304   "x.pallet.full[1]"
-N_INT305   "x.pallet.full[2]"
-N_INT308   "x.defect.put[1]"
-N_INT309   "x.defect.put[2]"
-N_INT310   "x.move.to.home"
-N_INT311   "x.pallet.free[1]"
-N_INT312   "x.pallet.free[2]"
 SENSING_SPEED     10.000     0.000 255
 SENS_STROKE       0.000
 PAL_TYPE_01     0
@@ -3354,12 +3135,15 @@ GAS_INVSIG8_OFF  0 0 0 0
 6,10,""," RESET","AUTOSTART","",10,4,6,1,"PCEXECUTE autostart.pc",0
 7,2,"","  LINE 1","  RESET","",10,2,13,2105,0
 8,1,"PAL 1 FREE","","","",10,15,4,10,2311,0
+9,1,"PAL 1 FULL","","","",10,15,4,10,2304,0
 11,2,""," PRIME"," MAIN","",10,4,6,2014,0
 12,2,""," RESET"," MAIN","",9,4,1,2009,-1
 13,2,""," PRIME"," HOME","",10,4,11,2015,0
 14,2,"","  LINE 2","  RESET","",10,2,13,2106,0
 15,1,"PAL 2 FREE","","","",10,15,4,10,2312,0
+16,1,"PAL 2 FULL","","","",10,15,4,10,2305,0
 21,9,8,3,15
+24,2,""," PALLET","CORRECTION","",10,4,3,2006,0
 25,2,"","  CONTROL","","",10,4,3,2002,0
 26,2,"","  LOG","","",10,4,3,2004,0
 27,2,""," DEBUG","","",10,4,3,2005,0
@@ -3385,6 +3169,7 @@ GAS_INVSIG8_OFF  0 0 0 0
 47,3,"","  LINE 1","  START ","",10,4,14,0,0,2107,2,-1
 48,3,"","  LINE 2","  START ","",10,4,14,0,0,2108,3,-1
 49,2,"","   MAIN","<---------","",10,4,11,2001,0
+50,2,""," DEBUG","","",10,4,3,2005,0
 53,1,"  AIR ON","","","",10,15,4,10,2243,-1
 54,2,"","  LINE 1","   STOP","",10,10,0,2105,-1
 55,2,"","  LINE 2","   STOP","",10,10,0,2106,-1
@@ -3419,19 +3204,67 @@ GAS_INVSIG8_OFF  0 0 0 0
 125,4,2,"PLATE R CL","","FORCE","",10,4,4,0,2140,0
 126,4,2,"BAG 1 DEF","","FORCE","",10,4,4,0,2111,0
 127,4,2,"BAG 2 DEF","","FORCE","",10,4,4,0,2112,0
-129,4,2,"CLAMP UP","","FORCE","",10,4,4,0,2141,0
-130,4,2,"CLAMP DOWN","","FORCE","",10,4,4,0,2142,0
+128,8,"cur.layer[1]","LINE 1","LAYER",10,8,2,1,-1
+129,8,"cur.bag[1]","LINE 1","BAG",10,8,2,1,-1
+130,4,2,"CLAMP UP","","FORCE","",10,4,4,0,2141,0
+131,4,2,"CLAMP DOWN","","FORCE","",10,4,4,0,2142,0
 132,4,2,"AIR ON","","FORCE","",10,4,4,0,2143,0
 133,2,"","   MAIN","<---------","",10,4,11,2001,0
+134,2,"","  CONTROL","","",10,4,3,2002,0
+135,8,"cur.layer[2]","LINE 2","LAYER",10,8,2,1,-1
+136,8,"cur.bag[2]","LINE 2","BAG",10,8,2,1,-1
 138,2,""," PRIME"," TEACH","",10,4,11,2016,0
 139,2,""," PRIME"," SERVICE","",10,4,11,2017,0
+140,8,"line.product.no[1]"," LINE 1","CURRENT NO",10,4,3,1,-1
+144,8,"line.product.no[2]"," LINE 2","CURRENT NO",10,4,3,1,-1
+147,8,"ifp.pal.z.shift[1]","LINE 1 Z","PAL SHIFT",10,6,5,2,0
+148,8,"ifp.pal.x.shift[1]","LINE 1 X","PAL SHIFT",10,6,5,2,0
+149,8,"ifp.pal.a.shift[1]","LINE 1 A","PAL SHIFT",10,6,5,2,0
+151,8,"ifp.pal.z.shift[2]","LINE 2 Z","PAL SHIFT",10,6,5,2,0
+152,8,"ifp.pal.x.shift[2]","LINE 2 X","PAL SHIFT",10,6,5,2,0
+153,8,"ifp.pal.a.shift[2]","LINE 2 A","PAL SHIFT",10,6,5,2,0
+154,8,"ifp.pal.y.shift[1]","LINE 1 Y","PAL SHIFT",10,6,5,2,0
+156,2," APPLY TO"," PALLET","","",10,4,5,2018,0
+158,8,"ifp.pal.y.shift[2]","LINE 2 Y","PAL SHIFT",10,6,5,2,0
+160,2," APPLY TO"," PALLET","","",10,4,5,2019,0
+161,2,"","   MAIN","<---------","",10,4,11,2001,0
+162,2,"","  BAG","CORRECTION","",10,4,3,2007,0
+163,2,""," PICK","CORRECTION","",10,4,3,2008,0
+168,8,"line.product.no[1]"," LINE 1","CURRENT NO",10,4,3,1,-1
+169,8,"ifp.curr.layer[1]","LINE 1","SEL LAYER",10,8,2,1,0
+170,8,"ifp.curr.bag[1]","LINE 1","SEL BAG",10,8,2,1,0
+172,8,"line.product.no[2]"," LINE 2","CURRENT NO",10,4,3,1,-1
+173,8,"ifp.curr.layer[2]","LINE 2","SEL LAYER",10,8,2,1,0
+174,8,"ifp.curr.bag[2]","LINE 2","SEL BAG",10,8,2,1,0
+175,8,"ifp.bag.z.shift[1]","LINE 1 Z","BAG SHIFT",10,6,5,2,0
+176,8,"ifp.bag.x.shift[1]","LINE 1 X","BAG SHIFT",10,6,5,2,0
+179,8,"ifp.bag.z.shift[2]","LINE 2 Z","BAG SHIFT",10,6,5,2,0
+180,8,"ifp.bag.x.shift[2]","LINE 2 X","BAG SHIFT",10,6,5,2,0
+182,8,"ifp.bag.y.shift[1]","LINE 1 Y","BAG SHIFT",10,6,5,2,0
+184,2," APPLY TO","SINGLE BAG","","",10,4,5,2020,0
+186,8,"ifp.bag.y.shift[2]","LINE 2 Y","BAG SHIFT",10,6,5,2,0
+188,2," APPLY TO","SINGLE BAG","","",10,4,5,2021,0
+189,2,"","   MAIN","<---------","",10,4,11,2001,0
+190,2,""," PALLET","CORRECTION","",10,4,3,2006,0
+191,2,""," PICK","CORRECTION","",10,4,3,2008,0
+196,8,"pick.z.shift[1]","PICK 1","Z SHIFT",10,6,5,2,0
+197,8,"pick.x.shift[1]","PICK 1","X SHIFT",10,6,5,2,0
+201,8,"pick.z.shift[2]","PICK 2","Z SHIFT",10,6,5,2,0
+202,8,"pick.x.shift[2]","PICK 2","X SHIFT",10,6,5,2,0
+203,8,"pick.y.shift[1]","PICK 1","Y SHIFT",10,6,5,2,0
+204,8,"pick.a.shift[1]","PICK 1","A SHIFT",10,6,5,2,0
+208,8,"pick.y.shift[2]","PICK 2","Y SHIFT",10,6,5,2,0
+209,8,"pick.a.shift[2]","PICK 2","A SHIFT",10,6,5,2,0
+217,2,"","   MAIN","<---------","",10,4,11,2001,0
+218,2,""," PALLET","CORRECTION","",10,4,3,2006,0
+219,2,"","  BAG","CORRECTION","",10,4,3,2007,0
 .END
 .INTER_PANEL_TITLE
-"",0
-"",0
-"",0
-"",0
-"",0
+"Main",1
+"Control",1
+"Select product",1
+"Log",1
+"Debug",1
 "",0
 "",0
 "",0
@@ -3439,9 +3272,202 @@ GAS_INVSIG8_OFF  0 0 0 0
 .INTER_PANEL_COLOR_D
 182,3,224,244,28,159,252,255,251,255,0,31,2,241,52,255,
 .END
-.SIG_COMMENT
+.ERRLOG
+   1 - [26/10/19 22:46:32 SIGNAL:00 MON.SPEED : 10 REPEAT mode]
+       (E1088)Destination is out of motion range.
+       OPERATION1:[26/10/19 22:46:20] ( HOLD->RUN )
+       OPERATION2:[26/10/19 22:46:19] ( CYCLE START )
+       OPERATION3:[26/10/19 22:46:19] ( Motor power ON )
+       OPERATION4:[26/10/19 22:46:18] ( TEACH->REPEAT )
+       OPERATION5:[26/10/19 22:46:17] ( CYCLE START )
+       OPERATION6:[26/10/19 22:46:17] ( REPEAT->TEACH )
+       OPERATION7:[26/10/19 22:46:16] ( Motor power ON )
+       OPERATION8:[26/10/19 22:46:09] ( PRIME/C 1:a.main,- )
+       OPERATION9:[26/10/19 22:46:07] ( DIRECTORY/N/P/CMT  )
+       ROBOT1:
+        PROGRAM:put.pallet Step:50 Cur_Step:63 STATUS:RUN
+        Interpolation Type:LINEAR  S_parameter:0.547500
+       PC1 PROGRAM: ifp.pc Step No: 47 STATUS: RUN
+       Current Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -34.323    11.067   -49.258    32.917     0.000     0.000
+
+       Command Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -34.336     6.896   -44.973    32.934     0.000     0.000
+
+       End Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -34.336    -3.347   -32.294    32.934     0.000     0.000
+
+------------------------------------------------------------------------------
+   2 - [26/10/19 22:41:43 SIGNAL:00 MON.SPEED : 10 REPEAT mode]
+       (E0102)Variable is not defined.
+       OPERATION1:[26/10/19 22:41:43] ( HOLD->RUN )
+       OPERATION2:[26/10/19 22:41:41] ( CYCLE START )
+       OPERATION3:[26/10/19 22:41:41] ( Motor power ON )
+       OPERATION4:[26/10/19 22:40:56] ( ifp.prod.no[2] = 1 )
+       OPERATION5:[26/10/19 22:40:54] ( ifp.prod.no[1] = 1 )
+       OPERATION6:[26/10/19 22:38:04] ( ty task(lseq) )
+       OPERATION7:[26/10/19 22:38:02] ( task(lseq) )
+       OPERATION8:[26/10/19 22:37:56] ( lsqab )
+       OPERATION9:[26/10/19 22:37:54] ( lsqexec )
+       ROBOT1:
+        PROGRAM:pick Step:0 Cur_Step:18 STATUS:STOP
+       PC1 PROGRAM: proc.correct.pc Step No: 19 STATUS: RUN
+       Current Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       Command Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       End Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+------------------------------------------------------------------------------
+   3 - [26/10/19 22:38:05 SIGNAL:00 MON.SPEED : 10 REPEAT mode]
+       (E0102)Variable is not defined.
+       OPERATION1:[26/10/19 22:38:04] ( ty task(lseq) )
+       OPERATION2:[26/10/19 22:38:02] ( task(lseq) )
+       OPERATION3:[26/10/19 22:37:56] ( lsqab )
+       OPERATION4:[26/10/19 22:37:54] ( lsqexec )
+       OPERATION5:[26/10/19 22:37:53] ( lsqab )
+       OPERATION6:[26/10/19 22:37:51] ( lsqexec )
+       OPERATION7:[26/10/19 22:37:48] ( lsqab )
+       OPERATION8:[26/10/19 22:37:40] ( lsqexec )
+       OPERATION9:[26/10/19 22:35:58] ( edit lsqpg )
+       ROBOT1:
+        PROGRAM:a.main Step:0 Cur_Step:1 STATUS:STOP
+       PC1 PROGRAM: proc.correct.pc Step No: 20 STATUS: RUN
+       Current Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       Command Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       End Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+------------------------------------------------------------------------------
+   4 - [26/10/19 21:47:56 SIGNAL:00 MON.SPEED : 100 REPEAT mode]
+       (E1102)Option is not set, cannot execute.
+       OPERATION1:[26/10/19 21:47:56] ( 1 )
+       OPERATION2:[26/10/19 21:47:55] ( sysinit )
+       OPERATION3:[26/10/19 21:47:53] ( pcab )
+       OPERATION4:[26/10/19 21:47:51] ( numab )
+       OPERATION5:[26/10/19 21:47:43] ( AUX1 connect )
+       OPERATION6:[26/10/19 21:47:42] ( auxapi connect )
+       OPERATION7:[26/10/19 21:47:42] ( RUN->HOLD )
+       OPERATION8:[26/10/19 21:47:41] ( Control Power ON )
+       ROBOT1:
+        PROGRAM:a.main Step:0 Cur_Step:1 STATUS:STOP
+       PC1 PROGRAM: ifp.pc Step No: 7 STATUS: STOP
+       Current Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       Command Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+       End Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+          0.000     0.000     0.000     0.000     0.000     0.000
+
+------------------------------------------------------------------------------
+   5 - [26/10/19 21:47:43 SIGNAL:00 MON.SPEED : 100 REPEAT mode]
+       (E0102)Variable is not defined.
+       OPERATION1:[26/10/19 21:47:43] ( AUX1 connect )
+       OPERATION2:[26/10/19 21:47:42] ( auxapi connect )
+       OPERATION3:[26/10/19 21:47:42] ( RUN->HOLD )
+       OPERATION4:[26/10/19 21:47:41] ( Control Power ON )
+       OPERATION9:[03/10/05 20:26:56] ( ENGLISH )
+       ROBOT1:
+        PROGRAM:a.main Step:0 Cur_Step:1 STATUS:STOP
+       PC1 PROGRAM: log.pc1 Step No: 7 STATUS: RUN
+       Current Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -22.495     0.000     0.000     0.000     0.000     0.000
+
+       Command Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -22.495     0.000     0.000     0.000     0.000     0.000
+
+       End Pose
+         JT1       JT2       JT3       JT4       JT5       JT6  
+
+        -22.495     0.000     0.000     0.000     0.000     0.000
+
+------------------------------------------------------------------------------
 .END
-.PROGRAM a.home()@26/10/16 00:16 #0
+.TP_TASK_SEQ
+COMM  0, 0, 0
+TPMA  0, 3, 3
+MFP_  0, 3, 3
+DTL_  0, 3, 3
+TPFLT  0, 0, 0
+DRAW_LOCK  0
+SEQ_LOCK   0
+ICOM_WRITE[0]  0
+ICOM_WRITE[1]  0
+ICOM_WRITE[2]  0
+ICOM_WRITE[3]  0
+ICOM_WRITE[4]  0
+ICOM_WRITE[5]  0
+ICOM_WRITE[6]  2
+ICOM_READ[0]   0
+ICOM_READ[1]   0
+ICOM_READ[2]   0
+ICOM_READ[3]   2
+ICOM_READ[4]   2
+ICOM_READ[5]   2
+ICOM_READ[6]   2
+TP_RELOAD_CNT    0
+TP_SEM_ERROR_CNT    0
+PSEQ_RESCAN_CNT     0
+.END
+.ENCTEMPLOG
+=== MIN(deg C) ===
+  JT1  - [26/10/19 21:47:51]      0.000
+  JT2  - [26/10/19 21:47:51]      0.000
+  JT3  - [26/10/19 21:47:51]      0.000
+  JT4  - [26/10/19 21:47:51]      0.000
+  JT5  - [26/10/19 21:47:51]      0.000
+  JT6  - [26/10/19 21:47:51]      0.000
+=== MAX(deg C) ===
+  JT1  - [26/10/19 21:47:51]      0.000
+  JT2  - [26/10/19 21:47:51]      0.000
+  JT3  - [26/10/19 21:47:51]      0.000
+  JT4  - [26/10/19 21:47:51]      0.000
+  JT5  - [26/10/19 21:47:51]      0.000
+  JT6  - [26/10/19 21:47:51]      0.000
+.END
+.FLTLOG
+=== USERAS FAULT LOG ===
+=== USERTP FAULT LOG ===
+=== ARMAS  FAULT LOG ===
+.END
+.PROGRAM a.home()@26/10/19 22:28 #0
 ;
 ; Set small speed
   SPEED 100 MM/S ALWAYS
@@ -3450,7 +3476,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   HOME
 ;
 .END
-.PROGRAM a.main()@26/10/15 23:45 #0
+.PROGRAM a.main()@26/10/19 22:28 #0
 ;
   CALL log("Main program executed")
 ;
@@ -3479,20 +3505,20 @@ GAS_INVSIG8_OFF  0 0 0 0
     END
   END
 .END
-.PROGRAM a.service()@26/10/16 00:16 #0
+.PROGRAM a.service()@26/10/19 22:28 #0
 ;
   SPEED 20 ALWAYS
   ACCURACY 1 ALWAYS
 ;
-  POINT .service = #put[.line.no]
+  POINT .service = #put[1]
   POINT .service.appro = SHIFT(.service BY 0,0,400)
 ;
   JMOVE .service.appro
 ;
 .END
-.PROGRAM a.teach()@26/10/16 00:16 #0
+.PROGRAM a.teach()@26/10/19 22:28 #0
 ;
-; CALL STEP 9 TO LINE 1 STEP 17 TO LINE 2
+; CALL STEP 10 TO LINE 1 STEP 18 TO LINE 2
 ; CALL STEP 26 TO DEFECT
 ;
   SPEED 20 ALWAYS
@@ -3521,7 +3547,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   LAPPRO #put.defect,800
 ;
 .END
-.PROGRAM a.transport()@26/10/16 00:16 #0
+.PROGRAM a.transport()@26/10/19 22:28 #0
 ;
 ; Set small speed
   SPEED 100 MM/S ALWAYS
@@ -3530,17 +3556,22 @@ GAS_INVSIG8_OFF  0 0 0 0
   JMOVE #transport
 ;
 .END
-.PROGRAM autostart.pc()@26/10/15 21:22 #0
+.PROGRAM autostart.pc()@26/10/19 22:28 #0
 ;
   CALL initialize.pc
 ;
   WHILE TRUE DO
+;
     CALL ifp.pc
-    CALL limits.pc
+;
+    IF TASK(6002)<>1 THEN
+      MC NUMEXECUTE
+      TWAIT 0.5
+    END
   END
 ;
 .END
-.PROGRAM calc.points(.line.no)@26/10/15 21:22 #2
+.PROGRAM calc.points(.line.no)@26/10/19 23:03 #2
 ;
   CALL log("Calculating points for line"+$ENCODE(.line.no))
 ;
@@ -3553,7 +3584,7 @@ GAS_INVSIG8_OFF  0 0 0 0
       DECOMPOSE .c[1] = .temp
 ;
       POINT/OAT .temp = NULL
-      POINT .temp = .temp+TRANS(w.pallet.x.shif[.line.no],w.pallet.y.shif[.line.no])
+;POINT .temp = .temp + TRANS(w.pallet.x.shif[.line.no], w.pallet.y.shif[.line.no])
       POINT/Z .temp = TRANS(0,0,-.c[3])
       POINT/OAT .temp = .temp.ang
       POINT put.base[.line.no,.layer,.bag] = .temp
@@ -3561,7 +3592,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   END
 ;
 .END
-.PROGRAM ciner(.$var.name,.var,.default)@26/10/16 00:16 #58
+.PROGRAM ciner(.$var.name,.var,.default)@26/10/19 22:28 #51
 ;
   IF NOT EXISTREAL(.$var.name) THEN
     CALL log("Variable "+.$var.name+" is not exist. Default:"+$ENCODE(.default))
@@ -3569,12 +3600,22 @@ GAS_INVSIG8_OFF  0 0 0 0
   END
 ;
 .END
-.PROGRAM comment___()@26/10/15 21:22 #0; Comments for IDE. Do not use.
+.PROGRAM comment___()@26/10/19 22:28 #0; Comments for IDE. Do not use.
 ; @@@ PROJECT @@@
 ; @@@ PROJECTNAME @@@
 ; PalletWizardEco
 ; @@@ HISTORY @@@
 ; @@@ INSPECTION @@@
+; x.pallet.full[1]
+; x.btn.stop[1]
+; x.line.safe[1]
+; x.btn.start[1]
+; x.line.ready[1]
+; line.product.no[1]
+; x.pg.selected[1]
+; pallet.shift[1,2]
+; pallet.shift[1,1]
+; line.product.no[2]
 ; @@@ CONNECTION @@@
 ; KROSET R01
 ; 127.0.0.1
@@ -3623,8 +3664,6 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;       .g1 
 ;       .g2 
 ;       .g3 
-;       .d1 
-;       .d2 
 ;     2:product2:F
 ;       .l 
 ;       .w 
@@ -3699,6 +3738,13 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;       .d1 
 ;       .g2 
 ;       .d2 
+;     2:product11:F
+;       .l 
+;       .w 
+;       .h 
+;       .g1 
+;       .g2 
+;       .g3 
 ;   Group:Motion:3
 ;     3:pick:F
 ;       .line.no 
@@ -3717,6 +3763,10 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;       .layer 
 ;       .bag 
 ;       .t.shift 
+;       .$no 
+;       .$l 
+;       .$b 
+;       .$temp 
 ;       .pick 
 ;       .put.base 
 ;       .put 
@@ -3747,6 +3797,11 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;       .default 
 ;     5:pallet.reset:F
 ;       .line.no 
+;     5:a.teach:F
+;     5:a.service:F
+;       .service 
+;       .service.appro 
+;       .line.no 
 ;   Group:Log:6
 ;     6:log:F
 ;       .$msg 
@@ -3763,6 +3818,7 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;     6:log.clear:F
 ;       .i 
 ;   0:a.main:F
+;     .i 
 ;   0:pg0:F
 ;   Group:Product:7
 ;     7:load.products:B
@@ -3803,8 +3859,14 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;       .$text 
 ;   Group:Background:8
 ;     8:ifp.pc:B
-;       .i 
-;     8:limits.pc:B
+;       .line 
+;       .$prod 
+;       .$line 
+;       .$var 
+;       .c 
+;       .temp 
+;       .$l 
+;     8:proc.correct.pc:B
 ;   Group:Initialization:9
 ;     9:initialize.pc:B
 ;     9:set.io.pc:B
@@ -3824,6 +3886,9 @@ GAS_INVSIG8_OFF  0 0 0 0
 ; pb[] 
 ; put.base[] 
 ; tool.gripper 
+; pallet.shift[] 
+; l1.bag.shift[] 
+; l2.bag.shift[] 
 ; @@@ JOINTS @@@
 ; #pick[] 
 ; #transport Robot transport position
@@ -3871,6 +3936,18 @@ GAS_INVSIG8_OFF  0 0 0 0
 ; drop.appro.def 
 ; w.pallet.x.shif[] 
 ; w.pallet.y.shif[] 
+; ifp.last.bag[] 
+; ifp.last.layer[] 
+; ifp.last.prod[] 
+; ifp.pal.a.shift[] 
+; ifp.pal.y.shift[] 
+; ifp.pal.x.shift[] 
+; x.line.ready[] 
+; x.pal.free[] 
+; x.start[] 
+; ifp.pal.z.shift[] 
+; x 
+; xxx 
 ; @@@ STRINGS @@@
 ; @@@ INTEGER @@@
 ; @@@ SIGNALS @@@
@@ -3926,6 +4003,8 @@ GAS_INVSIG8_OFF  0 0 0 0
 ; s.prime.home 
 ; s.plt.r.opened 
 ; s.fin.r.opened 
+; x.line.started[] 
+; z.line.blink[] 
 ; s.prime.teach 
 ; x.air.on 
 ; x.bag.defect[] 
@@ -3943,8 +4022,18 @@ GAS_INVSIG8_OFF  0 0 0 0
 ; x.plt.l.opened 
 ; x.plt.r.closed 
 ; x.plt.r.opened 
-; x.start[] 
+; x.pallet.full[] 
+; x.pick.ready[] 
 ; x.stop[] 
+; x.defect.put[] 
+; z.reset.tmr[] 
+; x.move.to.home 
+; x.pallet.free[] 
+; di.reset.main 
+; x.pg.selected[] 
+; s.apply.pal.sht[] 
+; s.apply.bag[] 
+; s.apply.layer[] 
 ; @@@ TOOLS @@@
 ; @@@ BASE @@@
 ; @@@ FRAME @@@
@@ -3956,7 +4045,7 @@ GAS_INVSIG8_OFF  0 0 0 0
 ; SIGNAME: sig1 sig2 sig3 sig4
 ; SIGDIM: % % % %
 .END
-.PROGRAM disp.info.pc(.$cont.name)@26/10/15 21:22 #5
+.PROGRAM disp.info.pc(.$cont.name)@26/10/19 22:28 #2
 ;
   .$robot.name = $SYSDATA(ZROB.NAME)
   .robot.sn = SYSDATA(ZROB.MGFNO)
@@ -3966,7 +4055,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   IFPWPRINT 8,1,1,5,10=.$robot.str,.$cont.str," ","Powered by Robowizard Co.Ltd."
 ;
 .END
-.PROGRAM disp.list()@26/10/15 21:22 #5
+.PROGRAM disp.list()@26/10/19 22:28 #2
 ;
   ifp.list.page = MAXVAL(ifp.list.page,1)
   ifp.list.page = MINVAL(ifp.list.page,22)
@@ -3991,7 +4080,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   END
 ;
 .END
-.PROGRAM disp.product()@26/10/15 21:22 #10
+.PROGRAM disp.product()@26/10/19 22:28 #9
 ;
   .product.window = 7
   .row = 1
@@ -4015,16 +4104,16 @@ GAS_INVSIG8_OFF  0 0 0 0
   IFPWPRINT .product.window,.row,.col,color.pink,color.black=.$line[1]," ",.$line[2]
 ;
 .END
-.PROGRAM grip.check.open()@26/10/15 21:22 #435
+.PROGRAM grip.check.open()@26/10/19 22:28 #163
 ;
   CALL log("Check if gripper is opened")
 ; 
-  SWAIT i.fin.l.opened,i.fin.r.opened
-  SWAIT i.plt.l.opened,i.plt.r.opened
-  SWAIT i.clamp.up
+  SWAIT x.fin.l.opened,x.fin.r.opened
+  SWAIT x.plt.l.opened,x.plt.r.opened
+  SWAIT x.clamp.up
 ;
 .END
-.PROGRAM grip.release()@26/10/15 21:22 #232
+.PROGRAM grip.release()@26/10/19 22:28 #98
 ;
   CALL log("Open gripper")
 ;
@@ -4033,51 +4122,57 @@ GAS_INVSIG8_OFF  0 0 0 0
   SIGNAL o.fingers.open,-o.fingers.close
 ;
 .END
-.PROGRAM ifp.pc()@26/10/16 00:20 #3501252
+.PROGRAM ifp.pc()@26/10/19 22:28 #3323796
 ;
   IF ifp.list.page<>ifp.last.page THEN
     CALL disp.list
     ifp.last.page = ifp.list.page
   END
+; Work with products
+  FOR .line = 1 TO 2
 ;
-  FOR .i = 1 TO 2
+    ifp.prod.no[.line] = MINVAL(ifp.prod.no[.line],255)
+    ifp.prod.no[.line] = MAXVAL(ifp.prod.no[.line],-1)
 ;
-    IF SIG(s.apply.product[.i]) AND NOT SWITCH(CS ) THEN
-      IF ifp.prod.no[.i]>0 THEN
-        CALL set.product(.i)
+; Select product
+    IF SIG(s.apply.product[.line]) AND NOT SWITCH(CS ) THEN
+      IF ifp.prod.no[.line]>0 THEN
+        CALL set.product(.line)
       END
-      ifp.prod.no[.i] = -1
+      ifp.prod.no[.line] = -1
     END
-;
-    IF SIG(s.upd.prod.list) AND NOT SWITCH(CS ) THEN
+; Update product list
+    IF SIG(s.upd.prod.list) THEN
       CALL load.products
       CALL disp.list
     END
+  END
 ;
 ; Prime buttons
-    IF SIG(s.prime.main) AND NOT SWITCH(CS ) AND WHICHTASK("a.main")<>1 THEN
-      CALL log.pc1("a.main program was set to execute")
-      MC PRIME a.main
-    END
-;
-    IF SIG(s.prime.home) AND NOT SWITCH(CS ) AND WHICHTASK("safe.home")<>1 THEN
-      CALL log.pc1("safe.home program was set to execute")
-      MC PRIME safe.home
-    END
-;
-    IF SIG(s.prime.teach) AND NOT SWITCH(REPEAT ) AND WHICHTASK("a.teach")<>1 THEN
-      CALL log.pc1("a.teach program was set to execute")
-      MC PRIME a.teach
-    END
-;
-    IF SIG(s.prime.service) AND NOT SWITCH(REPEAT ) AND WHICHTASK("a.service")<>1 THEN
-      CALL log.pc1("a.service program was set to execute")
-      MC PRIME a.service
-    END
-;
+  IF SIG(s.prime.main) AND NOT SWITCH(CS ) AND WHICHTASK("a.main")<>1 THEN
+    CALL log.pc1("a.main program was set to execute")
+    MC PRIME a.main
   END
+;
+  IF SIG(s.prime.home) AND NOT SWITCH(CS ) AND WHICHTASK("safe.home")<>1 THEN
+    CALL log.pc1("safe.home program was set to execute")
+    MC PRIME safe.home
+  END
+;
+  IF SIG(s.prime.teach) AND NOT SWITCH(REPEAT ) AND WHICHTASK("a.teach")<>1 THEN
+    CALL log.pc1("a.teach program was set to execute")
+    MC PRIME a.teach
+  END
+;
+  IF SIG(s.prime.service) AND NOT SWITCH(REPEAT ) AND WHICHTASK("a.service")<>1 THEN
+    CALL log.pc1("a.service program was set to execute")
+    MC PRIME a.service
+  END
+;
+  CALL proc.correct.pc
+;
 .END
-.PROGRAM initialize.pc()@26/10/15 21:22 #5
+.PROGRAM initialize.pc()@26/10/19 22:28 #2
 ;
   CALL log.init
   CALL set.switches.pc
@@ -4094,15 +4189,24 @@ GAS_INVSIG8_OFF  0 0 0 0
   CALL log.pc1("Robot boot initialize completed")
 ;
 .END
-.PROGRAM limits.pc()@26/10/15 21:22 #9049541
+.PROGRAM limits.pc()@26/10/19 21:48 #2599262
 ;
   ifp.prod.no[1] = MINVAL(ifp.prod.no[1],255)
   ifp.prod.no[1] = MAXVAL(ifp.prod.no[1],-1)
   ifp.prod.no[2] = MINVAL(ifp.prod.no[2],255)
   ifp.prod.no[2] = MAXVAL(ifp.prod.no[2],-1)
 ;
+  ifp.curr.layer[1] = MAXVAL(ifp.curr.layer[1],1)
+  ifp.curr.layer[1] = MINVAL(ifp.curr.layer[1],w.max.layers[1])
+  ifp.curr.layer[2] = MAXVAL(ifp.curr.layer[2],1)
+  ifp.curr.layer[2] = MINVAL(ifp.curr.layer[2],w.max.layers[2])
+;
+  ifp.curr.bag[1] = MAXVAL(ifp.curr.bag[1],1)
+  ifp.curr.bag[1] = MINVAL(ifp.curr.bag[1],w.layer.bags[1,ifp.curr.layer[1]])
+  ifp.curr.bag[2] = MAXVAL(ifp.curr.bag[2],1)
+  ifp.curr.bag[2] = MINVAL(ifp.curr.bag[2],w.layer.bags[2,ifp.curr.layer[2]])
 .END
-.PROGRAM load.prod.data(.line.no)@26/10/15 21:22 #2
+.PROGRAM load.prod.data(.line.no)@26/10/19 22:28 #4
 ;
   .$pg.name = "product"+$ENCODE(/L,line.product.no[.line.no])
   IF EXISTPGM(.$pg.name) THEN
@@ -4130,7 +4234,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   END
 ;
 .END
-.PROGRAM load.products()@26/10/15 21:22 #5
+.PROGRAM load.products()@26/10/19 22:28 #2
 ;
   .product.count = 0
 ;
@@ -4154,7 +4258,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   CALL disp.product
 ;
 .END
-.PROGRAM log(.$msg)@26/10/15 21:22 #1604
+.PROGRAM log(.$msg)@26/10/19 22:28 #648
 ;
   IF LEN(.$msg)>55 THEN
     .$msg = $LEFT(.$msg,55)
@@ -4174,14 +4278,14 @@ GAS_INVSIG8_OFF  0 0 0 0
   IFPWPRINT 3,1,1,9,10=.$tmp[8],.$tmp[9],.$tmp[10],.$tmp[11]
 ;
 .END
-.PROGRAM log.clear()@26/10/15 21:22 #0
+.PROGRAM log.clear()@26/10/19 22:28 #0
 ;
   FOR .i = 1 TO log.max.count
     $log.entry[.i] = ""
   END
 ;
 .END
-.PROGRAM log.init()@26/10/15 21:22 #11
+.PROGRAM log.init()@26/10/19 22:28 #8
 ;
 ; Change this number if needed
   log.max.count = 256
@@ -4195,7 +4299,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   END
 ;
 .END
-.PROGRAM log.pc1(.$msg)@26/10/15 21:22 #17
+.PROGRAM log.pc1(.$msg)@26/10/19 22:28 #74
 ;
   IF LEN(.$msg)>55 THEN
     .$msg = $LEFT(.$msg,55)
@@ -4215,266 +4319,11 @@ GAS_INVSIG8_OFF  0 0 0 0
   IFPWPRINT 3,1,1,9,10=.$tmp[8],.$tmp[9],.$tmp[10],.$tmp[11]
 ;
 .END
-.PROGRAM lsqpg()@26/10/15 22:49 #0
+.PROGRAM lsqpg()@26/10/19 22:37 #0
   LSQ STR,&X0000
-  LSQ OUT,&Y0200
-  LSQ STR,&X0200
-  LSQ OR,&V0000
   LSQ OUT,&Y0000
-  LSQ STR,&X0001
-  LSQ OUT,&Y0201
-  LSQ STR,&X0201
-  LSQ OUT,&Y0001
-  LSQ STR,&X0002
-  LSQ OUT,&Y0202
-  LSQ STR,&X0202
-  LSQ OUT,&Y0002
-  LSQ STR,&X0003
-  LSQ OUT,&Y0203
-  LSQ STR,&X0203
-  LSQ OUT,&Y0003
-  LSQ STR,&X0004
-  LSQ OUT,&Y0204
-  LSQ STR,&X0204
-  LSQ OUT,&Y0004
-  LSQ STR,&X0005
-  LSQ OUT,&Y0205
-  LSQ STR,&X0205
-  LSQ OUT,&Y0005
-  LSQ STR,&X0006
-  LSQ OUT,&Y0206
-  LSQ STR,&X0206
-  LSQ OUT,&Y0006
-  LSQ STR,&X0007
-  LSQ OUT,&Y0207
-  LSQ STR,&X0207
-  LSQ OUT,&Y0007
-  LSQ STR,&X0008
-  LSQ OUT,&Y0208
-  LSQ STR,&X0208
-  LSQ OUT,&Y0008
-  LSQ STR,&X0009
-  LSQ OUT,&Y0209
-  LSQ STR,&X0209
-  LSQ OUT,&Y0009
-  LSQ STR,&X000A
-  LSQ OUT,&Y020A
-  LSQ STR,&X020A
-  LSQ OUT,&Y000A
-  LSQ STR,&X000B
-  LSQ OUT,&Y020B
-  LSQ STR,&X020B
-  LSQ OUT,&Y000B
-  LSQ STR,&X000C
-  LSQ OUT,&Y020C
-  LSQ STR,&X020C
-  LSQ OUT,&Y000C
-  LSQ STR,&X000D
-  LSQ OUT,&Y020D
-  LSQ STR,&X020D
-  LSQ OUT,&Y000D
-  LSQ STR,&X000E
-  LSQ OUT,&Y020E
-  LSQ STR,&X020E
-  LSQ OUT,&Y000E
-  LSQ STR,&X000F
-  LSQ OUT,&Y020F
-  LSQ STR,&X020F
-  LSQ OUT,&Y000F
-  LSQ STR,&X0010
-  LSQ OUT,&Y0210
-  LSQ STR,&X0210
-  LSQ OUT,&Y0010
-  LSQ STR,&X0011
-  LSQ OUT,&Y0211
-  LSQ STR,&X0211
-  LSQ OUT,&Y0011
-  LSQ STR,&X0012
-  LSQ OUT,&Y0212
-  LSQ STR,&X0212
-  LSQ OUT,&Y0012
-  LSQ STR,&X0013
-  LSQ OUT,&Y0213
-  LSQ STR,&X0213
-  LSQ OUT,&Y0013
-  LSQ STR,&X0014
-  LSQ OUT,&Y0214
-  LSQ STR,&X0214
-  LSQ OUT,&Y0014
-  LSQ STR,&X0015
-  LSQ OUT,&Y0215
-  LSQ STR,&X0215
-  LSQ OUT,&Y0015
-  LSQ STR,&X0016
-  LSQ OUT,&Y0216
-  LSQ STR,&X0216
-  LSQ OUT,&Y0016
-  LSQ STR,&X0017
-  LSQ OUT,&Y0217
-  LSQ STR,&X0217
-  LSQ OUT,&Y0017
-  LSQ STR,&X0018
-  LSQ OUT,&Y0218
-  LSQ STR,&X0218
-  LSQ OUT,&Y0018
-  LSQ STR,&X0019
-  LSQ OUT,&Y0219
-  LSQ STR,&X0219
-  LSQ OUT,&Y0019
-  LSQ STR,&X001A
-  LSQ OUT,&Y021A
-  LSQ STR,&X021A
-  LSQ OUT,&Y001A
-  LSQ STR,&X001B
-  LSQ OUT,&Y021B
-  LSQ STR,&X021B
-  LSQ OUT,&Y001B
-  LSQ STR,&X001C
-  LSQ OUT,&Y021C
-  LSQ STR,&X021C
-  LSQ OUT,&Y001C
-  LSQ STR,&X001D
-  LSQ OUT,&Y021D
-  LSQ STR,&X021D
-  LSQ OUT,&Y001D
-  LSQ STR,&X001E
-  LSQ OUT,&Y021E
-  LSQ STR,&X021E
-  LSQ OUT,&Y001E
-  LSQ STR,&X001F
-  LSQ OUT,&Y021F
-  LSQ STR,&X021F
-  LSQ OUT,&Y001F
-  LSQ STR,&X0020
-  LSQ OUT,&Y0220
-  LSQ STR,&X0220
-  LSQ OUT,&Y0020
-  LSQ STR,&X0021
-  LSQ OUT,&Y0221
-  LSQ STR,&X0221
-  LSQ OUT,&Y0021
-  LSQ STR,&X0022
-  LSQ OUT,&Y0222
-  LSQ STR,&X0222
-  LSQ OUT,&Y0022
-  LSQ STR,&X0023
-  LSQ OUT,&Y0223
-  LSQ STR,&X0223
-  LSQ OUT,&Y0023
-  LSQ STR,&X0024
-  LSQ OUT,&Y0224
-  LSQ STR,&X0224
-  LSQ OUT,&Y0024
-  LSQ STR,&X0025
-  LSQ OUT,&Y0225
-  LSQ STR,&X0225
-  LSQ OUT,&Y0025
-  LSQ STR,&X0026
-  LSQ OUT,&Y0226
-  LSQ STR,&X0226
-  LSQ OUT,&Y0026
-  LSQ STR,&X0027
-  LSQ OUT,&Y0227
-  LSQ STR,&X0227
-  LSQ OUT,&Y0027
-  LSQ STR,&X0028
-  LSQ OUT,&Y0228
-  LSQ STR,&X0228
-  LSQ OUT,&Y0028
-  LSQ STR,&X0029
-  LSQ OUT,&Y0229
-  LSQ STR,&X0229
-  LSQ OUT,&Y0029
-  LSQ STR,&X002A
-  LSQ OUT,&Y022A
-  LSQ STR,&X022A
-  LSQ OUT,&Y002A
-  LSQ STR,&X002B
-  LSQ OUT,&Y022B
-  LSQ STR,&X022B
-  LSQ OUT,&Y002B
-  LSQ STR,&X002C
-  LSQ OUT,&Y022C
-  LSQ STR,&X022C
-  LSQ OUT,&Y002C
-  LSQ STR,&X002D
-  LSQ OUT,&Y022D
-  LSQ STR,&X022D
-  LSQ OUT,&Y002D
-  LSQ STR,&X002E
-  LSQ OUT,&Y022E
-  LSQ STR,&X022E
-  LSQ OUT,&Y002E
-  LSQ STR,&X002F
-  LSQ OUT,&Y022F
-  LSQ STR,&X022F
-  LSQ OUT,&Y002F
-  LSQ STR,&X0030
-  LSQ OUT,&Y0230
-  LSQ STR,&X0230
-  LSQ OUT,&Y0030
-  LSQ STR,&X0031
-  LSQ OUT,&Y0231
-  LSQ STR,&X0231
-  LSQ OUT,&Y0031
-  LSQ STR,&X0032
-  LSQ OUT,&Y0232
-  LSQ STR,&X0232
-  LSQ OUT,&Y0032
-  LSQ STR,&X0033
-  LSQ OUT,&Y0233
-  LSQ STR,&X0233
-  LSQ OUT,&Y0033
-  LSQ STR,&X0034
-  LSQ OUT,&Y0234
-  LSQ STR,&X0234
-  LSQ OUT,&Y0034
-  LSQ STR,&X0035
-  LSQ OUT,&Y0235
-  LSQ STR,&X0235
-  LSQ OUT,&Y0035
-  LSQ STR,&X0036
-  LSQ OUT,&Y0236
-  LSQ STR,&X0236
-  LSQ OUT,&Y0036
-  LSQ STR,&X0037
-  LSQ OUT,&Y0237
-  LSQ STR,&X0237
-  LSQ OUT,&Y0037
-  LSQ STR,&X0038
-  LSQ OUT,&Y0238
-  LSQ STR,&X0238
-  LSQ OUT,&Y0038
-  LSQ STR,&X0039
-  LSQ OUT,&Y0239
-  LSQ STR,&X0239
-  LSQ OUT,&Y0039
-  LSQ STR,&X003A
-  LSQ OUT,&Y023A
-  LSQ STR,&X023A
-  LSQ OUT,&Y003A
-  LSQ STR,&X003B
-  LSQ OUT,&Y023B
-  LSQ STR,&X023B
-  LSQ OUT,&Y003B
-  LSQ STR,&X003C
-  LSQ OUT,&Y023C
-  LSQ STR,&X023C
-  LSQ OUT,&Y003C
-  LSQ STR,&X003D
-  LSQ OUT,&Y023D
-  LSQ STR,&X023D
-  LSQ OUT,&Y003D
-  LSQ STR,&X003E
-  LSQ OUT,&Y023E
-  LSQ STR,&X023E
-  LSQ OUT,&Y003E
-  LSQ STR,&X003F
-  LSQ OUT,&Y023F
-  LSQ STR,&X023F
-  LSQ OUT,&Y003F
 .END
-.PROGRAM numpg()@26/10/15 23:51 #2559010
+.PROGRAM numpg()@26/10/19 21:48 #2746801
 ;
 ; Green lamp flicker
   SFLK z.line.blink[1] = 2
@@ -4515,6 +4364,17 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;
   SOUT x.air.on = s.air.on OR i.air.on
 ;
+  IF line.product.no[1]==-1 THEN
+    SIGNAL -x.pg.selected[1]
+  ELSE
+    SIGNAL x.pg.selected[1]
+  END
+  IF line.product.no[2]==-1 THEN
+    SIGNAL -x.pg.selected[2]
+  ELSE
+    SIGNAL x.pg.selected[2]
+  END
+;
 ; Lamp if pallet is free
   IF cur.layer[1]==1 AND cur.bag[1]==1 THEN
     SIGNAL x.pallet.free[1]
@@ -4539,52 +4399,52 @@ GAS_INVSIG8_OFF  0 0 0 0
     SIGNAL -x.pallet.full[2]
   END
 ; Line ready blink
-  SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.line.safe[1] AND z.line.blink[1] OR x.line.ready[1])
-  SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.line.safe[2] AND z.line.blink[2] OR x.line.ready[2])
+  SOUT o.lamp.green[1] = NOT x.pallet.full[1] AND (x.pg.selected[1] AND z.line.blink[1] OR x.line.started[1])
+  SOUT o.lamp.green[2] = NOT x.pallet.full[2] AND (x.pg.selected[2] AND z.line.blink[2] OR x.line.started[2])
 ;
 ; Stop conditions
   SOUT x.stop[1] = x.btn.stop[1] OR x.pallet.full[1]
   SOUT x.stop[2] = x.btn.stop[2] OR x.pallet.full[2]
 ;
 ; Line start/stop
-  SOUT x.line.ready[1] = x.line.safe[1] AND x.btn.start[1] OR x.line.ready[1] AND NOT x.stop[1] AND x.line.safe[1]
-  SOUT x.line.ready[2] = x.line.safe[2] AND x.btn.start[2] OR x.line.ready[2] AND NOT x.stop[2] AND x.line.safe[2]
+  SOUT x.line.started[1] = x.btn.start[1] AND x.pg.selected[1] OR x.line.started[1] AND NOT x.stop[1]
+  SOUT x.line.started[2] = x.btn.start[2] AND x.pg.selected[2] OR x.line.started[2] AND NOT x.stop[2]
 ;
 ; Bag pick ready
-  SOUT x.pick.ready[1] = x.air.on AND x.line.ready[1] AND x.bag.ready[1] AND NOT x.pallet.full[1]
-  SOUT x.pick.ready[2] = x.air.on AND x.line.ready[2] AND x.bag.ready[2] AND NOT x.pallet.full[2]
+  SOUT x.pick.ready[1] = x.line.started[1] AND x.line.safe[1] AND x.air.on AND x.line.started[1] AND x.bag.ready[1]
+  SOUT x.pick.ready[2] = x.line.started[2] AND x.line.safe[2] AND x.air.on AND x.line.started[2] AND x.bag.ready[2]
 ;
 ; Check if bag is defect
   SOUT x.defect.put[1] = i.bag.defect[1] OR s.bag.defect[1] OR x.defect.put[1]
   SOUT x.defect.put[2] = i.bag.defect[2] OR s.bag.defect[2] OR x.defect.put[2]
 ;
 ; Reset pallet
-  IF SIG(z.reset.tmr[1]) AND NOT SIG(x.line.ready[1]) THEN
+  IF SIG(z.reset.tmr[1]) AND NOT SIG(x.line.started[1]) THEN
     cur.layer[1] = 1
     cur.bag[1] = 1
   END
-  IF SIG(z.reset.tmr[2]) AND NOT SIG(x.line.ready[2]) THEN
+  IF SIG(z.reset.tmr[2]) AND NOT SIG(x.line.started[2]) THEN
     cur.layer[2] = 1
     cur.bag[2] = 1
   END
 ;
 ; Move to home
-  SOUT x.move.to.home = NOT x.line.ready[1] AND NOT x.line.ready[2] AND NOT do.home
+  SOUT x.move.to.home = NOT x.line.started[1] AND NOT x.line.started[2] AND NOT do.home
 ;
 .END
-.PROGRAM pallet.reset(.line.no)@26/10/16 00:16 #0
+.PROGRAM pallet.reset(.line.no)@26/10/19 22:28 #0
 ;
   CALL log("Pallet"+$ENCODE(.line.no)+" reset")
   cur.layer[.line.no] = 1
   cur.bag[.line.no] = 1
 ;
 .END
-.PROGRAM pg0()@26/10/15 21:22 #0
+.PROGRAM pg0()@26/10/19 22:28 #0
 ;
   CALL a.main
 ;
 .END
-.PROGRAM pick(.line.no)@26/10/15 21:22 #872
+.PROGRAM pick(.line.no)@26/10/19 23:13 #0
 ;
   .layer = cur.layer[.line.no]
   .bag = cur.bag[.line.no]
@@ -4601,6 +4461,8 @@ GAS_INVSIG8_OFF  0 0 0 0
   .z.appro = MAXVAL(.put.z,.pick.z)
 ;
   CALL log("Calculated z.appro for pick:"+$ENCODE(.z.appro))
+;
+  POINT .pick = .pick+TRANS(pick.x.shift[.line.no],pick.y.shift[.line.no],pick.z.shift[.line.no],pick.a.shift[.line.no])
 ;
   POINT .pick.appro = .pick
   POINT/Z .pick.appro = TRANS(0,0,.z.appro)
@@ -4628,8 +4490,8 @@ GAS_INVSIG8_OFF  0 0 0 0
   SIGNAL o.fingers.close,-o.fingers.open
 ;
 ; Wait for sensors
-  SWAIT i.plt.l.closed,i.plt.r.closed
-  SWAIT i.fin.l.closed,i.fin.r.closed
+  SWAIT x.plt.l.closed,x.plt.r.closed
+  SWAIT x.fin.l.closed,x.fin.r.closed
 ;
 ; Depart
   LMOVE .pick.depart
@@ -4638,7 +4500,119 @@ GAS_INVSIG8_OFF  0 0 0 0
   SIGNAL o.clamp.down
 ;
 .END
-.PROGRAM product.demo()@26/10/15 21:22 #0
+.PROGRAM proc.correct.pc()@26/10/19 22:28 #1574685
+; Correction tool
+  FOR .line = 1 TO 2
+;
+    ifp.curr.layer[.line] = MAXVAL(ifp.curr.layer[.line],1)
+    ifp.curr.layer[.line] = MINVAL(ifp.curr.layer[.line],w.max.layers[.line])
+    ifp.curr.bag[.line] = MAXVAL(ifp.curr.bag[.line],1)
+    ifp.curr.bag[.line] = MINVAL(ifp.curr.bag[.line],w.layer.bags[.line,ifp.curr.layer[.line]])
+;
+;
+    .product = line.product.no[.line]
+    .layer = ifp.curr.layer[.line]
+    .bag = ifp.curr.bag[.line]
+;
+    .$line = $ENCODE(/L,.line)
+    .$prod = $ENCODE(/L,.product)
+    .$layer = $ENCODE(/L,.layer)
+    .$bag = $ENCODE(/L,.bag)
+;
+    .prod.chg = ifp.last.prod[.line]<>line.product.no[.line]
+    .prod.exist = line.product.no[.line]<>-1
+    .layer.chg = ifp.last.layer[.line]<>ifp.curr.layer[.line]
+    .bag.chg = ifp.last.bag[.line]<>ifp.curr.bag[.line]
+    .load.data = (.prod.chg OR .layer.chg OR .bag.chg) AND .prod.exist
+;
+    IF .load.data THEN
+;
+      IF .prod.chg THEN
+        ifp.curr.layer[.line] = 1
+        ifp.curr.bag[.line] = 1
+      END
+;
+      ifp.last.prod[.line] = line.product.no[.line]
+      ifp.last.layer[.line] = ifp.curr.layer[.line]
+      ifp.last.bag[.line] = ifp.curr.bag[.line]
+;
+; Global pallet shifts
+      IF .prod.chg THEN
+; Check if already exists
+        .$var = "pallet.shift["+.$prod+","+.$line+"]"
+        IF NOT EXISTTRANS(.$var) THEN
+          POINT pallet.shift[.product,.line] = NULL
+        END
+;
+; Decompose to global coordinates
+        DECOMPOSE .c[1] = pallet.shift[.product,.line]
+        ifp.pal.x.shift[.line] = .c[1]
+        ifp.pal.y.shift[.line] = .c[2]
+        ifp.pal.z.shift[.line] = .c[3]
+        ifp.pal.a.shift[.line] = .c[4]
+        CALL log.pc1("Loaded pallet correction for product: "+.$prod+" line: "+.$line)
+      END
+;
+      IF .line==1 THEN
+        .$var = "l1.bag.shift["+.$prod+","+.$layer+","+.$bag+"]"
+        IF NOT EXISTTRANS(.$var) THEN
+          POINT l1.bag.shift[.product,.layer,.bag] = NULL
+        END
+;
+; Decompose to global coordinates
+        DECOMPOSE .c[1] = l1.bag.shift[.product,.layer,.bag]
+      ELSE
+        .$var = "l2.bag.shift["+.$prod+","+.$layer+","+.$bag+"]"
+        IF NOT EXISTTRANS(.$var) THEN
+          POINT l2.bag.shift[.product,.layer,.bag] = NULL
+        END
+;
+; Decompose to global coordinates
+        DECOMPOSE .c[1] = l2.bag.shift[.product,.layer,.bag]
+      END
+      ifp.bag.x.shift[.line] = .c[1]
+      ifp.bag.y.shift[.line] = .c[2]
+      ifp.bag.z.shift[.line] = .c[3]
+      CALL log.pc1("Loaded bag correction for product: "+.$prod+" line: "+.$line+" layer: "+.$layer+" bag: "+.$bag)
+;
+    END
+;
+; Global corrections
+    IF SIG(s.apply.pal.sht[.line]) AND line.product.no[.line]<>-1 THEN
+      .c[1] = ifp.pal.x.shift[.line]
+      .c[2] = ifp.pal.y.shift[.line]
+      .c[3] = ifp.pal.z.shift[.line]
+      .c[4] = ifp.pal.a.shift[.line]
+;
+      POINT .temp = TRANS(.c[1],.c[2],.c[3],.c[4],0,0,0)
+      IF DISTANCE(.temp,pallet.shift[ifp.last.prod[.line],.line])>0 THEN
+        POINT pallet.shift[ifp.last.prod[.line],.line] = TRANS(.c[1],.c[2],.c[3],.c[4],0,0,0)
+        CALL log.pc1("Saved pallet correction for product: "+.$prod+" line: "+.$line)
+      END
+    END
+;
+    IF SIG(s.apply.bag[.line]) AND line.product.no[.line]<>-1 THEN
+      .c[1] = ifp.bag.x.shift[.line]
+      .c[2] = ifp.bag.y.shift[.line]
+      .c[3] = ifp.bag.z.shift[.line]
+;
+      POINT .temp = TRANS(.c[1],.c[2],.c[3],.c[4],0,0,0)
+      IF .line==1 THEN
+        IF DISTANCE(.temp,l1.bag.shift[.product,.layer,.bag])>0 THEN
+          POINT l1.bag.shift[.product,.layer,.bag] = TRANS(.c[1],.c[2],.c[3],.c[4],0,0,0)
+        END
+      ELSE
+        IF DISTANCE(.temp,l2.bag.shift[.product,.layer,.bag])>0 THEN
+          POINT l2.bag.shift[.product,.layer,.bag] = TRANS(.c[1],.c[2],.c[3],.c[4],0,0,0)
+        END
+      END
+      CALL log.pc1("Loaded bag correction for product: "+.$prod+" line: "+.$line+" layer: "+.$layer+" bag: "+.$bag)
+    END
+;
+  END
+;
+.END
+.PROGRAM product.demo()@26/10/19 22:28 #0
 ;
   $product.name = "Cement 41x37x11"
 ;
@@ -4738,7 +4712,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[7,8] = TRANS(1.5*.l+.d2,.l+0.5*.w+.g2,7*.h,90)
 ;
 .END
-.PROGRAM product1()@26/10/15 21:22 #8
+.PROGRAM product1()@26/10/19 22:28 #5
 ;
   $product.name = "Program  1: 58x49.5x11, 30kg, 9x5"
 ;
@@ -4830,7 +4804,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[9,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,9*.h,90)
 ;
 .END
-.PROGRAM product10()@26/10/15 21:22 #4
+.PROGRAM product10()@26/10/19 22:28 #1
 ;
   $product.name = "Program 10: 54x45x11,   40kg, 9x5"
 ;
@@ -4922,7 +4896,99 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[9,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,9*.h,90)
 ;
 .END
-.PROGRAM product2()@26/10/15 21:22 #4
+.PROGRAM product11()@26/10/19 22:28 #5
+;
+  $product.name = "Testing"
+;
+  bag.length = 620
+  bag.width = 420
+  bag.height = 120
+;
+  bag.weight = 30
+;
+  pallet.length = 1200
+  pallet.width = 1000
+  pallet.height = 150
+;
+  .l = bag.length
+  .w = bag.width
+  .h = bag.height
+  .g1 = 5
+  .g2 = 5
+  .g3 = 3*.w-2*.l+2*.g2
+;
+  pallet.x.shift = (pallet.width-(.w+.l+.g1))/2
+  pallet.y.shift = (pallet.length-(2*.l+.g2))/2
+;
+; Default layout
+;
+  max.layers = 3
+;
+  layer.bags[1] = 5
+  POINT pb[1,1] = TRANS(0.5*.w,0.5*.l,.h,0)
+  POINT pb[1,2] = TRANS(0.5*.w,1.5*.l+.g3,.h,0)
+  POINT pb[1,3] = TRANS(.w+0.5*.l+.g1,0.5*.w,.h,90)
+  POINT pb[1,4] = TRANS(.w+0.5*.l+.g1,1.5*.w+.g2,.h,90)
+  POINT pb[1,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,.h,90)
+;
+  layer.bags[2] = 5
+  POINT pb[2,1] = TRANS(0.5*.l,0.5*.w,2*.h,90)
+  POINT pb[2,2] = TRANS(0.5*.l,1.5*.w+.g1,2*.h,90)
+  POINT pb[2,3] = TRANS(0.5*.l,2.5*.w+2*.g1,2*.h,90)
+  POINT pb[2,4] = TRANS(.l+0.5*.w+.g1,0.5*.l,2*.h,0)
+  POINT pb[2,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,2*.h,0)
+;
+  layer.bags[3] = 5
+  POINT pb[3,1] = TRANS(0.5*.w,0.5*.l,3*.h,0)
+  POINT pb[3,2] = TRANS(0.5*.w,1.5*.l+.g3,3*.h,0)
+  POINT pb[3,3] = TRANS(.w+0.5*.l+.g1,0.5*.w,3*.h,90)
+  POINT pb[3,4] = TRANS(.w+0.5*.l+.g1,1.5*.w+.g2,3*.h,90)
+  POINT pb[3,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,3*.h,90)
+;
+  layer.bags[4] = 5
+  POINT pb[4,1] = TRANS(0.5*.l,0.5*.w,4*.h,90)
+  POINT pb[4,2] = TRANS(0.5*.l,1.5*.w+.g1,4*.h,90)
+  POINT pb[4,3] = TRANS(0.5*.l,2.5*.w+2*.g1,4*.h,90)
+  POINT pb[4,4] = TRANS(.l+0.5*.w+.g1,0.5*.l,4*.h,0)
+  POINT pb[4,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,4*.h,0)
+;
+  layer.bags[5] = 5
+  POINT pb[5,1] = TRANS(0.5*.w,0.5*.l,5*.h,0)
+  POINT pb[5,2] = TRANS(0.5*.w,1.5*.l+.g3,5*.h,0)
+  POINT pb[5,3] = TRANS(.w+0.5*.l+.g1,0.5*.w,5*.h,90)
+  POINT pb[5,4] = TRANS(.w+0.5*.l+.g1,1.5*.w+.g2,5*.h,90)
+  POINT pb[5,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,5*.h,90)
+;
+  layer.bags[6] = 5
+  POINT pb[6,1] = TRANS(0.5*.l,0.5*.w,6*.h,90)
+  POINT pb[6,2] = TRANS(0.5*.l,1.5*.w+.g1,6*.h,90)
+  POINT pb[6,3] = TRANS(0.5*.l,2.5*.w+2*.g1,6*.h,90)
+  POINT pb[6,4] = TRANS(.l+0.5*.w+.g1,0.5*.l,6*.h,0)
+  POINT pb[6,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,6*.h,0)
+;
+  layer.bags[7] = 5
+  POINT pb[7,1] = TRANS(0.5*.w,0.5*.l,7*.h,0)
+  POINT pb[7,2] = TRANS(0.5*.w,1.5*.l+.g3,7*.h,0)
+  POINT pb[7,3] = TRANS(.w+0.5*.l+.g1,0.5*.w,7*.h,90)
+  POINT pb[7,4] = TRANS(.w+0.5*.l+.g1,1.5*.w+.g2,7*.h,90)
+  POINT pb[7,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,7*.h,90)
+;
+  layer.bags[8] = 5
+  POINT pb[8,1] = TRANS(0.5*.l,0.5*.w,8*.h,90)
+  POINT pb[8,2] = TRANS(0.5*.l,1.5*.w+.g1,8*.h,90)
+  POINT pb[8,3] = TRANS(0.5*.l,2.5*.w+2*.g1,8*.h,90)
+  POINT pb[8,4] = TRANS(.l+0.5*.w+.g1,0.5*.l,8*.h,0)
+  POINT pb[8,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,8*.h,0)
+;
+  layer.bags[9] = 5
+  POINT pb[9,1] = TRANS(0.5*.w,0.5*.l,9*.h,0)
+  POINT pb[9,2] = TRANS(0.5*.w,1.5*.l+.g3,9*.h,0)
+  POINT pb[9,3] = TRANS(.w+0.5*.l+.g1,0.5*.w,9*.h,90)
+  POINT pb[9,4] = TRANS(.w+0.5*.l+.g1,1.5*.w+.g2,9*.h,90)
+  POINT pb[9,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,9*.h,90)
+;
+.END
+.PROGRAM product2()@26/10/19 22:28 #1
 ;
   $product.name = "Program  2: 54x45x11,   30kg, 9x5"
 ;
@@ -5014,7 +5080,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[9,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,9*.h,90)
 ;
 .END
-.PROGRAM product3()@26/10/15 21:22 #6
+.PROGRAM product3()@26/10/19 22:28 #1
 ;
   $product.name = "Program  3: 54x45x11,   40kg, 7x5"
 ;
@@ -5092,7 +5158,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[7,5] = TRANS(.w+0.5*.l+.g1,2.5*.w+2*.g2,7*.h,90)
 ;
 .END
-.PROGRAM product4()@26/10/15 21:22 #4
+.PROGRAM product4()@26/10/19 22:28 #1
 ;
   $product.name = "Program  4: 41x37x11,   25kg, 7x8"
 ;
@@ -5192,7 +5258,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[7,8] = TRANS(1.5*.l+.d2,.l+0.5*.w+.g2,7*.h,90)
 ;
 .END
-.PROGRAM product5()@26/10/15 21:22 #4
+.PROGRAM product5()@26/10/19 22:28 #1
 ;
   $product.name = "Program  5: 49x40x11,   25kg, 7x8"
 ;
@@ -5292,7 +5358,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[7,8] = TRANS(1.5*.l+.d2,.l+0.5*.w+.g2,7*.h,90)
 ;
 .END
-.PROGRAM product6()@26/10/15 21:22 #4
+.PROGRAM product6()@26/10/19 22:28 #1
 ;
   $product.name = "Program  6: 54x45x11,   25kg, 10x5"
 ;
@@ -5391,7 +5457,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[10,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,10*.h,0)
 ;
 .END
-.PROGRAM product7()@26/10/15 21:22 #4
+.PROGRAM product7()@26/10/19 22:28 #1
 ;
   $product.name = "Program  7: 41x37x11,   20kg, 8x8"
 ;
@@ -5501,7 +5567,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[8,8] = TRANS(1.5*.l+.d2,3.5*.w+3*.d1,8*.h,90)
 ;
 .END
-.PROGRAM product8()@26/10/15 21:22 #4
+.PROGRAM product8()@26/10/19 22:28 #1
 ;
   $product.name = "Program  8: 58x49.5x11, 30kg, 12x5"
 ;
@@ -5614,7 +5680,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[12,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,12*.h,0)
 ;
 .END
-.PROGRAM product9()@26/10/15 21:22 #4
+.PROGRAM product9()@26/10/19 22:28 #1
 ;
   $product.name = "Program  9: 54x45x11,   30kg, 12x5"
 ;
@@ -5727,7 +5793,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   POINT pb[12,5] = TRANS(.l+0.5*.w+.g1,1.5*.l+.g3,12*.h,0)
 ;
 .END
-.PROGRAM put.defect(.line.no)@26/10/15 21:22 #16
+.PROGRAM put.defect(.line.no)@26/10/19 22:28 #16
 ;
   CALL log("Put bag from line:"+$ENCODE(.line.no)+" to defect")
 ;
@@ -5762,11 +5828,17 @@ GAS_INVSIG8_OFF  0 0 0 0
   LMOVE .put.depart
 ;
 .END
-.PROGRAM put.pallet(.line.no)@26/10/15 21:22 #1066
+.PROGRAM put.pallet(.line.no)@26/10/19 22:52 #295
 ;
+  .product = line.product.no[.line.no]
   .layer = cur.layer[.line.no]
   .bag = cur.bag[.line.no]
   .t.shift = pick.shift[.line.no]-w.bag.length[.line.no]/2
+;
+  .$prod = $ENCODE(/L,.product)
+  .$line = $ENCODE(/L,.line.no)
+  .$layer = $ENCODE(/L,.layer)
+  .$bag = $ENCODE(/L,.bag)
 ;
   .$no = $ENCODE(/L,.line.no)
   .$l = $ENCODE(/L,.layer)
@@ -5778,13 +5850,35 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;
   POINT .pick = #pick[.line.no]
   POINT .put.base = #put[.line.no]
+;
+; Calculate shifts
+  .$var = "pallet.shift["+.$prod+","+.$line+"]"
+  IF NOT EXISTTRANS(.$var) THEN
+    POINT pallet.shift[.product,.line.no] = NULL
+  END
+;
+  POINT .put.base = .put.base+pallet.shift[.product,.line.no]
+;
+  IF .line.no==1 THEN
+    .$var = "l1.bag.shift["+.$prod+","+.$layer+","+.$bag+"]"
+    IF NOT EXISTTRANS(.$var) THEN
+      POINT l1.bag.shift[.product,.layer,.bag] = NULL
+    END
+    POINT .put.base = .put.base+l1.bag.shift[.product,.layer,.bag]
+  ELSE
+    .$var = "l2.bag.shift["+.$prod+","+.$layer+","+.$bag+"]"
+    IF NOT EXISTTRANS(.$var) THEN
+      POINT l2.bag.shift[.product,.layer,.bag] = NULL
+    END
+    POINT .put.base = .put.base+l2.bag.shift[.product,.layer,.bag]
+  END
+;
   POINT .put = .put.base+put.base[.line.no,.layer,.bag]
   POINT .put = .put+TRANS(0,-.t.shift,0)
 ;
   .pick.z = DZ(.pick)+pick.appro[.line.no]
   .put.z = DZ(.put)+put.appro[.line.no]
   .z.appro = MAXVAL(.put.z,.pick.z)
-;
   CALL log("Calculated z.appro for put:"+$ENCODE(.z.appro))
 ;
   POINT .put.appro = .put
@@ -5820,7 +5914,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   JMOVE .pick.appro
 ;
 .END
-.PROGRAM safe.home()@26/10/16 00:16 #0;
+.PROGRAM safe.home()@26/10/19 22:28 #30;
 ;
 ; Check if robot already in home
   IF SIG(do.home) THEN
@@ -5845,7 +5939,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   RETURN
 ;
 .END
-.PROGRAM set.io.pc()@26/10/16 00:25 #7
+.PROGRAM set.io.pc()@26/10/19 22:28 #8
 ;
 ; Robot internal I/O
 ;
@@ -5986,8 +6080,20 @@ GAS_INVSIG8_OFF  0 0 0 0
   s.prime.teach = 2016
   s.prime.service = 2017
 ;
-  x.line.ready[1] = 2300
-  x.line.ready[2] = 2301
+  s.apply.pal.sht[1] = 2018
+  s.apply.pal.sht[2] = 2019
+;
+  s.apply.bag[1] = 2020
+  s.apply.bag[2] = 2021
+;
+  s.apply.layer[1] = 2022
+  s.apply.layer[2] = 2023
+;
+;s.apply.even[1] 
+;s.apply.even[2] 
+;
+  x.line.started[1] = 2300
+  x.line.started[2] = 2301
 ;
   x.pick.ready[1] = 2302
   x.pick.ready[2] = 2303
@@ -6006,6 +6112,9 @@ GAS_INVSIG8_OFF  0 0 0 0
   x.pallet.free[1] = 2311
   x.pallet.free[2] = 2312
 ;
+  x.pg.selected[1] = 2313
+  x.pg.selected[2] = 2314
+;
   z.line.blink[1] = 3065
   z.line.blink[2] = 3066
 ;
@@ -6013,7 +6122,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   z.reset.tmr[2] = 3002
 ;
 .END
-.PROGRAM set.product(.line.no)@26/10/15 21:22 #5
+.PROGRAM set.product(.line.no)@26/10/19 22:28 #7
 ;
   IF $product.names[ifp.prod.no[.line.no]]<>"Empty" THEN
 ;
@@ -6032,7 +6141,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   CALL disp.product
 ;
 .END
-.PROGRAM set.switches.pc()@26/10/15 21:22 #5
+.PROGRAM set.switches.pc()@26/10/19 22:28 #2
 ;
 ; System switches
   CP ON
@@ -6047,7 +6156,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   AUTOSTART.PC ON
 ;
 .END
-.PROGRAM set.vars.pc()@26/10/15 21:22 #5
+.PROGRAM set.vars.pc()@26/10/19 22:28 #2
 ;
   POINT tool.gripper = TRANS(0,0,350,0,0,0)
   SETHOME 100,#PPOINT(0,0,0,0)
@@ -6082,13 +6191,58 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;
   CALL ciner("drop.appro.def",drop.appro.def,200)
 ;
+  CALL ciner("pick.x.shift[1]",pick.x.shift[1],0)
+  CALL ciner("pick.x.shift[2]",pick.x.shift[2],0)
+  CALL ciner("pick.y.shift[1]",pick.y.shift[1],0)
+  CALL ciner("pick.y.shift[2]",pick.y.shift[2],0)
+  CALL ciner("pick.z.shift[1]",pick.z.shift[1],0)
+  CALL ciner("pick.z.shift[2]",pick.z.shift[2],0)
+;
   ifp.prod.no[1] = -1
   ifp.prod.no[2] = -1
 ;
   ifp.list.page = 1
   ifp.last.page = 1
+;
+; Last selected elements for correction tool
+  ifp.last.prod[1] = -1
+  ifp.last.prod[2] = -1
+;
+  ifp.curr.layer[1] = 1
+  ifp.curr.layer[2] = 1
+  ifp.last.layer[1] = -1
+  ifp.last.layer[2] = -1
+;
+  ifp.curr.bag[1] = 1
+  ifp.curr.bag[2] = 1
+  ifp.last.bag[1] = -1
+  ifp.last.bag[2] = -1
+;
+; Corrections on interface panel
+  ifp.pal.x.shift[1] = 0
+  ifp.pal.x.shift[2] = 0
+  ifp.pal.y.shift[1] = 0
+  ifp.pal.y.shift[2] = 0
+  ifp.pal.z.shift[1] = 0
+  ifp.pal.z.shift[2] = 0
+  ifp.pal.a.shift[1] = 0
+  ifp.pal.a.shift[2] = 0
+;
+  ifp.bag.x.shift[1] = 0
+  ifp.bag.x.shift[2] = 0
+  ifp.bag.y.shift[1] = 0
+  ifp.bag.y.shift[2] = 0
+  ifp.bag.z.shift[1] = 0
+  ifp.bag.z.shift[2] = 0
+;
+;ifp.l1.x.shift
+;ifp.locv.cur.y = 0
+;ifp.locv.cur.z = 0
+;ifp.locv.cur.a = 0
+;
+;
 .END
-.PROGRAM t.pick(.line.no)@26/10/15 21:22 #0
+.PROGRAM t.pick(.line.no)@26/10/19 22:28 #0
 ;
 ; Points calculation
 ;
@@ -6130,8 +6284,8 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;BREAK
 ;
 ; Close gripper
-  SWAIT i.plt.l.closed,i.plt.r.closed
-  SWAIT i.fin.l.closed,i.fin.r.closed
+  SWAIT x.plt.l.closed,x.plt.r.closed
+  SWAIT x.fin.l.closed,x.fin.r.closed
 ;
 ; Depart
   LMOVE .pick.depart
@@ -6140,7 +6294,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   SIGNAL o.clamp.down
 ;
 .END
-.PROGRAM t.put.defect(.line.no)@26/10/15 21:22 #0
+.PROGRAM t.put.defect(.line.no)@26/10/19 22:28 #0
 ;
 ; Points calculation
 ;
@@ -6177,7 +6331,7 @@ GAS_INVSIG8_OFF  0 0 0 0
   LMOVE .put.depart
 ;
 .END
-.PROGRAM t.put.pallet(.line.no)@26/10/15 21:22 #0
+.PROGRAM t.put.pallet(.line.no)@26/10/19 22:28 #0
 ;
 ; Points calculation
 ;
@@ -6229,120 +6383,152 @@ GAS_INVSIG8_OFF  0 0 0 0
 ;
 .END
 .TRANS
-bp[1,1] 247.500000 290.000000 110.000000 90.000015 0.000000 0.000000
-bp[1,2] 247.500000 870.000000 110.000000 90.000015 0.000000 0.000000
+bp[1,1] 247.500000 290.000000 110.000000 90.000031 0.000000 0.000000
+bp[1,2] 247.500000 870.000000 110.000000 90.000031 0.000000 0.000000
 bp[1,3] 785.000000 247.500000 110.000000 0.000000 0.000000 0.000000
 bp[1,4] 785.000000 742.500000 110.000000 0.000000 0.000000 0.000000
 bp[1,5] 785.000000 1237.500000 110.000000 0.000000 0.000000 0.000000
 bp[2,1] 290.000000 247.500000 220.000000 0.000000 0.000000 0.000000
 bp[2,2] 290.000000 742.500000 220.000000 0.000000 0.000000 0.000000
 bp[2,3] 290.000000 1237.500000 220.000000 0.000000 0.000000 0.000000
-bp[2,4] 827.500000 290.000000 220.000000 90.000015 0.000000 0.000000
-bp[2,5] 827.500000 870.000000 220.000000 90.000015 0.000000 0.000000
-bp[3,1] 247.500000 290.000000 330.000000 90.000015 0.000000 0.000000
-bp[3,2] 247.500000 870.000000 330.000000 90.000015 0.000000 0.000000
+bp[2,4] 827.500000 290.000000 220.000000 90.000031 0.000000 0.000000
+bp[2,5] 827.500000 870.000000 220.000000 90.000031 0.000000 0.000000
+bp[3,1] 247.500000 290.000000 330.000000 90.000031 0.000000 0.000000
+bp[3,2] 247.500000 870.000000 330.000000 90.000031 0.000000 0.000000
 bp[3,3] 785.000000 247.500000 330.000000 0.000000 0.000000 0.000000
 bp[3,4] 785.000000 742.500000 330.000000 0.000000 0.000000 0.000000
 bp[3,5] 785.000000 1237.500000 330.000000 0.000000 0.000000 0.000000
 bp[4,1] 290.000000 247.500000 440.000000 0.000000 0.000000 0.000000
 bp[4,2] 290.000000 742.500000 440.000000 0.000000 0.000000 0.000000
 bp[4,3] 290.000000 1237.500000 440.000000 0.000000 0.000000 0.000000
-bp[4,4] 827.500000 290.000000 440.000000 90.000015 0.000000 0.000000
-bp[4,5] 827.500000 870.000000 440.000000 90.000015 0.000000 0.000000
-bp[5,1] 247.500000 290.000000 550.000000 90.000015 0.000000 0.000000
-bp[5,2] 247.500000 870.000000 550.000000 90.000015 0.000000 0.000000
+bp[4,4] 827.500000 290.000000 440.000000 90.000031 0.000000 0.000000
+bp[4,5] 827.500000 870.000000 440.000000 90.000031 0.000000 0.000000
+bp[5,1] 247.500000 290.000000 550.000000 90.000031 0.000000 0.000000
+bp[5,2] 247.500000 870.000000 550.000000 90.000031 0.000000 0.000000
 bp[5,3] 785.000000 247.500000 550.000000 0.000000 0.000000 0.000000
 bp[5,4] 785.000000 742.500000 550.000000 0.000000 0.000000 0.000000
 bp[5,5] 785.000000 1237.500000 550.000000 0.000000 0.000000 0.000000
 bp[6,1] 290.000000 247.500000 660.000000 0.000000 0.000000 0.000000
 bp[6,2] 290.000000 742.500000 660.000000 0.000000 0.000000 0.000000
 bp[6,3] 290.000000 1237.500000 660.000000 0.000000 0.000000 0.000000
-bp[6,4] 827.500000 290.000000 660.000000 90.000015 0.000000 0.000000
-bp[6,5] 827.500000 870.000000 660.000000 90.000015 0.000000 0.000000
-bp[7,1] 247.500000 290.000000 770.000000 90.000015 0.000000 0.000000
-bp[7,2] 247.500000 870.000000 770.000000 90.000015 0.000000 0.000000
+bp[6,4] 827.500000 290.000000 660.000000 90.000031 0.000000 0.000000
+bp[6,5] 827.500000 870.000000 660.000000 90.000031 0.000000 0.000000
+bp[7,1] 247.500000 290.000000 770.000000 90.000031 0.000000 0.000000
+bp[7,2] 247.500000 870.000000 770.000000 90.000031 0.000000 0.000000
 bp[7,3] 785.000000 247.500000 770.000000 0.000000 0.000000 0.000000
 bp[7,4] 785.000000 742.500000 770.000000 0.000000 0.000000 0.000000
 bp[7,5] 785.000000 1237.500000 770.000000 0.000000 0.000000 0.000000
 bp[8,1] 290.000000 247.500000 880.000000 0.000000 0.000000 0.000000
 bp[8,2] 290.000000 742.500000 880.000000 0.000000 0.000000 0.000000
 bp[8,3] 290.000000 1237.500000 880.000000 0.000000 0.000000 0.000000
-bp[8,4] 827.500000 290.000000 880.000000 90.000015 0.000000 0.000000
-bp[8,5] 827.500000 870.000000 880.000000 90.000015 0.000000 0.000000
-bp[9,1] 247.500000 290.000000 990.000000 90.000015 0.000000 0.000000
-bp[9,2] 247.500000 870.000000 990.000000 90.000015 0.000000 0.000000
+bp[8,4] 827.500000 290.000000 880.000000 90.000031 0.000000 0.000000
+bp[8,5] 827.500000 870.000000 880.000000 90.000031 0.000000 0.000000
+bp[9,1] 247.500000 290.000000 990.000000 90.000031 0.000000 0.000000
+bp[9,2] 247.500000 870.000000 990.000000 90.000031 0.000000 0.000000
 bp[9,3] 785.000000 247.500000 990.000000 0.000000 0.000000 0.000000
 bp[9,4] 785.000000 742.500000 990.000000 0.000000 0.000000 0.000000
 bp[9,5] 785.000000 1237.500000 990.000000 0.000000 0.000000 0.000000
-pb[1,1] 190.000000 290.000000 120.000000 0.000000 0.000000 0.000000
-pb[1,2] 190.000000 890.000000 120.000000 0.000000 0.000000 0.000000
-pb[1,3] 690.000000 190.000000 120.000000 90.000008 0.000000 0.000000
-pb[1,4] 690.000000 590.000000 120.000000 90.000008 0.000000 0.000000
-pb[1,5] 690.000000 990.000000 120.000000 90.000008 0.000000 0.000000
+l1.bag.shift[1,1,1] 0.000000 0.000000 5.000000 0.000000 0.000000 0.000000
+l1.bag.shift[1,1,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[1,2,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[1,9,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[1,9,5] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[1,111,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[5,1,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,1,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,1,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,1,3] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,1,4] 100.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,1,5] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,2,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,2,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,2,3] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,2,4] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,2,5] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,3,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,3,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,3,3] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,3,4] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l1.bag.shift[11,3,5] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+l2.bag.shift[1,1,1] 0.000000 0.000000 6.000000 0.000000 0.000000 0.000000
+l2.bag.shift[11,1,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+pallet.shift[1,1] 1.000000 2.000000 3.000000 4.000000 0.000000 0.000000
+pallet.shift[1,2] 5.000000 6.000000 7.000000 8.000000 0.000000 0.000000
+pallet.shift[2,1] 11.000000 22.000000 33.000000 44.000000 0.000000 0.000000
+pallet.shift[5,1] 11.000000 2.000000 11.000000 0.000000 0.000000 0.000000
+pallet.shift[5,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+pallet.shift[6,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+pallet.shift[11,1] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+pallet.shift[11,2] 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+pb[1,1] 210.000000 310.000000 120.000000 0.000000 0.000000 0.000000
+pb[1,2] 210.000000 960.000000 120.000000 0.000000 0.000000 0.000000
+pb[1,3] 735.000000 210.000000 120.000000 90.000008 0.000000 0.000000
+pb[1,4] 735.000000 635.000000 120.000000 90.000008 0.000000 0.000000
+pb[1,5] 735.000000 1060.000000 120.000000 90.000008 0.000000 0.000000
 pb[1,6] 782.500000 1012.500000 120.000000 0.000000 0.000000 0.000000
 pb[1,7] 222.500000 617.500000 120.000000 90.000008 0.000000 0.000000
 pb[1,8] 712.500000 617.500000 120.000000 90.000008 0.000000 0.000000
-pb[2,1] 290.000000 190.000000 240.000000 90.000008 0.000000 0.000000
-pb[2,2] 290.000000 590.000000 240.000000 90.000008 0.000000 0.000000
-pb[2,3] 290.000000 990.000000 240.000000 90.000008 0.000000 0.000000
-pb[2,4] 790.000000 290.000000 240.000000 0.000000 0.000000 0.000000
-pb[2,5] 790.000000 890.000000 240.000000 0.000000 0.000000 0.000000
+pb[2,1] 310.000000 210.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,2] 310.000000 635.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,3] 310.000000 1060.000000 240.000000 90.000008 0.000000 0.000000
+pb[2,4] 835.000000 310.000000 240.000000 0.000000 0.000000 0.000000
+pb[2,5] 835.000000 960.000000 240.000000 0.000000 0.000000 0.000000
 pb[2,6] 712.500000 462.500000 240.000000 90.000008 0.000000 0.000000
 pb[2,7] 712.500000 772.500000 240.000000 90.000008 0.000000 0.000000
 pb[2,8] 712.500000 1082.500000 240.000000 90.000008 0.000000 0.000000
-pb[3,1] 190.000000 290.000000 360.000000 0.000000 0.000000 0.000000
-pb[3,2] 190.000000 890.000000 360.000000 0.000000 0.000000 0.000000
-pb[3,3] 690.000000 190.000000 360.000000 90.000008 0.000000 0.000000
-pb[3,4] 690.000000 590.000000 360.000000 90.000008 0.000000 0.000000
-pb[3,5] 690.000000 990.000000 360.000000 90.000008 0.000000 0.000000
+pb[3,1] 210.000000 310.000000 360.000000 0.000000 0.000000 0.000000
+pb[3,2] 210.000000 960.000000 360.000000 0.000000 0.000000 0.000000
+pb[3,3] 735.000000 210.000000 360.000000 90.000008 0.000000 0.000000
+pb[3,4] 735.000000 635.000000 360.000000 90.000008 0.000000 0.000000
+pb[3,5] 735.000000 1060.000000 360.000000 90.000008 0.000000 0.000000
 pb[3,6] 782.500000 1012.500000 360.000000 0.000000 0.000000 0.000000
 pb[3,7] 222.500000 617.500000 360.000000 90.000008 0.000000 0.000000
 pb[3,8] 712.500000 617.500000 360.000000 90.000008 0.000000 0.000000
-pb[4,1] 290.000000 190.000000 480.000000 90.000008 0.000000 0.000000
-pb[4,2] 290.000000 590.000000 480.000000 90.000008 0.000000 0.000000
-pb[4,3] 290.000000 990.000000 480.000000 90.000008 0.000000 0.000000
-pb[4,4] 790.000000 290.000000 480.000000 0.000000 0.000000 0.000000
-pb[4,5] 790.000000 890.000000 480.000000 0.000000 0.000000 0.000000
+pb[4,1] 310.000000 210.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,2] 310.000000 635.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,3] 310.000000 1060.000000 480.000000 90.000008 0.000000 0.000000
+pb[4,4] 835.000000 310.000000 480.000000 0.000000 0.000000 0.000000
+pb[4,5] 835.000000 960.000000 480.000000 0.000000 0.000000 0.000000
 pb[4,6] 712.500000 462.500000 480.000000 90.000008 0.000000 0.000000
 pb[4,7] 712.500000 772.500000 480.000000 90.000008 0.000000 0.000000
 pb[4,8] 712.500000 1082.500000 480.000000 90.000008 0.000000 0.000000
-pb[5,1] 190.000000 290.000000 600.000000 0.000000 0.000000 0.000000
-pb[5,2] 190.000000 890.000000 600.000000 0.000000 0.000000 0.000000
-pb[5,3] 690.000000 190.000000 600.000000 90.000008 0.000000 0.000000
-pb[5,4] 690.000000 590.000000 600.000000 90.000008 0.000000 0.000000
-pb[5,5] 690.000000 990.000000 600.000000 90.000008 0.000000 0.000000
+pb[5,1] 210.000000 310.000000 600.000000 0.000000 0.000000 0.000000
+pb[5,2] 210.000000 960.000000 600.000000 0.000000 0.000000 0.000000
+pb[5,3] 735.000000 210.000000 600.000000 90.000008 0.000000 0.000000
+pb[5,4] 735.000000 635.000000 600.000000 90.000008 0.000000 0.000000
+pb[5,5] 735.000000 1060.000000 600.000000 90.000008 0.000000 0.000000
 pb[5,6] 782.500000 1012.500000 600.000000 0.000000 0.000000 0.000000
 pb[5,7] 222.500000 617.500000 600.000000 90.000008 0.000000 0.000000
 pb[5,8] 712.500000 617.500000 600.000000 90.000008 0.000000 0.000000
-pb[6,1] 290.000000 190.000000 720.000000 90.000008 0.000000 0.000000
-pb[6,2] 290.000000 590.000000 720.000000 90.000008 0.000000 0.000000
-pb[6,3] 290.000000 990.000000 720.000000 90.000008 0.000000 0.000000
-pb[6,4] 790.000000 290.000000 720.000000 0.000000 0.000000 0.000000
-pb[6,5] 790.000000 890.000000 720.000000 0.000000 0.000000 0.000000
+pb[6,1] 310.000000 210.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,2] 310.000000 635.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,3] 310.000000 1060.000000 720.000000 90.000008 0.000000 0.000000
+pb[6,4] 835.000000 310.000000 720.000000 0.000000 0.000000 0.000000
+pb[6,5] 835.000000 960.000000 720.000000 0.000000 0.000000 0.000000
 pb[6,6] 712.500000 462.500000 720.000000 90.000008 0.000000 0.000000
 pb[6,7] 712.500000 772.500000 720.000000 90.000008 0.000000 0.000000
 pb[6,8] 712.500000 1082.500000 720.000000 90.000008 0.000000 0.000000
-pb[7,1] 190.000000 290.000000 840.000000 0.000000 0.000000 0.000000
-pb[7,2] 190.000000 890.000000 840.000000 0.000000 0.000000 0.000000
-pb[7,3] 690.000000 190.000000 840.000000 90.000008 0.000000 0.000000
-pb[7,4] 690.000000 590.000000 840.000000 90.000008 0.000000 0.000000
-pb[7,5] 690.000000 990.000000 840.000000 90.000008 0.000000 0.000000
+pb[7,1] 210.000000 310.000000 840.000000 0.000000 0.000000 0.000000
+pb[7,2] 210.000000 960.000000 840.000000 0.000000 0.000000 0.000000
+pb[7,3] 735.000000 210.000000 840.000000 90.000008 0.000000 0.000000
+pb[7,4] 735.000000 635.000000 840.000000 90.000008 0.000000 0.000000
+pb[7,5] 735.000000 1060.000000 840.000000 90.000008 0.000000 0.000000
 pb[7,6] 782.500000 1012.500000 840.000000 0.000000 0.000000 0.000000
 pb[7,7] 222.500000 617.500000 840.000000 90.000008 0.000000 0.000000
 pb[7,8] 712.500000 617.500000 840.000000 90.000008 0.000000 0.000000
-pb[8,1] 290.000000 190.000000 960.000000 90.000008 0.000000 0.000000
-pb[8,2] 290.000000 590.000000 960.000000 90.000008 0.000000 0.000000
-pb[8,3] 290.000000 990.000000 960.000000 90.000008 0.000000 0.000000
-pb[8,4] 790.000000 290.000000 960.000000 0.000000 0.000000 0.000000
-pb[8,5] 790.000000 890.000000 960.000000 0.000000 0.000000 0.000000
+pb[8,1] 310.000000 210.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,2] 310.000000 635.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,3] 310.000000 1060.000000 960.000000 90.000008 0.000000 0.000000
+pb[8,4] 835.000000 310.000000 960.000000 0.000000 0.000000 0.000000
+pb[8,5] 835.000000 960.000000 960.000000 0.000000 0.000000 0.000000
 pb[8,6] 712.500000 462.500000 960.000000 90.000008 0.000000 0.000000
 pb[8,7] 712.500000 772.500000 960.000000 90.000008 0.000000 0.000000
 pb[8,8] 712.500000 1082.500000 960.000000 90.000008 0.000000 0.000000
-pb[9,1] 190.000000 290.000000 1080.000000 0.000000 0.000000 0.000000
-pb[9,2] 190.000000 890.000000 1080.000000 0.000000 0.000000 0.000000
-pb[9,3] 690.000000 190.000000 1080.000000 90.000008 0.000000 0.000000
-pb[9,4] 690.000000 590.000000 1080.000000 90.000008 0.000000 0.000000
-pb[9,5] 690.000000 990.000000 1080.000000 90.000008 0.000000 0.000000
+pb[9,1] 210.000000 310.000000 1080.000000 0.000000 0.000000 0.000000
+pb[9,2] 210.000000 960.000000 1080.000000 0.000000 0.000000 0.000000
+pb[9,3] 735.000000 210.000000 1080.000000 90.000008 0.000000 0.000000
+pb[9,4] 735.000000 635.000000 1080.000000 90.000008 0.000000 0.000000
+pb[9,5] 735.000000 1060.000000 1080.000000 90.000008 0.000000 0.000000
 pb[10,1] 290.000000 190.000000 1200.000000 90.000008 0.000000 0.000000
 pb[10,2] 290.000000 590.000000 1200.000000 90.000008 0.000000 0.000000
 pb[10,3] 290.000000 990.000000 1200.000000 90.000008 0.000000 0.000000
@@ -6358,96 +6544,122 @@ pb[12,2] 290.000000 590.000000 1440.000000 90.000008 0.000000 0.000000
 pb[12,3] 290.000000 990.000000 1440.000000 90.000008 0.000000 0.000000
 pb[12,4] 790.000000 290.000000 1440.000000 0.000000 0.000000 0.000000
 pb[12,5] 790.000000 890.000000 1440.000000 0.000000 0.000000 0.000000
-put.base[1,1,1] 200.000000 300.000000 -120.000000 0.000000 0.000000 0.000000
-put.base[1,1,2] 200.000000 900.000000 -120.000000 0.000000 0.000000 0.000000
-put.base[1,1,3] 700.000000 200.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[1,1,4] 700.000000 600.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[1,1,5] 700.000000 1000.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[1,2,1] 300.000000 200.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[1,2,2] 300.000000 600.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[1,2,3] 300.000000 1000.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[1,2,4] 800.000000 300.000000 -240.000000 0.000000 0.000000 0.000000
-put.base[1,2,5] 800.000000 900.000000 -240.000000 0.000000 0.000000 0.000000
-put.base[1,3,1] 200.000000 300.000000 -360.000000 0.000000 0.000000 0.000000
-put.base[1,3,2] 200.000000 900.000000 -360.000000 0.000000 0.000000 0.000000
-put.base[1,3,3] 700.000000 200.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[1,3,4] 700.000000 600.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[1,3,5] 700.000000 1000.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[1,4,1] 300.000000 200.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[1,4,2] 300.000000 600.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[1,4,3] 300.000000 1000.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[1,4,4] 800.000000 300.000000 -480.000000 0.000000 0.000000 0.000000
-put.base[1,4,5] 800.000000 900.000000 -480.000000 0.000000 0.000000 0.000000
-put.base[1,5,1] 200.000000 300.000000 -600.000000 0.000000 0.000000 0.000000
-put.base[1,5,2] 200.000000 900.000000 -600.000000 0.000000 0.000000 0.000000
-put.base[1,5,3] 700.000000 200.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[1,5,4] 700.000000 600.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[1,5,5] 700.000000 1000.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[1,6,1] 300.000000 200.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[1,6,2] 300.000000 600.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[1,6,3] 300.000000 1000.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[1,6,4] 800.000000 300.000000 -720.000000 0.000000 0.000000 0.000000
-put.base[1,6,5] 800.000000 900.000000 -720.000000 0.000000 0.000000 0.000000
-put.base[1,7,1] 200.000000 300.000000 -840.000000 0.000000 0.000000 0.000000
-put.base[1,7,2] 200.000000 900.000000 -840.000000 0.000000 0.000000 0.000000
-put.base[1,7,3] 700.000000 200.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[1,7,4] 700.000000 600.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[1,7,5] 700.000000 1000.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[1,8,1] 290.000000 247.500000 880.000000 90.000015 0.000000 0.000000
-put.base[1,8,2] 290.000000 742.500000 880.000000 90.000015 0.000000 0.000000
-put.base[1,8,3] 290.000000 1237.500000 880.000000 90.000015 0.000000 0.000000
-put.base[1,8,4] 827.500000 290.000000 880.000000 0.000000 0.000000 0.000000
-put.base[1,8,5] 827.500000 870.000000 880.000000 0.000000 0.000000 0.000000
-put.base[1,9,1] 247.500000 290.000000 990.000000 0.000000 0.000000 0.000000
-put.base[1,9,2] 247.500000 870.000000 990.000000 0.000000 0.000000 0.000000
-put.base[1,9,3] 785.000000 247.500000 990.000000 90.000015 0.000000 0.000000
-put.base[1,9,4] 785.000000 742.500000 990.000000 90.000015 0.000000 0.000000
-put.base[1,9,5] 785.000000 1237.500000 990.000000 90.000015 0.000000 0.000000
-put.base[2,1,1] 200.000000 300.000000 -120.000000 0.000000 0.000000 0.000000
-put.base[2,1,2] 200.000000 900.000000 -120.000000 0.000000 0.000000 0.000000
-put.base[2,1,3] 700.000000 200.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[2,1,4] 700.000000 600.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[2,1,5] 700.000000 1000.000000 -120.000000 90.000015 0.000000 0.000000
-put.base[2,2,1] 300.000000 200.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[2,2,2] 300.000000 600.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[2,2,3] 300.000000 1000.000000 -240.000000 90.000015 0.000000 0.000000
-put.base[2,2,4] 800.000000 300.000000 -240.000000 0.000000 0.000000 0.000000
-put.base[2,2,5] 800.000000 900.000000 -240.000000 0.000000 0.000000 0.000000
-put.base[2,3,1] 200.000000 300.000000 -360.000000 0.000000 0.000000 0.000000
-put.base[2,3,2] 200.000000 900.000000 -360.000000 0.000000 0.000000 0.000000
-put.base[2,3,3] 700.000000 200.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[2,3,4] 700.000000 600.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[2,3,5] 700.000000 1000.000000 -360.000000 90.000015 0.000000 0.000000
-put.base[2,4,1] 300.000000 200.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[2,4,2] 300.000000 600.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[2,4,3] 300.000000 1000.000000 -480.000000 90.000015 0.000000 0.000000
-put.base[2,4,4] 800.000000 300.000000 -480.000000 0.000000 0.000000 0.000000
-put.base[2,4,5] 800.000000 900.000000 -480.000000 0.000000 0.000000 0.000000
-put.base[2,5,1] 200.000000 300.000000 -600.000000 0.000000 0.000000 0.000000
-put.base[2,5,2] 200.000000 900.000000 -600.000000 0.000000 0.000000 0.000000
-put.base[2,5,3] 700.000000 200.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[2,5,4] 700.000000 600.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[2,5,5] 700.000000 1000.000000 -600.000000 90.000015 0.000000 0.000000
-put.base[2,6,1] 300.000000 200.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[2,6,2] 300.000000 600.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[2,6,3] 300.000000 1000.000000 -720.000000 90.000015 0.000000 0.000000
-put.base[2,6,4] 800.000000 300.000000 -720.000000 0.000000 0.000000 0.000000
-put.base[2,6,5] 800.000000 900.000000 -720.000000 0.000000 0.000000 0.000000
-put.base[2,7,1] 200.000000 300.000000 -840.000000 0.000000 0.000000 0.000000
-put.base[2,7,2] 200.000000 900.000000 -840.000000 0.000000 0.000000 0.000000
-put.base[2,7,3] 700.000000 200.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[2,7,4] 700.000000 600.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[2,7,5] 700.000000 1000.000000 -840.000000 90.000015 0.000000 0.000000
-put.base[2,8,1] 290.000000 247.500000 880.000000 90.000015 0.000000 0.000000
-put.base[2,8,2] 290.000000 742.500000 880.000000 90.000015 0.000000 0.000000
-put.base[2,8,3] 290.000000 1237.500000 880.000000 90.000015 0.000000 0.000000
-put.base[2,8,4] 827.500000 290.000000 880.000000 0.000000 0.000000 0.000000
-put.base[2,8,5] 827.500000 870.000000 880.000000 0.000000 0.000000 0.000000
-put.base[2,9,1] 247.500000 290.000000 990.000000 0.000000 0.000000 0.000000
-put.base[2,9,2] 247.500000 870.000000 990.000000 0.000000 0.000000 0.000000
-put.base[2,9,3] 785.000000 247.500000 990.000000 90.000015 0.000000 0.000000
-put.base[2,9,4] 785.000000 742.500000 990.000000 90.000015 0.000000 0.000000
-put.base[2,9,5] 785.000000 1237.500000 990.000000 90.000015 0.000000 0.000000
+put.base[1,1,1] 210.000000 310.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,2] 210.000000 960.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,3] 735.000000 210.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,1,4] 735.000000 635.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,1,5] 735.000000 1060.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[1,1,6] 840.000000 1017.500000 -120.000000 0.000000 0.000000 0.000000
+put.base[1,1,7] 245.000000 600.000000 -120.000000 90.000031 0.000000 0.000000
+put.base[1,1,8] 755.000000 600.000000 -120.000000 90.000031 0.000000 0.000000
+put.base[1,2,1] 310.000000 210.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,2] 310.000000 635.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,3] 310.000000 1060.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[1,2,4] 835.000000 310.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[1,2,5] 835.000000 960.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[1,2,6] 755.000000 432.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,2,7] 755.000000 767.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,2,8] 755.000000 1102.500000 -240.000000 90.000031 0.000000 0.000000
+put.base[1,3,1] 210.000000 310.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,2] 210.000000 960.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,3] 735.000000 210.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,3,4] 735.000000 635.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,3,5] 735.000000 1060.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[1,3,6] 840.000000 1017.500000 -360.000000 0.000000 0.000000 0.000000
+put.base[1,3,7] 245.000000 600.000000 -360.000000 90.000031 0.000000 0.000000
+put.base[1,3,8] 755.000000 600.000000 -360.000000 90.000031 0.000000 0.000000
+put.base[1,4,1] 287.500000 187.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,2] 287.500000 612.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,3] 287.500000 1037.500000 -480.000000 90.000023 0.000000 0.000000
+put.base[1,4,4] 812.500000 287.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[1,4,5] 812.500000 937.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[1,4,6] 755.000000 432.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,4,7] 755.000000 767.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,4,8] 755.000000 1102.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[1,5,1] 187.500000 287.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,2] 187.500000 937.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,3] 712.500000 187.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,5,4] 712.500000 612.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,5,5] 712.500000 1037.500000 -600.000000 90.000023 0.000000 0.000000
+put.base[1,5,6] 840.000000 1017.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[1,5,7] 245.000000 600.000000 -600.000000 90.000031 0.000000 0.000000
+put.base[1,5,8] 755.000000 600.000000 -600.000000 90.000031 0.000000 0.000000
+put.base[1,6,1] 287.500000 187.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,2] 287.500000 612.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,3] 287.500000 1037.500000 -720.000000 90.000023 0.000000 0.000000
+put.base[1,6,4] 812.500000 287.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[1,6,5] 812.500000 937.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[1,6,6] 755.000000 432.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,6,7] 755.000000 767.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,6,8] 755.000000 1102.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[1,7,1] 187.500000 287.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,2] 187.500000 937.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,3] 712.500000 187.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,7,4] 712.500000 612.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,7,5] 712.500000 1037.500000 -840.000000 90.000023 0.000000 0.000000
+put.base[1,7,6] 840.000000 1017.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[1,7,7] 245.000000 600.000000 -840.000000 90.000031 0.000000 0.000000
+put.base[1,7,8] 755.000000 600.000000 -840.000000 90.000031 0.000000 0.000000
+put.base[1,8,1] 287.500000 187.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,2] 287.500000 612.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,3] 287.500000 1037.500000 -960.000000 90.000023 0.000000 0.000000
+put.base[1,8,4] 812.500000 287.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[1,8,5] 812.500000 937.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[1,9,1] 187.500000 287.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[1,9,2] 187.500000 937.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[1,9,3] 712.500000 187.500000 -1080.000000 90.000023 0.000000 0.000000
+put.base[1,9,4] 712.500000 612.500000 -1080.000000 90.000023 0.000000 0.000000
+put.base[1,9,5] 712.500000 1037.500000 -1080.000000 90.000023 0.000000 0.000000
+put.base[1,10,1] 300.000000 200.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,2] 300.000000 600.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,3] 300.000000 1000.000000 -1200.000000 90.000031 0.000000 0.000000
+put.base[1,10,4] 800.000000 300.000000 -1200.000000 0.000000 0.000000 0.000000
+put.base[1,10,5] 800.000000 900.000000 -1200.000000 0.000000 0.000000 0.000000
+put.base[2,1,1] 210.000000 310.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[2,1,2] 210.000000 960.000000 -120.000000 0.000000 0.000000 0.000000
+put.base[2,1,3] 735.000000 210.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,1,4] 735.000000 635.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,1,5] 735.000000 1060.000000 -120.000000 90.000015 0.000000 0.000000
+put.base[2,2,1] 310.000000 210.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,2] 310.000000 635.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,3] 310.000000 1060.000000 -240.000000 90.000015 0.000000 0.000000
+put.base[2,2,4] 835.000000 310.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[2,2,5] 835.000000 960.000000 -240.000000 0.000000 0.000000 0.000000
+put.base[2,3,1] 210.000000 310.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[2,3,2] 210.000000 960.000000 -360.000000 0.000000 0.000000 0.000000
+put.base[2,3,3] 735.000000 210.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,3,4] 735.000000 635.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,3,5] 735.000000 1060.000000 -360.000000 90.000015 0.000000 0.000000
+put.base[2,4,1] 287.500000 187.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,2] 287.500000 612.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,3] 287.500000 1037.500000 -480.000000 90.000031 0.000000 0.000000
+put.base[2,4,4] 812.500000 287.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[2,4,5] 812.500000 937.500000 -480.000000 0.000000 0.000000 0.000000
+put.base[2,5,1] 187.500000 287.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[2,5,2] 187.500000 937.500000 -600.000000 0.000000 0.000000 0.000000
+put.base[2,5,3] 712.500000 187.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,5,4] 712.500000 612.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,5,5] 712.500000 1037.500000 -600.000000 90.000031 0.000000 0.000000
+put.base[2,6,1] 287.500000 187.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,2] 287.500000 612.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,3] 287.500000 1037.500000 -720.000000 90.000031 0.000000 0.000000
+put.base[2,6,4] 812.500000 287.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[2,6,5] 812.500000 937.500000 -720.000000 0.000000 0.000000 0.000000
+put.base[2,7,1] 187.500000 287.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[2,7,2] 187.500000 937.500000 -840.000000 0.000000 0.000000 0.000000
+put.base[2,7,3] 712.500000 187.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,7,4] 712.500000 612.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,7,5] 712.500000 1037.500000 -840.000000 90.000031 0.000000 0.000000
+put.base[2,8,1] 287.500000 187.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,2] 287.500000 612.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,3] 287.500000 1037.500000 -960.000000 90.000031 0.000000 0.000000
+put.base[2,8,4] 812.500000 287.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[2,8,5] 812.500000 937.500000 -960.000000 0.000000 0.000000 0.000000
+put.base[2,9,1] 187.500000 287.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[2,9,2] 187.500000 937.500000 -1080.000000 0.000000 0.000000 0.000000
+put.base[2,9,3] 712.500000 187.500000 -1080.000000 90.000031 0.000000 0.000000
+put.base[2,9,4] 712.500000 612.500000 -1080.000000 90.000031 0.000000 0.000000
+put.base[2,9,5] 712.500000 1037.500000 -1080.000000 90.000031 0.000000 0.000000
 tool.gripper 0.000000 0.000000 350.000000 0.000000 0.000000 0.000000
 .END
 .JOINTS
@@ -6456,13 +6668,14 @@ tool.gripper 0.000000 0.000000 350.000000 0.000000 0.000000 0.000000
 #put[1] -78.213707 70.963997 -47.698101 78.310722 0.000000 0.000000
 #put[2] 70.766350 49.537300 -81.693642 -70.669212 0.000000 0.000000
 #put.defect 3.796430 37.918758 -82.519531 -5.198590 0.000000 0.000000
+#rrrr0 -49.723747 4.824684 -31.126303 78.105301 0.000000 0.000000
 #transport 0.000000 -46.000000 -34.000000 0.000000 0.000000 0.000000
 .END
 .REALS
 bag.height = 120
-bag.length = 580
-bag.weight = 25
-bag.width = 380
+bag.length = 620
+bag.weight = 30
+bag.width = 420
 clamp.appro[1] = 100
 clamp.appro[2] = 100
 color.black = 10
@@ -6470,10 +6683,10 @@ color.green = 4
 color.pink = 8
 color.white = 15
 color.yellow = 6
-cur.bag[1] = 1
+cur.bag[1] = 2
 cur.bag[2] = 1
-cur.layer[1] = 3
-cur.layer[2] = 8
+cur.layer[1] = 2
+cur.layer[2] = 1
 di.cs = 1031
 di.error = 1030
 di.ifp.page[1] = 2001
@@ -6515,8 +6728,32 @@ i.plt.l.closed = 1039
 i.plt.l.opened = 1037
 i.plt.r.closed = 1040
 i.plt.r.opened = 1038
+ifp.bag.x.shift[1] = 100
+ifp.bag.x.shift[2] = 0
+ifp.bag.y.shift[1] = 0
+ifp.bag.y.shift[2] = 0
+ifp.bag.z.shift[1] = 0
+ifp.bag.z.shift[2] = 0
+ifp.curr.bag[1] = 4
+ifp.curr.bag[2] = 1
+ifp.curr.layer[1] = 1
+ifp.curr.layer[2] = 1
+ifp.last.bag[1] = 4
+ifp.last.bag[2] = 1
+ifp.last.layer[1] = 1
+ifp.last.layer[2] = 1
 ifp.last.page = 1
+ifp.last.prod[1] = 11
+ifp.last.prod[2] = 11
 ifp.list.page = 1
+ifp.pal.a.shift[1] = 0
+ifp.pal.a.shift[2] = 0
+ifp.pal.x.shift[1] = 0
+ifp.pal.x.shift[2] = 0
+ifp.pal.y.shift[1] = 0
+ifp.pal.y.shift[2] = 0
+ifp.pal.z.shift[1] = 0
+ifp.pal.z.shift[2] = 0
 ifp.prod.no[1] = -1
 ifp.prod.no[2] = -1
 layer.bags[1] = 5
@@ -6531,10 +6768,10 @@ layer.bags[9] = 5
 layer.bags[10] = 5
 layer.bags[11] = 5
 layer.bags[12] = 5
-line.product.no[1] = 3
-line.product.no[2] = 3
+line.product.no[1] = 11
+line.product.no[2] = 11
 log.max.count = 256
-max.layers = 9
+max.layers = 3
 max.product.cnt = 255
 o.clamp.down = 37
 o.fingers.close = 34
@@ -6546,15 +6783,29 @@ o.plate.open = 35
 pallet.height = 150
 pallet.length = 1200
 pallet.width = 1000
-pallet.x.shift = 10
-pallet.y.shift = 10
+pallet.x.shift = -22.5
+pallet.y.shift = -22.5
+pick.a.shift[1] = 0
+pick.a.shift[2] = 0
 pick.appro[1] = 400
 pick.appro[2] = 400
 pick.shift[1] = 342
 pick.shift[2] = 342
+pick.x.shift[1] = 0
+pick.x.shift[2] = 0
+pick.y.shift[1] = 0
+pick.y.shift[2] = 0
+pick.z.shift[1] = 0
+pick.z.shift[2] = 0
 put.appro[1] = 400
 put.appro[2] = 400
 s.air.on = 2143
+s.apply.bag[1] = 2020
+s.apply.bag[2] = 2021
+s.apply.layer[1] = 2022
+s.apply.layer[2] = 2023
+s.apply.pal.sht[1] = 2018
+s.apply.pal.sht[2] = 2019
 s.apply.product[1] = 2011
 s.apply.product[2] = 2012
 s.bag.defect[1] = 2111
@@ -6584,19 +6835,19 @@ s.prime.teach = 2016
 s.upd.prod.list = 2013
 w.bag.height[1] = 120
 w.bag.height[2] = 120
-w.bag.length[1] = 580
-w.bag.length[2] = 580
-w.bag.weight[1] = 40
-w.bag.weight[2] = 40
-w.bag.width[1] = 380
-w.bag.width[2] = 380
+w.bag.length[1] = 620
+w.bag.length[2] = 620
+w.bag.weight[1] = 30
+w.bag.weight[2] = 30
+w.bag.width[1] = 420
+w.bag.width[2] = 420
 w.layer.bags[1,1] = 5
 w.layer.bags[1,2] = 5
 w.layer.bags[1,3] = 5
-w.layer.bags[1,4] = 5
-w.layer.bags[1,5] = 5
-w.layer.bags[1,6] = 5
-w.layer.bags[1,7] = 5
+w.layer.bags[1,4] = 8
+w.layer.bags[1,5] = 8
+w.layer.bags[1,6] = 8
+w.layer.bags[1,7] = 8
 w.layer.bags[1,8] = 5
 w.layer.bags[1,9] = 5
 w.layer.bags[1,10] = 5
@@ -6614,18 +6865,19 @@ w.layer.bags[2,9] = 5
 w.layer.bags[2,10] = 5
 w.layer.bags[2,11] = 5
 w.layer.bags[2,12] = 5
-w.max.layers[1] = 7
-w.max.layers[2] = 7
+w.max.layers[1] = 3
+w.max.layers[2] = 3
 w.pallet.height[1] = 150
 w.pallet.height[2] = 150
 w.pallet.length[1] = 1200
 w.pallet.length[2] = 1200
 w.pallet.width[1] = 1000
 w.pallet.width[2] = 1000
-w.pallet.x.shif[1] = 10
-w.pallet.x.shif[2] = 10
-w.pallet.y.shif[1] = 10
-w.pallet.y.shif[2] = 10
+w.pallet.x.shif[1] = -22.5
+w.pallet.x.shif[2] = -22.5
+w.pallet.y.shif[1] = -22.5
+w.pallet.y.shif[2] = -22.5
+x = 23
 x.air.on = 2243
 x.bag.defect[1] = 2211
 x.bag.defect[2] = 2212
@@ -6647,6 +6899,8 @@ x.line.ready[1] = 2300
 x.line.ready[2] = 2301
 x.line.safe[1] = 2203
 x.line.safe[2] = 2204
+x.line.started[1] = 2300
+x.line.started[2] = 2301
 x.move.to.home = 2310
 x.pal.free[1] = 2311
 x.pal.free[2] = 2312
@@ -6654,6 +6908,8 @@ x.pallet.free[1] = 2311
 x.pallet.free[2] = 2312
 x.pallet.full[1] = 2304
 x.pallet.full[2] = 2305
+x.pg.selected[1] = 2313
+x.pg.selected[2] = 2314
 x.pick.ready[1] = 2302
 x.pick.ready[2] = 2303
 x.plt.l.closed = 2239
@@ -6664,269 +6920,270 @@ x.start[1] = 2030
 x.start[2] = 2031
 x.stop[1] = 2306
 x.stop[2] = 2307
+xxx = 23
 z.line.blink[1] = 3065
 z.line.blink[2] = 3066
 z.reset.tmr[1] = 3001
 z.reset.tmr[2] = 3002
 .END
 .STRINGS
-$log.entry[1] = "23:57:14 Put bag from line: 2 to layer: 3 bag: 3"
-$log.entry[2] = "23:57:15 Calculated z.appro for put: 787.75586"
-$log.entry[3] = "23:57:15 Check if gripper is opened"
-$log.entry[4] = "23:57:16 Pick bag from line: 1"
-$log.entry[5] = "23:57:16 Calculated z.appro for pick: 905.0011"
-$log.entry[6] = "23:57:16 Open gripper"
-$log.entry[7] = "23:57:16 Check if gripper is opened"
-$log.entry[8] = "23:57:18 Put bag from line: 1 to layer: 7 bag: 5"
-$log.entry[9] = "23:57:18 Calculated z.appro for put: 905.0011"
-$log.entry[10] = "23:57:19 Check if gripper is opened"
-$log.entry[11] = "23:57:19 Pick bag from line: 2"
-$log.entry[12] = "23:57:19 Calculated z.appro for pick: 787.75586"
-$log.entry[13] = "23:57:19 Open gripper"
-$log.entry[14] = "23:57:20 Check if gripper is opened"
-$log.entry[15] = "23:57:21 Put bag from line: 2 to layer: 3 bag: 4"
-$log.entry[16] = "23:57:22 Calculated z.appro for put: 787.75586"
-$log.entry[17] = "23:57:22 Check if gripper is opened"
-$log.entry[18] = "23:57:23 Pick bag from line: 2"
-$log.entry[19] = "23:57:23 Calculated z.appro for pick: 787.75586"
-$log.entry[20] = "23:57:23 Open gripper"
-$log.entry[21] = "23:57:24 Check if gripper is opened"
-$log.entry[22] = "23:57:24 Put bag from line: 2 to layer: 3 bag: 5"
-$log.entry[23] = "23:57:24 Calculated z.appro for put: 787.75586"
-$log.entry[24] = "23:57:25 Check if gripper is opened"
-$log.entry[25] = "23:57:26 Pick bag from line: 2"
-$log.entry[26] = "23:57:26 Calculated z.appro for pick: 787.75586"
-$log.entry[27] = "23:57:26 Open gripper"
-$log.entry[28] = "23:57:27 Check if gripper is opened"
-$log.entry[29] = "23:57:28 Put bag from line: 2 to layer: 4 bag: 1"
-$log.entry[30] = "23:57:28 Calculated z.appro for put: 787.75586"
-$log.entry[31] = "23:57:29 Check if gripper is opened"
-$log.entry[32] = "23:57:29 Pick bag from line: 2"
-$log.entry[33] = "23:57:29 Calculated z.appro for pick: 787.75586"
-$log.entry[34] = "23:57:29 Open gripper"
-$log.entry[35] = "23:57:30 Check if gripper is opened"
-$log.entry[36] = "23:57:30 Put bag from line: 2 to layer: 4 bag: 2"
-$log.entry[37] = "23:57:31 Calculated z.appro for put: 787.75586"
-$log.entry[38] = "23:57:31 Check if gripper is opened"
-$log.entry[39] = "23:57:32 Pick bag from line: 2"
-$log.entry[40] = "23:57:32 Calculated z.appro for pick: 787.75586"
-$log.entry[41] = "23:57:32 Open gripper"
-$log.entry[42] = "23:57:33 Check if gripper is opened"
-$log.entry[43] = "23:57:33 Put bag from line: 2 to layer: 4 bag: 3"
-$log.entry[44] = "23:57:33 Calculated z.appro for put: 787.75586"
-$log.entry[45] = "23:57:34 Check if gripper is opened"
-$log.entry[46] = "23:57:35 Pick bag from line: 2"
-$log.entry[47] = "23:57:35 Calculated z.appro for pick: 787.75586"
-$log.entry[48] = "23:57:35 Open gripper"
-$log.entry[49] = "23:57:36 Check if gripper is opened"
-$log.entry[50] = "23:57:36 Put bag from line: 2 to layer: 4 bag: 4"
-$log.entry[51] = "23:57:37 Calculated z.appro for put: 787.75586"
-$log.entry[52] = "23:57:37 Check if gripper is opened"
-$log.entry[53] = "23:57:38 Pick bag from line: 2"
-$log.entry[54] = "23:57:38 Calculated z.appro for pick: 787.75586"
-$log.entry[55] = "23:57:38 Open gripper"
-$log.entry[56] = "23:57:38 Check if gripper is opened"
-$log.entry[57] = "23:57:39 Put bag from line: 2 to layer: 4 bag: 5"
-$log.entry[58] = "23:57:39 Calculated z.appro for put: 787.75586"
-$log.entry[59] = "23:57:40 Check if gripper is opened"
-$log.entry[60] = "23:57:40 Pick bag from line: 2"
-$log.entry[61] = "23:57:41 Calculated z.appro for pick: 787.75586"
-$log.entry[62] = "23:57:41 Open gripper"
-$log.entry[63] = "23:57:41 Check if gripper is opened"
-$log.entry[64] = "23:57:42 Put bag from line: 2 to layer: 5 bag: 1"
-$log.entry[65] = "23:57:42 Calculated z.appro for put: 787.75586"
-$log.entry[66] = "23:57:43 Check if gripper is opened"
-$log.entry[67] = "23:57:43 Pick bag from line: 2"
-$log.entry[68] = "23:57:43 Calculated z.appro for pick: 787.75586"
-$log.entry[69] = "23:57:44 Open gripper"
-$log.entry[70] = "23:57:44 Check if gripper is opened"
-$log.entry[71] = "23:57:44 Put bag from line: 2 to layer: 5 bag: 2"
-$log.entry[72] = "23:57:45 Calculated z.appro for put: 787.75586"
-$log.entry[73] = "23:57:46 Check if gripper is opened"
-$log.entry[74] = "23:57:46 Pick bag from line: 1"
-$log.entry[75] = "23:57:46 Calculated z.appro for pick: 789.84985"
-$log.entry[76] = "23:57:46 Open gripper"
-$log.entry[77] = "23:57:47 Check if gripper is opened"
-$log.entry[78] = "23:57:48 Put bag from line: 1 to layer: 1 bag: 1"
-$log.entry[79] = "23:57:49 Calculated z.appro for put: 789.84985"
-$log.entry[80] = "23:57:50 Check if gripper is opened"
-$log.entry[81] = "23:57:50 Pick bag from line: 2"
-$log.entry[82] = "23:57:50 Calculated z.appro for pick: 787.75586"
-$log.entry[83] = "23:57:50 Open gripper"
-$log.entry[84] = "23:57:50 Check if gripper is opened"
-$log.entry[85] = "23:57:52 Put bag from line: 2 to layer: 5 bag: 3"
-$log.entry[86] = "23:57:52 Calculated z.appro for put: 787.75586"
-$log.entry[87] = "23:57:53 Check if gripper is opened"
-$log.entry[88] = "23:57:53 Pick bag from line: 1"
-$log.entry[89] = "23:57:53 Calculated z.appro for pick: 789.84985"
-$log.entry[90] = "23:57:53 Open gripper"
-$log.entry[91] = "23:57:54 Check if gripper is opened"
-$log.entry[92] = "23:57:55 Put bag from line: 1 to layer: 1 bag: 2"
-$log.entry[93] = "23:57:55 Calculated z.appro for put: 789.84985"
-$log.entry[94] = "23:57:56 Check if gripper is opened"
-$log.entry[95] = "23:57:57 Pick bag from line: 2"
-$log.entry[96] = "23:57:57 Calculated z.appro for pick: 787.75586"
-$log.entry[97] = "23:57:57 Open gripper"
-$log.entry[98] = "23:57:57 Check if gripper is opened"
-$log.entry[99] = "23:57:59 Put bag from line: 2 to layer: 5 bag: 4"
-$log.entry[100] = "23:57:59 Calculated z.appro for put: 787.75586"
-$log.entry[101] = "23:58:00 Check if gripper is opened"
-$log.entry[102] = "23:58:00 Pick bag from line: 1"
-$log.entry[103] = "23:58:00 Calculated z.appro for pick: 789.84985"
-$log.entry[104] = "23:58:00 Open gripper"
-$log.entry[105] = "23:58:01 Check if gripper is opened"
-$log.entry[106] = "23:58:02 Put bag from line: 1 to layer: 1 bag: 3"
-$log.entry[107] = "23:58:02 Calculated z.appro for put: 789.84985"
-$log.entry[108] = "23:58:03 Check if gripper is opened"
-$log.entry[109] = "23:58:04 Pick bag from line: 2"
-$log.entry[110] = "23:58:04 Calculated z.appro for pick: 787.75586"
-$log.entry[111] = "23:58:04 Open gripper"
-$log.entry[112] = "23:58:04 Check if gripper is opened"
-$log.entry[113] = "23:58:05 Put bag from line: 2 to layer: 5 bag: 5"
-$log.entry[114] = "23:58:06 Calculated z.appro for put: 787.75586"
-$log.entry[115] = "23:58:07 Check if gripper is opened"
-$log.entry[116] = "23:58:07 Pick bag from line: 1"
-$log.entry[117] = "23:58:07 Calculated z.appro for pick: 789.84985"
-$log.entry[118] = "23:58:07 Open gripper"
-$log.entry[119] = "23:58:08 Check if gripper is opened"
-$log.entry[120] = "23:58:09 Put bag from line: 1 to layer: 1 bag: 4"
-$log.entry[121] = "23:58:09 Calculated z.appro for put: 789.84985"
-$log.entry[122] = "23:58:10 Check if gripper is opened"
-$log.entry[123] = "23:58:11 Pick bag from line: 2"
-$log.entry[124] = "23:58:11 Calculated z.appro for pick: 787.75586"
-$log.entry[125] = "23:58:11 Open gripper"
-$log.entry[126] = "23:58:11 Check if gripper is opened"
-$log.entry[127] = "23:58:13 Put bag from line: 2 to layer: 6 bag: 1"
-$log.entry[128] = "23:58:13 Calculated z.appro for put: 787.75586"
-$log.entry[129] = "23:58:14 Check if gripper is opened"
-$log.entry[130] = "23:58:14 Pick bag from line: 1"
-$log.entry[131] = "23:58:14 Calculated z.appro for pick: 789.84985"
-$log.entry[132] = "23:58:14 Open gripper"
-$log.entry[133] = "23:58:14 Check if gripper is opened"
-$log.entry[134] = "23:58:16 Put bag from line: 1 to layer: 1 bag: 5"
-$log.entry[135] = "23:58:16 Calculated z.appro for put: 789.84985"
-$log.entry[136] = "23:58:17 Check if gripper is opened"
-$log.entry[137] = "23:58:18 Pick bag from line: 2"
-$log.entry[138] = "23:58:18 Calculated z.appro for pick: 787.75586"
-$log.entry[139] = "23:58:18 Open gripper"
-$log.entry[140] = "23:58:19 Check if gripper is opened"
-$log.entry[141] = "23:58:20 Put bag from line: 2 to layer: 6 bag: 2"
-$log.entry[142] = "23:58:20 Calculated z.appro for put: 787.75586"
-$log.entry[143] = "23:58:21 Check if gripper is opened"
-$log.entry[144] = "23:58:21 Pick bag from line: 1"
-$log.entry[145] = "23:58:21 Calculated z.appro for pick: 789.84985"
-$log.entry[146] = "23:58:22 Open gripper"
-$log.entry[147] = "23:58:22 Check if gripper is opened"
-$log.entry[148] = "23:58:23 Put bag from line: 1 to layer: 2 bag: 1"
-$log.entry[149] = "23:58:24 Calculated z.appro for put: 789.84985"
-$log.entry[150] = "23:58:25 Check if gripper is opened"
-$log.entry[151] = "23:58:25 Pick bag from line: 1"
-$log.entry[152] = "23:58:25 Calculated z.appro for pick: 789.84985"
-$log.entry[153] = "23:58:25 Open gripper"
-$log.entry[154] = "23:58:26 Check if gripper is opened"
-$log.entry[155] = "23:58:26 Put bag from line: 1 to layer: 2 bag: 2"
-$log.entry[156] = "23:58:27 Calculated z.appro for put: 789.84985"
-$log.entry[157] = "23:58:28 Check if gripper is opened"
-$log.entry[158] = "23:58:28 Pick bag from line: 1"
-$log.entry[159] = "23:58:28 Calculated z.appro for pick: 789.84985"
-$log.entry[160] = "23:58:28 Open gripper"
-$log.entry[161] = "23:58:29 Check if gripper is opened"
-$log.entry[162] = "23:58:30 Put bag from line: 1 to layer: 2 bag: 3"
-$log.entry[163] = "23:58:30 Calculated z.appro for put: 789.84985"
-$log.entry[164] = "23:58:31 Check if gripper is opened"
-$log.entry[165] = "23:58:33 Perform safe motion to home position: going up"
-$log.entry[166] = "23:58:33 Perform safe motion to home position: move to home"
-$log.entry[167] = "23:58:33 Open gripper"
-$log.entry[168] = "23:58:36 Pick bag from line: 1"
-$log.entry[169] = "23:58:36 Calculated z.appro for pick: 789.84985"
-$log.entry[170] = "23:58:36 Open gripper"
-$log.entry[171] = "23:58:36 Check if gripper is opened"
-$log.entry[172] = "23:58:37 Put bag from line: 1 to layer: 2 bag: 4"
-$log.entry[173] = "23:58:38 Calculated z.appro for put: 789.84985"
-$log.entry[174] = "23:58:39 Check if gripper is opened"
-$log.entry[175] = "23:58:39 Pick bag from line: 1"
-$log.entry[176] = "23:58:39 Calculated z.appro for pick: 789.84985"
-$log.entry[177] = "23:58:39 Open gripper"
-$log.entry[178] = "23:58:40 Check if gripper is opened"
-$log.entry[179] = "23:58:40 Put bag from line: 1 to layer: 2 bag: 5"
-$log.entry[180] = "23:58:41 Calculated z.appro for put: 789.84985"
-$log.entry[181] = "23:58:42 Check if gripper is opened"
-$log.entry[182] = "23:58:43 Perform safe motion to home position: going up"
-$log.entry[183] = "23:58:44 Perform safe motion to home position: move to home"
-$log.entry[184] = "23:58:44 Open gripper"
-$log.entry[185] = "23:58:47 Pick bag from line: 2"
-$log.entry[186] = "23:58:47 Calculated z.appro for pick: 787.75586"
-$log.entry[187] = "23:58:47 Open gripper"
-$log.entry[188] = "23:58:47 Check if gripper is opened"
-$log.entry[189] = "23:58:47 Put bag from line: 2 to layer: 6 bag: 3"
-$log.entry[190] = "23:58:48 Calculated z.appro for put: 787.75586"
-$log.entry[191] = "23:58:49 Check if gripper is opened"
-$log.entry[192] = "23:58:49 Pick bag from line: 2"
-$log.entry[193] = "23:58:49 Calculated z.appro for pick: 787.75586"
-$log.entry[194] = "23:58:49 Open gripper"
-$log.entry[195] = "23:58:50 Check if gripper is opened"
-$log.entry[196] = "23:58:50 Put bag from line: 2 to layer: 6 bag: 4"
-$log.entry[197] = "23:58:51 Calculated z.appro for put: 787.75586"
-$log.entry[198] = "23:58:52 Check if gripper is opened"
-$log.entry[199] = "23:58:52 Pick bag from line: 2"
-$log.entry[200] = "23:58:52 Calculated z.appro for pick: 787.75586"
-$log.entry[201] = "23:58:52 Open gripper"
-$log.entry[202] = "23:58:53 Check if gripper is opened"
-$log.entry[203] = "23:58:53 Put bag from line: 2 to layer: 6 bag: 5"
-$log.entry[204] = "23:58:54 Calculated z.appro for put: 787.75586"
-$log.entry[205] = "23:58:55 Check if gripper is opened"
-$log.entry[206] = "23:58:55 Pick bag from line: 2"
-$log.entry[207] = "23:58:55 Calculated z.appro for pick: 905.00336"
-$log.entry[208] = "23:58:55 Open gripper"
-$log.entry[209] = "23:58:56 Check if gripper is opened"
-$log.entry[210] = "23:58:56 Put bag from line: 2 to layer: 7 bag: 1"
-$log.entry[211] = "23:58:56 Calculated z.appro for put: 905.00336"
-$log.entry[212] = "23:58:57 Check if gripper is opened"
-$log.entry[213] = "23:58:57 Pick bag from line: 2"
-$log.entry[214] = "23:58:58 Calculated z.appro for pick: 905.00336"
-$log.entry[215] = "23:58:58 Open gripper"
-$log.entry[216] = "23:58:58 Check if gripper is opened"
-$log.entry[217] = "23:58:59 Put bag from line: 2 to layer: 7 bag: 2"
-$log.entry[218] = "23:58:59 Calculated z.appro for put: 905.00336"
-$log.entry[219] = "23:59:00 Check if gripper is opened"
-$log.entry[220] = "23:59:00 Pick bag from line: 2"
-$log.entry[221] = "23:59:01 Calculated z.appro for pick: 905.00336"
-$log.entry[222] = "23:59:01 Open gripper"
-$log.entry[223] = "23:59:01 Check if gripper is opened"
-$log.entry[224] = "23:59:02 Put bag from line: 2 to layer: 7 bag: 3"
-$log.entry[225] = "23:59:02 Calculated z.appro for put: 905.00336"
-$log.entry[226] = "23:59:03 Check if gripper is opened"
-$log.entry[227] = "23:59:03 Pick bag from line: 2"
-$log.entry[228] = "23:59:03 Calculated z.appro for pick: 905.00336"
-$log.entry[229] = "23:59:04 Open gripper"
-$log.entry[230] = "23:59:04 Check if gripper is opened"
-$log.entry[231] = "23:59:04 Put bag from line: 2 to layer: 7 bag: 4"
-$log.entry[232] = "23:59:05 Calculated z.appro for put: 905.00336"
-$log.entry[233] = "23:59:06 Check if gripper is opened"
-$log.entry[234] = "23:59:06 Pick bag from line: 2"
-$log.entry[235] = "23:59:06 Calculated z.appro for pick: 905.00336"
-$log.entry[236] = "23:59:06 Open gripper"
-$log.entry[237] = "23:59:07 Check if gripper is opened"
-$log.entry[238] = "23:59:08 Put bag from line: 2 to layer: 7 bag: 5"
-$log.entry[239] = "23:59:08 Calculated z.appro for put: 905.00336"
-$log.entry[240] = "23:59:09 Check if gripper is opened"
-$log.entry[241] = "23:59:10 Perform safe motion to home position: going up"
-$log.entry[242] = "23:59:10 Perform safe motion to home position: move to home"
-$log.entry[243] = "23:59:11 Open gripper"
-$log.entry[244] = "00:19:45 Getting loaded products"
-$log.entry[245] = "00:19:45 Found 10 products"
-$log.entry[246] = "00:19:46 Robot boot initialize completed"
-$log.entry[247] = "00:21:08 Getting loaded products"
-$log.entry[248] = "00:21:08 Found 10 products"
-$log.entry[249] = "00:21:08 Robot boot initialize completed"
-$log.entry[250] = "00:21:15 safe.home program was set to execute"
-$log.entry[251] = "00:21:20 a.main program was set to execute"
-$log.entry[252] = "00:23:51 safe.home program was set to execute"
-$log.entry[253] = "00:23:52 a.main program was set to execute"
-$log.entry[254] = "00:24:00 a.teach program was set to execute"
-$log.entry[255] = "00:24:00 a.service program was set to execute"
-$log.entry[256] = "00:29:34 a.main program was set to execute"
-$product.name = "Program 10: 54x45x11,   40kg, 9x5"
+$log.entry[1] = "23:01:28 Open gripper"
+$log.entry[2] = "23:01:31 Check if gripper is opened"
+$log.entry[3] = "23:01:31 Put bag from line: 1 to layer: 3 bag: 5"
+$log.entry[4] = "23:01:32 Calculated z.appro for put: 789.84985"
+$log.entry[5] = "23:01:35 Check if gripper is opened"
+$log.entry[6] = "23:01:40 Perform safe motion to home position: going up"
+$log.entry[7] = "23:01:40 Perform safe motion to home position: move to home"
+$log.entry[8] = "23:01:41 Open gripper"
+$log.entry[9] = "23:03:18 Selected product Testing for line 1"
+$log.entry[10] = "23:03:18 Calculating points for line 1"
+$log.entry[11] = "23:03:18 Selected product Testing for line 2"
+$log.entry[12] = "23:03:18 Calculating points for line 2"
+$log.entry[13] = "23:03:32 Pick bag from line: 1"
+$log.entry[14] = "23:03:32 Calculated z.appro for pick: 789.84985"
+$log.entry[15] = "23:03:32 Open gripper"
+$log.entry[16] = "23:03:32 Check if gripper is opened"
+$log.entry[17] = "23:03:34 Put bag from line: 1 to layer: 1 bag: 1"
+$log.entry[18] = "23:03:34 Calculated z.appro for put: 789.84985"
+$log.entry[19] = "23:03:37 Check if gripper is opened"
+$log.entry[20] = "23:03:37 Pick bag from line: 1"
+$log.entry[21] = "23:03:37 Calculated z.appro for pick: 789.84985"
+$log.entry[22] = "23:03:37 Open gripper"
+$log.entry[23] = "23:03:39 Check if gripper is opened"
+$log.entry[24] = "23:03:39 Put bag from line: 1 to layer: 1 bag: 2"
+$log.entry[25] = "23:03:40 Calculated z.appro for put: 789.84985"
+$log.entry[26] = "23:03:42 Check if gripper is opened"
+$log.entry[27] = "23:03:42 Pick bag from line: 1"
+$log.entry[28] = "23:03:43 Calculated z.appro for pick: 789.84985"
+$log.entry[29] = "23:03:43 Open gripper"
+$log.entry[30] = "23:03:45 Check if gripper is opened"
+$log.entry[31] = "23:03:45 Put bag from line: 1 to layer: 1 bag: 3"
+$log.entry[32] = "23:03:45 Calculated z.appro for put: 789.84985"
+$log.entry[33] = "23:03:47 Check if gripper is opened"
+$log.entry[34] = "23:03:48 Pick bag from line: 1"
+$log.entry[35] = "23:03:48 Calculated z.appro for pick: 789.84985"
+$log.entry[36] = "23:03:48 Open gripper"
+$log.entry[37] = "23:03:49 Check if gripper is opened"
+$log.entry[38] = "23:03:50 Put bag from line: 1 to layer: 1 bag: 4"
+$log.entry[39] = "23:03:50 Calculated z.appro for put: 789.84985"
+$log.entry[40] = "23:03:52 Check if gripper is opened"
+$log.entry[41] = "23:03:53 Pick bag from line: 1"
+$log.entry[42] = "23:03:53 Calculated z.appro for pick: 789.84985"
+$log.entry[43] = "23:03:53 Open gripper"
+$log.entry[44] = "23:03:55 Check if gripper is opened"
+$log.entry[45] = "23:03:55 Put bag from line: 1 to layer: 1 bag: 5"
+$log.entry[46] = "23:03:55 Calculated z.appro for put: 789.84985"
+$log.entry[47] = "23:03:59 Check if gripper is opened"
+$log.entry[48] = "23:03:59 Pick bag from line: 1"
+$log.entry[49] = "23:03:59 Calculated z.appro for pick: 789.84985"
+$log.entry[50] = "23:03:59 Open gripper"
+$log.entry[51] = "23:04:02 Check if gripper is opened"
+$log.entry[52] = "23:04:02 Put bag from line: 1 to layer: 2 bag: 1"
+$log.entry[53] = "23:04:02 Calculated z.appro for put: 789.84985"
+$log.entry[54] = "23:04:04 Check if gripper is opened"
+$log.entry[55] = "23:04:04 Pick bag from line: 1"
+$log.entry[56] = "23:04:04 Calculated z.appro for pick: 789.84985"
+$log.entry[57] = "23:04:04 Open gripper"
+$log.entry[58] = "23:04:06 Check if gripper is opened"
+$log.entry[59] = "23:04:06 Put bag from line: 1 to layer: 2 bag: 2"
+$log.entry[60] = "23:04:07 Calculated z.appro for put: 789.84985"
+$log.entry[61] = "23:04:09 Check if gripper is opened"
+$log.entry[62] = "23:04:09 Pick bag from line: 1"
+$log.entry[63] = "23:04:09 Calculated z.appro for pick: 789.84985"
+$log.entry[64] = "23:04:09 Open gripper"
+$log.entry[65] = "23:04:10 Check if gripper is opened"
+$log.entry[66] = "23:04:11 Put bag from line: 1 to layer: 2 bag: 3"
+$log.entry[67] = "23:04:11 Calculated z.appro for put: 789.84985"
+$log.entry[68] = "23:04:13 Check if gripper is opened"
+$log.entry[69] = "23:04:13 Pick bag from line: 1"
+$log.entry[70] = "23:04:14 Calculated z.appro for pick: 789.84985"
+$log.entry[71] = "23:04:14 Open gripper"
+$log.entry[72] = "23:04:16 Check if gripper is opened"
+$log.entry[73] = "23:04:16 Put bag from line: 1 to layer: 2 bag: 4"
+$log.entry[74] = "23:04:16 Calculated z.appro for put: 789.84985"
+$log.entry[75] = "23:04:18 Check if gripper is opened"
+$log.entry[76] = "23:04:18 Pick bag from line: 1"
+$log.entry[77] = "23:04:18 Calculated z.appro for pick: 789.84985"
+$log.entry[78] = "23:04:18 Open gripper"
+$log.entry[79] = "23:04:20 Check if gripper is opened"
+$log.entry[80] = "23:04:20 Put bag from line: 1 to layer: 2 bag: 5"
+$log.entry[81] = "23:04:20 Calculated z.appro for put: 789.84985"
+$log.entry[82] = "23:04:22 Check if gripper is opened"
+$log.entry[83] = "23:04:23 Pick bag from line: 1"
+$log.entry[84] = "23:04:23 Calculated z.appro for pick: 789.84985"
+$log.entry[85] = "23:04:23 Open gripper"
+$log.entry[86] = "23:04:25 Check if gripper is opened"
+$log.entry[87] = "23:04:25 Put bag from line: 1 to layer: 3 bag: 1"
+$log.entry[88] = "23:04:25 Calculated z.appro for put: 789.84985"
+$log.entry[89] = "23:04:27 Check if gripper is opened"
+$log.entry[90] = "23:04:27 Pick bag from line: 1"
+$log.entry[91] = "23:04:27 Calculated z.appro for pick: 789.84985"
+$log.entry[92] = "23:04:27 Open gripper"
+$log.entry[93] = "23:04:28 Check if gripper is opened"
+$log.entry[94] = "23:04:29 Put bag from line: 1 to layer: 3 bag: 2"
+$log.entry[95] = "23:04:29 Calculated z.appro for put: 789.84985"
+$log.entry[96] = "23:04:31 Check if gripper is opened"
+$log.entry[97] = "23:04:31 Pick bag from line: 1"
+$log.entry[98] = "23:04:31 Calculated z.appro for pick: 789.84985"
+$log.entry[99] = "23:04:31 Open gripper"
+$log.entry[100] = "23:04:33 Check if gripper is opened"
+$log.entry[101] = "23:04:33 Put bag from line: 1 to layer: 3 bag: 3"
+$log.entry[102] = "23:04:33 Calculated z.appro for put: 789.84985"
+$log.entry[103] = "23:04:35 Check if gripper is opened"
+$log.entry[104] = "23:04:35 Pick bag from line: 1"
+$log.entry[105] = "23:04:35 Calculated z.appro for pick: 789.84985"
+$log.entry[106] = "23:04:36 Open gripper"
+$log.entry[107] = "23:06:37 Main program executed"
+$log.entry[108] = "23:06:37 Perform safe motion to home position: going up"
+$log.entry[109] = "23:06:38 Perform safe motion to home position: move to home"
+$log.entry[110] = "23:06:38 Open gripper"
+$log.entry[111] = "23:06:40 Pick bag from line: 1"
+$log.entry[112] = "23:06:40 Calculated z.appro for pick: 789.84985"
+$log.entry[113] = "23:06:40 Open gripper"
+$log.entry[114] = "23:06:40 Check if gripper is opened"
+$log.entry[115] = "23:06:42 Put bag from line: 1 to layer: 1 bag: 1"
+$log.entry[116] = "23:06:42 Calculated z.appro for put: 789.84985"
+$log.entry[117] = "23:06:44 Check if gripper is opened"
+$log.entry[118] = "23:06:44 Pick bag from line: 1"
+$log.entry[119] = "23:06:44 Calculated z.appro for pick: 789.84985"
+$log.entry[120] = "23:06:44 Open gripper"
+$log.entry[121] = "23:06:46 Check if gripper is opened"
+$log.entry[122] = "23:06:46 Put bag from line: 1 to layer: 1 bag: 2"
+$log.entry[123] = "23:06:46 Calculated z.appro for put: 789.84985"
+$log.entry[124] = "23:06:48 Check if gripper is opened"
+$log.entry[125] = "23:06:48 Pick bag from line: 1"
+$log.entry[126] = "23:06:48 Calculated z.appro for pick: 789.84985"
+$log.entry[127] = "23:06:48 Open gripper"
+$log.entry[128] = "23:06:50 Check if gripper is opened"
+$log.entry[129] = "23:06:51 Put bag from line: 1 to layer: 1 bag: 3"
+$log.entry[130] = "23:06:51 Calculated z.appro for put: 789.84985"
+$log.entry[131] = "23:06:53 Check if gripper is opened"
+$log.entry[132] = "23:06:53 Pick bag from line: 1"
+$log.entry[133] = "23:06:53 Calculated z.appro for pick: 789.84985"
+$log.entry[134] = "23:06:53 Open gripper"
+$log.entry[135] = "23:06:54 Check if gripper is opened"
+$log.entry[136] = "23:06:54 Put bag from line: 1 to layer: 1 bag: 4"
+$log.entry[137] = "23:06:55 Calculated z.appro for put: 789.84985"
+$log.entry[138] = "23:06:57 Check if gripper is opened"
+$log.entry[139] = "23:06:57 Pick bag from line: 1"
+$log.entry[140] = "23:06:57 Calculated z.appro for pick: 789.84985"
+$log.entry[141] = "23:06:57 Open gripper"
+$log.entry[142] = "23:06:59 Check if gripper is opened"
+$log.entry[143] = "23:06:59 Put bag from line: 1 to layer: 1 bag: 5"
+$log.entry[144] = "23:06:59 Calculated z.appro for put: 789.84985"
+$log.entry[145] = "23:07:02 Check if gripper is opened"
+$log.entry[146] = "23:07:02 Pick bag from line: 1"
+$log.entry[147] = "23:07:02 Calculated z.appro for pick: 789.84985"
+$log.entry[148] = "23:07:02 Open gripper"
+$log.entry[149] = "23:07:20 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[150] = "23:07:24 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[151] = "23:07:24 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[152] = "23:07:24 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[153] = "23:07:24 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[154] = "23:07:25 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[155] = "23:07:25 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[156] = "23:07:25 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[157] = "23:07:25 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[158] = "23:07:37 Check if gripper is opened"
+$log.entry[159] = "23:07:38 Put bag from line: 1 to layer: 1 bag: 1"
+$log.entry[160] = "23:07:38 Calculated z.appro for put: 789.84985"
+$log.entry[161] = "23:07:40 Check if gripper is opened"
+$log.entry[162] = "23:07:42 Perform safe motion to home position: going up"
+$log.entry[163] = "23:07:42 Perform safe motion to home position: move to home"
+$log.entry[164] = "23:07:42 Open gripper"
+$log.entry[165] = "23:07:48 Pick bag from line: 1"
+$log.entry[166] = "23:07:48 Calculated z.appro for pick: 789.84985"
+$log.entry[167] = "23:07:48 Open gripper"
+$log.entry[168] = "23:07:48 Check if gripper is opened"
+$log.entry[169] = "23:07:49 Put bag from line: 1 to layer: 1 bag: 2"
+$log.entry[170] = "23:07:49 Calculated z.appro for put: 789.84985"
+$log.entry[171] = "23:07:52 Check if gripper is opened"
+$log.entry[172] = "23:07:52 Pick bag from line: 1"
+$log.entry[173] = "23:07:52 Calculated z.appro for pick: 789.84985"
+$log.entry[174] = "23:07:52 Open gripper"
+$log.entry[175] = "23:07:54 Check if gripper is opened"
+$log.entry[176] = "23:07:55 Put bag from line: 1 to layer: 1 bag: 3"
+$log.entry[177] = "23:07:55 Calculated z.appro for put: 789.84985"
+$log.entry[178] = "23:07:57 Check if gripper is opened"
+$log.entry[179] = "23:07:57 Pick bag from line: 1"
+$log.entry[180] = "23:07:57 Calculated z.appro for pick: 789.84985"
+$log.entry[181] = "23:07:57 Open gripper"
+$log.entry[182] = "23:07:59 Check if gripper is opened"
+$log.entry[183] = "23:07:59 Put bag from line: 1 to layer: 1 bag: 4"
+$log.entry[184] = "23:07:59 Calculated z.appro for put: 789.84985"
+$log.entry[185] = "23:08:02 Check if gripper is opened"
+$log.entry[186] = "23:08:02 Pick bag from line: 1"
+$log.entry[187] = "23:08:02 Calculated z.appro for pick: 789.84985"
+$log.entry[188] = "23:08:02 Open gripper"
+$log.entry[189] = "23:08:04 Check if gripper is opened"
+$log.entry[190] = "23:08:05 Put bag from line: 1 to layer: 1 bag: 5"
+$log.entry[191] = "23:08:05 Calculated z.appro for put: 789.84985"
+$log.entry[192] = "23:08:08 Check if gripper is opened"
+$log.entry[193] = "23:08:08 Pick bag from line: 1"
+$log.entry[194] = "23:08:09 Calculated z.appro for pick: 789.84985"
+$log.entry[195] = "23:08:09 Open gripper"
+$log.entry[196] = "23:08:11 Check if gripper is opened"
+$log.entry[197] = "23:08:28 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[198] = "23:08:28 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[199] = "23:08:28 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[200] = "23:08:28 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[201] = "23:08:28 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[202] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[203] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[204] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[205] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[206] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[207] = "23:08:29 Loaded bag correction for product: 11 line: 1 layer: 1 "
+$log.entry[208] = "23:08:42 Main program executed"
+$log.entry[209] = "23:08:42 Perform safe motion to home position: going up"
+$log.entry[210] = "23:08:43 Perform safe motion to home position: move to home"
+$log.entry[211] = "23:08:43 Open gripper"
+$log.entry[212] = "23:08:48 Pick bag from line: 1"
+$log.entry[213] = "23:08:48 Calculated z.appro for pick: 789.84985"
+$log.entry[214] = "23:08:48 Open gripper"
+$log.entry[215] = "23:08:48 Check if gripper is opened"
+$log.entry[216] = "23:08:49 Put bag from line: 1 to layer: 1 bag: 1"
+$log.entry[217] = "23:08:50 Calculated z.appro for put: 789.84985"
+$log.entry[218] = "23:08:52 Check if gripper is opened"
+$log.entry[219] = "23:08:52 Pick bag from line: 1"
+$log.entry[220] = "23:08:52 Calculated z.appro for pick: 789.84985"
+$log.entry[221] = "23:08:52 Open gripper"
+$log.entry[222] = "23:08:55 Check if gripper is opened"
+$log.entry[223] = "23:08:55 Put bag from line: 1 to layer: 1 bag: 2"
+$log.entry[224] = "23:08:56 Calculated z.appro for put: 789.84985"
+$log.entry[225] = "23:08:59 Check if gripper is opened"
+$log.entry[226] = "23:08:59 Pick bag from line: 1"
+$log.entry[227] = "23:08:59 Calculated z.appro for pick: 789.84985"
+$log.entry[228] = "23:08:59 Open gripper"
+$log.entry[229] = "23:09:02 Check if gripper is opened"
+$log.entry[230] = "23:09:02 Put bag from line: 1 to layer: 1 bag: 3"
+$log.entry[231] = "23:09:03 Calculated z.appro for put: 789.84985"
+$log.entry[232] = "23:09:05 Check if gripper is opened"
+$log.entry[233] = "23:09:05 Pick bag from line: 1"
+$log.entry[234] = "23:09:05 Calculated z.appro for pick: 789.84985"
+$log.entry[235] = "23:09:06 Open gripper"
+$log.entry[236] = "23:09:07 Check if gripper is opened"
+$log.entry[237] = "23:09:08 Put bag from line: 1 to layer: 1 bag: 4"
+$log.entry[238] = "23:09:08 Calculated z.appro for put: 789.84985"
+$log.entry[239] = "23:09:11 Check if gripper is opened"
+$log.entry[240] = "23:09:11 Pick bag from line: 1"
+$log.entry[241] = "23:09:11 Calculated z.appro for pick: 789.84985"
+$log.entry[242] = "23:09:11 Open gripper"
+$log.entry[243] = "23:09:13 Check if gripper is opened"
+$log.entry[244] = "23:09:14 Put bag from line: 1 to layer: 1 bag: 5"
+$log.entry[245] = "23:09:14 Calculated z.appro for put: 789.84985"
+$log.entry[246] = "23:09:17 Check if gripper is opened"
+$log.entry[247] = "23:09:18 Pick bag from line: 1"
+$log.entry[248] = "23:09:18 Calculated z.appro for pick: 789.84985"
+$log.entry[249] = "23:09:18 Open gripper"
+$log.entry[250] = "23:09:20 Check if gripper is opened"
+$log.entry[251] = "23:09:21 Put bag from line: 1 to layer: 2 bag: 1"
+$log.entry[252] = "23:09:21 Calculated z.appro for put: 789.84985"
+$log.entry[253] = "23:09:23 Check if gripper is opened"
+$log.entry[254] = "23:09:23 Pick bag from line: 1"
+$log.entry[255] = "23:09:23 Calculated z.appro for pick: 789.84985"
+$log.entry[256] = "23:09:24 Open gripper"
+$product.name = "Testing"
 $product.names[1] = "Program  1: 58x49.5x11, 30kg, 9x5"
 $product.names[2] = "Program  2: 54x45x11,   30kg, 9x5"
 $product.names[3] = "Program  3: 54x45x11,   40kg, 7x5"
@@ -6937,7 +7194,7 @@ $product.names[7] = "Program  7: 41x37x11,   20kg, 8x8"
 $product.names[8] = "Program  8: 58x49.5x11, 30kg, 12x5"
 $product.names[9] = "Program  9: 54x45x11,   30kg, 12x5"
 $product.names[10] = "Program 10: 54x45x11,   40kg, 9x5"
-$product.names[11] = "Empty"
+$product.names[11] = "Testing"
 $product.names[12] = "Empty"
 $product.names[13] = "Empty"
 $product.names[14] = "Empty"

@@ -132,7 +132,7 @@ N_INT314    "x.pg.selected[2]"
 24,2,""," PALLET","CORRECTION","",10,4,3,2006,0
 25,2,"","  CONTROL","","",10,4,3,2002,0
 26,2,"","  LOG","","",10,4,3,2004,0
-27,2,""," DEBUG","","",10,4,3,2005,0
+27,2,""," DEBUG","","",10,4,3,2005,-1
 28,1," BAG 1 RDY","","","",10,15,4,10,2201,0
 29,1," BAG 2 RDY","","","",10,15,4,10,2202,0
 30,4,2,"FINGERS","CLOSE","OPEN","",10,4,4,34,33,0
@@ -2729,8 +2729,6 @@ N_INT314    "x.pg.selected[2]"
 	; x.line.ready[1]
 	; line.product.no[1]
 	; x.pg.selected[1]
-	; pallet.shift[1,2]
-	; pallet.shift[1,1]
 	; line.product.no[2]
 	; @@@ CONNECTION @@@
 	; KROSET R01
@@ -2876,15 +2874,21 @@ N_INT314    "x.pg.selected[2]"
 	;       .pick.depart 
 	;     3:put.pallet:F
 	;       .line.no 
+	;       .product 
 	;       .layer 
 	;       .bag 
 	;       .t.shift 
+	;       .$prod 
+	;       .$line 
+	;       .$layer 
+	;       .$bag 
 	;       .$no 
 	;       .$l 
 	;       .$b 
 	;       .$temp 
 	;       .pick 
 	;       .put.base 
+	;       .$var 
 	;       .put 
 	;       .pick.z 
 	;       .put.z 
@@ -2976,13 +2980,24 @@ N_INT314    "x.pg.selected[2]"
 	;   Group:Background:8
 	;     8:ifp.pc:B
 	;       .line 
-	;       .$prod 
+	;       .c 
+	;     8:proc.correct.pc:B
+	;       .line 
+	;       .product 
+	;       .layer 
+	;       .bag 
 	;       .$line 
+	;       .$prod 
+	;       .$layer 
+	;       .$bag 
+	;       .prod.chg 
+	;       .prod.exist 
+	;       .layer.chg 
+	;       .bag.chg 
+	;       .load.data 
 	;       .$var 
 	;       .c 
 	;       .temp 
-	;       .$l 
-	;     8:proc.correct.pc:B
 	;   Group:Initialization:9
 	;     9:initialize.pc:B
 	;     9:set.io.pc:B
